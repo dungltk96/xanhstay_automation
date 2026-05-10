@@ -16,5 +16,3 @@ ${btn_huy_bo}    accessibility_id=Hủy bỏ
 #Thông báo thành công
 ${msg_thanh_cong}    thành công
 
-
-
