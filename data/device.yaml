@@ -1,0 +1,9 @@
+remote_url: "http://127.0.0.1:4723"
+platformName: "Android"
+deviceName: "R5CW716L3GZ"
+platformVersion: "16"
+automationName: "UiAutomator2"
+appPackage: "com.xanh.stay"
+appActivity: "com.xanh.stay.MainActivity"
+noReset: False
+fullReset: True
