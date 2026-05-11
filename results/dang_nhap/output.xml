@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-10T21:47:42.372507" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-11T21:36:26.529777" rpa="false" schemaversion="5">
 <suite id="s1" name="Dang Nhap" source="D:\xanhstay_automation\tests\dang_nhap.robot">
-<test id="s1-t1" name="TC_01_Dang_nhap_thanh_cong" line="5">
-<kw name="Setup-Open application" owner="keywords">
+<test id="s1-t1" name="TC_01_Dang_nhap_thanh_cong" line="7">
+<kw name="Setup-Open application" owner="keywords" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>remote_url=${remote_url}</arg>
 <arg>automationName=${automationName}</arg>
@@ -18,213 +18,173 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-10T21:47:42.582326" elapsed="5.885961"/>
+<status status="PASS" start="2026-05-11T21:36:26.738361" elapsed="5.869289"/>
 </kw>
-<status status="PASS" start="2026-05-10T21:47:42.582326" elapsed="5.885961"/>
+<status status="PASS" start="2026-05-11T21:36:26.738361" elapsed="5.870301"/>
 </kw>
 <kw name="Thuc Hien Dang Nhap" owner="dang_nhap_keywords">
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-10T21:47:52.945710" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
+<msg time="2026-05-11T21:36:37.052300" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-10T21:47:48.469302" elapsed="4.476408"/>
+<status status="PASS" start="2026-05-11T21:36:32.609188" elapsed="4.443112"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-10T21:47:52.946714" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]'.</msg>
-<msg time="2026-05-10T21:47:57.432433" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
+<msg time="2026-05-11T21:36:37.053301" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]'.</msg>
+<msg time="2026-05-11T21:36:37.170182" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-10T21:47:52.945710" elapsed="4.487986"/>
+<status status="PASS" start="2026-05-11T21:36:37.052300" elapsed="0.117882"/>
 </kw>
 <arg>${btn_menu}</arg>
-<status status="PASS" start="2026-05-10T21:47:48.469302" elapsed="8.964394"/>
+<status status="PASS" start="2026-05-11T21:36:32.609188" elapsed="4.560994"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-10T21:47:57.433696" elapsed="0.105094"/>
+<status status="PASS" start="2026-05-11T21:36:37.171184" elapsed="4.429773"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-10T21:47:57.539790" level="INFO">Clicking element 'accessibility_id=Cá nhân'.</msg>
+<msg time="2026-05-11T21:36:41.601959" level="INFO">Clicking element 'accessibility_id=Cá nhân'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-10T21:47:57.538790" elapsed="0.112478"/>
+<status status="PASS" start="2026-05-11T21:36:41.600957" elapsed="4.660238"/>
 </kw>
 <arg>${btn_ca_nhan}</arg>
-<status status="PASS" start="2026-05-10T21:47:57.433696" elapsed="0.217572"/>
+<status status="PASS" start="2026-05-11T21:36:37.171184" elapsed="9.090011"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-10T21:47:57.651268" elapsed="4.553545"/>
+<status status="PASS" start="2026-05-11T21:36:46.261195" elapsed="0.092537"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-10T21:48:02.205806" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
+<msg time="2026-05-11T21:36:46.355732" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-10T21:48:02.204813" elapsed="0.939765"/>
+<status status="PASS" start="2026-05-11T21:36:46.353732" elapsed="0.129895"/>
 </kw>
 <arg>${btn_open_login}</arg>
-<status status="PASS" start="2026-05-10T21:47:57.651268" elapsed="5.493310"/>
+<status status="PASS" start="2026-05-11T21:36:46.261195" elapsed="0.223432"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2026-05-10T21:48:04.910452" level="FAIL">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.ts:87:5)</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2026-05-10T21:48:04.905459" elapsed="0.079368">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.ts:87:5)</status>
-</kw>
-<msg time="2026-05-10T21:48:04.985846" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.ts:87:5)</msg>
-<msg time="2026-05-10T21:48:04.985846" level="INFO">criteria is login_phone_number
-criteria is login_phone_number
-criteria is login_phone_number
-criteria is login_phone_number
-criteria is login_phone_number
-criteria is login_phone_number
-criteria is login_phone_number
-criteria is login_phone_number</msg>
-<msg time="2026-05-10T21:48:04.986844" level="FAIL">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.ts:44:11)
-    at doFind (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
-    at wrappedCondFn (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</msg>
+<msg time="2026-05-11T21:36:47.410333" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-05-10T21:48:03.144578" elapsed="1.842266">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.ts:44:11)
-    at doFind (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
-    at wrappedCondFn (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+<status status="PASS" start="2026-05-11T21:36:46.484627" elapsed="0.925706"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:47.411347" level="INFO">Clicking element '//android.widget.EditText[@hint='Số điện thoại']'.</msg>
+<msg time="2026-05-11T21:36:47.532445" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-05-10T21:48:04.986844" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-11T21:36:47.410333" elapsed="0.122112"/>
 </kw>
 <arg>${input_phone_number}</arg>
-<status status="FAIL" start="2026-05-10T21:48:03.144578" elapsed="1.842266">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.ts:44:11)
-    at doFind (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
-    at wrappedCondFn (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+<status status="PASS" start="2026-05-11T21:36:46.484627" elapsed="1.047818"/>
 </kw>
 <kw name="Common - Input Element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:48.614465" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
+<arg>${input_locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-11T21:36:47.533437" elapsed="1.081028"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:48.615486" level="INFO">Typing text '0989628827' into text field '//android.widget.EditText[@hint='Số điện thoại']'</msg>
+<msg time="2026-05-11T21:36:48.687525" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
+<arg>${input_locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-11T21:36:48.614465" elapsed="0.073060"/>
+</kw>
 <arg>${input_phone_number}</arg>
 <arg>${so_dien_thoai}</arg>
-<status status="NOT RUN" start="2026-05-10T21:48:04.987854" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-11T21:36:47.533437" elapsed="1.154088"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:49.282510" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-11T21:36:48.687525" elapsed="0.594985"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:49.283513" level="INFO">Clicking element '//android.widget.EditText[@hint='Mật khẩu']'.</msg>
+<msg time="2026-05-11T21:36:49.401345" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<arg>${locator}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-11T21:36:49.282510" elapsed="0.118835"/>
+</kw>
 <arg>${input_password}</arg>
-<status status="NOT RUN" start="2026-05-10T21:48:04.987854" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-11T21:36:48.687525" elapsed="0.713820"/>
 </kw>
 <kw name="Common - Input Element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:50.100362" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<arg>${input_locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-11T21:36:49.402345" elapsed="0.698017"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:50.101361" level="INFO">Typing text 'Dung123@' into text field '//android.widget.EditText[@hint='Mật khẩu']'</msg>
+<msg time="2026-05-11T21:36:50.178588" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<arg>${input_locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-11T21:36:50.100362" elapsed="0.078226"/>
+</kw>
 <arg>${input_password}</arg>
 <arg>${mat_khau}</arg>
-<status status="NOT RUN" start="2026-05-10T21:48:04.987854" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-11T21:36:49.401345" elapsed="0.777243"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:50.769564" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-11T21:36:50.179656" elapsed="0.589908"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-05-11T21:36:50.771561" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đăng nhập"]'.</msg>
+<msg time="2026-05-11T21:36:51.407326" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
+<arg>${locator}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-11T21:36:50.770562" elapsed="0.636764"/>
+</kw>
 <arg>${btn_login}</arg>
-<status status="NOT RUN" start="2026-05-10T21:48:04.987854" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-11T21:36:50.178588" elapsed="1.228738"/>
 </kw>
 <arg>${phone_number}</arg>
 <arg>${password}</arg>
-<status status="FAIL" start="2026-05-10T21:47:48.469302" elapsed="16.518552">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.ts:44:11)
-    at doFind (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
-    at wrappedCondFn (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+<status status="PASS" start="2026-05-11T21:36:32.608662" elapsed="18.798664"/>
 </kw>
-<kw name="Teardown - Close application" owner="keywords">
-<status status="NOT RUN" start="2026-05-10T21:48:04.987854" elapsed="0.000000"/>
+<kw name="Teardown - Close application" owner="keywords" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2026-05-11T21:36:51.408325" elapsed="0.612587"/>
 </kw>
-<status status="FAIL" start="2026-05-10T21:47:42.581324" elapsed="22.406530">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.ts:44:11)
-    at doFind (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
-    at wrappedCondFn (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+<status status="PASS" start="2026-05-11T21:36:51.407326" elapsed="0.613586"/>
+</kw>
+<status status="PASS" start="2026-05-11T21:36:26.738361" elapsed="25.282551"/>
 </test>
-<status status="FAIL" start="2026-05-10T21:47:42.373514" elapsed="22.615329"/>
+<status status="PASS" start="2026-05-11T21:36:26.532289" elapsed="25.488623"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Dang Nhap" id="s1" pass="0" fail="1" skip="0">Dang Nhap</stat>
+<stat name="Dang Nhap" id="s1" pass="1" fail="0" skip="0">Dang Nhap</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-05-10T21:47:42.575976" level="WARN">Imported resource file 'D:\xanhstay_automation\common\variables.resource' is empty.</msg>
-<msg time="2026-05-10T21:48:04.985846" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.ts:87:5)</msg>
+<msg time="2026-05-11T21:36:26.733357" level="WARN">Imported resource file 'D:\xanhstay_automation\common\variables.resource' is empty.</msg>
 </errors>
 </robot>
