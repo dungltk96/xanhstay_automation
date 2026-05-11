@@ -2,14 +2,11 @@
 Resource    ../config/import.resource
 
 *** Test Cases ***
-TC_01_Dang_ky_xem_can_ho_thanh_cong
-    [Tags]    open_app
+TC_01_Dang_ky_thue_can_ho_thanh_cong
     Setup-Open Application
 
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
 
-    Thuc Hien Dang Ky Can Ho Khi Chua Login    ${dt_ho_ten}    ${dt_email}    ${dt_phone_number}
+    Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}
 
     Teardown - Close Application
-
-#TC_02_Dang_ky_xem_can_ho_that_bai
