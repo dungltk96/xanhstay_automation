@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3ac1f94-52f4-45e6-a3e9-a63907e7da4a" name="Changes" comment="Build code Login &amp; Register to view rooms">
-      <change afterPath="$PROJECT_DIR$/feature/thue_can_ho/thue_can_ho.keywords.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature/thue_can_ho/thue_can_ho.variables.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/03_thue_can_ho.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/keywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/common/keywords.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/common/variables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/import.resource" beforeDir="false" afterPath="$PROJECT_DIR$/config/import.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_product.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_product.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/device.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/data/device.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/dang_ky_xem_can_ho.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/02_dang_ky_xem_can_ho.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/dang_nhap.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/01_dang_nhap.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "D:/xanhstay_automation/app",
-    "settings.editor.selected.configurable": "preferences.general"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/xanhstay_automation/app&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xanhstay_automation\app" />
