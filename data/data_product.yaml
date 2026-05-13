@@ -3,12 +3,10 @@ dt_phone_number: 0989628827
 dt_password: Dung123@
 
 #Dang ky xem phong
-#ngay_xem: today
 dt_ho_ten: Kim Dung
 dt_email: dungltk96@gmail.com
 
 #Thue can ho
 #dt_type_hop_dong: Theo tháng
 #dt_thoi_han: 3 tháng
-#dt_ngay_vao_o: today
 dt_so_nguoi_o: 1

@@ -14,19 +14,19 @@ Thuc Hien Dang Ky Can Ho Khi Chua Login
     
 #    Common - Click Element    ${locator_ngay_hom_nay}
 
-    Common - Click Element    ${viewing_date}
+    Common - Click Element    ${viewing_date_xem_can_ho}
     Common - Click Element    ${date_picker_today}
     Common - Click Element    ${btn_chon}
 
 #    Lấy giá trị element thực tế & so sánh kq mong muốn với kq thực tế
     ${actual_ho_ten}    Get Text    ${input_ho_ten}
-    Should Be Equal As Strings    ${ho_ten}    ${actual_ho_ten}
+    Should Be Equal As Strings    ${dt_ho_ten}    ${actual_ho_ten}
 
     ${actual_email}    Get Text    ${input_email}
-    Should Be Equal As Strings    ${email}    ${actual_email}
+    Should Be Equal As Strings    ${dt_email}    ${actual_email}
     
     ${actual_so_dien_thoai}    Get Text    ${input_so_dien_thoai}
-    Should Be Equal As Strings    ${phone_number}    ${actual_so_dien_thoai}
+    Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
 
     Common - Click Element    ${btn_xac_nhan}
 

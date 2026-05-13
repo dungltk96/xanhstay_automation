@@ -16,7 +16,6 @@ Thuc Hien Dang Nhap
     Common - Click Element    ${input_password}
     Common - Input Element    ${input_password}    ${mat_khau}
 
-    Common - Click Element    ${btn_login}
-    
 #    Wait Until Element Is Visible    ${btn_login}
-#    Click Element    ${btn_login}
+    Common - Click Element    ${btn_login}
+

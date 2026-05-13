@@ -5,5 +5,8 @@ platformVersion: "16"
 automationName: "UiAutomator2"
 appPackage: "com.xanh.stay"
 appActivity: "com.xanh.stay.MainActivity"
-noReset: False
-fullReset: True
+noReset: false
+fullReset: false
+#disableIdLocatorAutocompletion: true
+##Auto download APP
+#app_name: "xanhstay.apk"
