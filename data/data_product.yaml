@@ -1,6 +1,12 @@
-phone_number: 0989628827
-password: Dung123@
+#Dang nhap
+dt_phone_number: 0989628827
+dt_password: Dung123@
 
-#ngay_xem: 09/05/2026
-ho_ten: Lê Thị Kim Dung
-email: dungltk96@gmail.com
+#Dang ky xem phong
+dt_ho_ten: Kim Dung
+dt_email: dungltk96@gmail.com
+
+#Thue can ho
+#dt_type_hop_dong: Theo tháng
+#dt_thoi_han: 3 tháng
+dt_so_nguoi_o: 1

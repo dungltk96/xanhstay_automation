@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3ac1f94-52f4-45e6-a3e9-a63907e7da4a" name="Changes" comment="Build code Login &amp; Register to view rooms" />
+    <list default="true" id="c3ac1f94-52f4-45e6-a3e9-a63907e7da4a" name="Changes" comment="Build code Login &amp; Register to view rooms">
+      <change afterPath="$PROJECT_DIR$/feature/thue_can_ho/thue_can_ho.keywords.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature/thue_can_ho/thue_can_ho.variables.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/03_thue_can_ho.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/keywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/common/keywords.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/common/variables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/import.resource" beforeDir="false" afterPath="$PROJECT_DIR$/config/import.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_product.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_product.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/device.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/data/device.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/dang_ky_xem_can_ho.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/02_dang_ky_xem_can_ho.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/dang_nhap.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/01_dang_nhap.robot" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#1 on master",
+    "git-widget-placeholder": "dev",
     "last_opened_file_path": "D:/xanhstay_automation/app",
     "settings.editor.selected.configurable": "preferences.general"
   }

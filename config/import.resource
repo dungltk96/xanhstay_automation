@@ -8,3 +8,4 @@ Variables   ../data/data_${env}.yaml
 Resource    ../common/keywords.resource
 Resource    ../feature/dang_nhap/dang_nhap_keywords.resource
 Resource    ../feature/dang_ky_xem_can_ho/dang_ky_xem_can_ho_keywords.resource
+Resource    ../feature/thue_can_ho/thue_can_ho.keywords.resource

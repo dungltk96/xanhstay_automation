@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-13T19:20:05.132602" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-13T19:40:20.197815" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="D:\xanhstay_automation\tests">
 <suite id="s1-s1" name="01 Dang Nhap" source="D:\xanhstay_automation\tests\01_dang_nhap.robot">
 <test id="s1-s1-t1" name="TC_01_Dang_nhap_thanh_cong" line="7">
 <kw name="Setup-Open application" owner="keywords" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-05-13T19:40:21.583674" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-05-13T19:40:21.582674" elapsed="0.002000">No application is open</status>
+</kw>
+<msg time="2026-05-13T19:40:21.585683" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-13T19:40:21.586674" level="FAIL">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</msg>
 <arg>remote_url=${remote_url}</arg>
 <arg>automationName=${automationName}</arg>
 <arg>platformName=${platformName}</arg>
@@ -20,180 +39,91 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-13T19:20:05.335658" elapsed="5.962938"/>
+<status status="FAIL" start="2026-05-13T19:40:20.396197" elapsed="1.190477">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </kw>
-<status status="PASS" start="2026-05-13T19:20:05.334567" elapsed="5.965039"/>
-</kw>
-<kw name="Thuc Hien Dang Nhap" owner="dang_nhap_keywords">
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:15.750141" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:11.299606" elapsed="4.450535"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:15.752144" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]'.</msg>
-<msg time="2026-05-13T19:20:15.865383" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:15.750141" elapsed="0.115242"/>
-</kw>
-<arg>${btn_menu}</arg>
-<status status="PASS" start="2026-05-13T19:20:11.299606" elapsed="4.566768"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:15.866374" elapsed="4.431840"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:20.301214" level="INFO">Clicking element 'accessibility_id=Cá nhân'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:20.298214" elapsed="4.636741"/>
-</kw>
-<arg>${btn_ca_nhan}</arg>
-<status status="PASS" start="2026-05-13T19:20:15.866374" elapsed="9.069524"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:24.936894" elapsed="0.073501"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:25.013392" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:25.011397" elapsed="0.110293"/>
-</kw>
-<arg>${btn_open_login}</arg>
-<status status="PASS" start="2026-05-13T19:20:24.935898" elapsed="0.185792"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:26.039722" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:25.122684" elapsed="0.917038"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:26.041720" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Số điện thoại']'.</msg>
-<msg time="2026-05-13T19:20:27.187080" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:26.040722" elapsed="1.147358"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<status status="PASS" start="2026-05-13T19:20:25.122684" elapsed="2.065396"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:27.294318" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:27.189150" elapsed="0.105168"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:27.295335" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T19:20:27.376972" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:27.294318" elapsed="0.082654"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:27.378973" level="INFO">Typing text '0989628827' into text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T19:20:27.482086" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:27.377975" elapsed="0.104111"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<arg>${so_dien_thoai}</arg>
-<status status="PASS" start="2026-05-13T19:20:27.188080" elapsed="0.294006"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:28.079216" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:27.483081" elapsed="0.596135"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:28.081222" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Mật khẩu']'.</msg>
-<msg time="2026-05-13T19:20:28.196452" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:28.079216" elapsed="0.117236"/>
-</kw>
-<arg>${input_password}</arg>
-<status status="PASS" start="2026-05-13T19:20:27.482086" elapsed="0.714366"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:28.923804" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:28.196452" elapsed="0.728352"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:28.925820" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T19:20:28.994203" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:28.924804" elapsed="0.069399"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:28.995220" level="INFO">Typing text 'Dung123@' into text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T19:20:29.064900" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:28.994203" elapsed="0.070697"/>
-</kw>
-<arg>${input_password}</arg>
-<arg>${mat_khau}</arg>
-<status status="PASS" start="2026-05-13T19:20:28.196452" elapsed="0.868448"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:29.606307" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:29.064900" elapsed="0.541407"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:29.609300" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đăng nhập"]'.</msg>
-<msg time="2026-05-13T19:20:30.296112" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:29.606307" elapsed="0.689805"/>
-</kw>
-<arg>${btn_login}</arg>
-<status status="PASS" start="2026-05-13T19:20:29.064900" elapsed="1.232212"/>
-</kw>
-<arg>${dt_phone_number}</arg>
-<arg>${dt_password}</arg>
-<status status="PASS" start="2026-05-13T19:20:11.299606" elapsed="18.997506"/>
+<status status="FAIL" start="2026-05-13T19:40:20.395196" elapsed="1.191478">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </kw>
 <kw name="Teardown - Close application" owner="keywords" type="TEARDOWN">
 <kw name="Close Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-05-13T19:40:21.587674" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-05-13T19:40:21.587674" elapsed="0.000000">No application is open</status>
+</kw>
+<msg time="2026-05-13T19:40:21.588682" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-13T19:40:21.589674" level="FAIL">No application is open</msg>
 <doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2026-05-13T19:20:30.299115" elapsed="0.586686"/>
+<status status="FAIL" start="2026-05-13T19:40:21.587674" elapsed="0.002000">No application is open</status>
 </kw>
-<status status="PASS" start="2026-05-13T19:20:30.299115" elapsed="0.586686"/>
+<status status="FAIL" start="2026-05-13T19:40:21.587674" elapsed="0.002000">No application is open</status>
 </kw>
-<status status="PASS" start="2026-05-13T19:20:05.334567" elapsed="25.552239"/>
+<status status="FAIL" start="2026-05-13T19:40:20.395196" elapsed="1.194478">Setup failed:
+WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)
+
+Also teardown failed:
+No application is open</status>
 </test>
-<status status="PASS" start="2026-05-13T19:20:05.161074" elapsed="25.725732"/>
+<status status="FAIL" start="2026-05-13T19:40:20.225261" elapsed="1.364413"/>
 </suite>
 <suite id="s1-s2" name="02 Dang Ky Xem Can Ho" source="D:\xanhstay_automation\tests\02_dang_ky_xem_can_ho.robot">
 <test id="s1-s2-t1" name="TC_01_Dang_ky_xem_can_ho_thanh_cong" line="5">
 <kw name="Setup-Open application" owner="keywords">
 <kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-05-13T19:40:22.845569" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-05-13T19:40:22.845569" elapsed="0.000992">No application is open</status>
+</kw>
+<msg time="2026-05-13T19:40:22.847561" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-13T19:40:22.848075" level="FAIL">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</msg>
 <arg>remote_url=${remote_url}</arg>
 <arg>automationName=${automationName}</arg>
 <arg>platformName=${platformName}</arg>
@@ -209,335 +139,88 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-13T19:20:30.896939" elapsed="5.688828"/>
+<status status="FAIL" start="2026-05-13T19:40:21.598686" elapsed="1.249389">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </kw>
-<status status="PASS" start="2026-05-13T19:20:30.896939" elapsed="5.688828"/>
+<status status="FAIL" start="2026-05-13T19:40:21.598686" elapsed="1.249389">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </kw>
 <kw name="Thuc Hien Dang Nhap" owner="dang_nhap_keywords">
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:41.038937" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:36.586767" elapsed="4.452170"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:41.039938" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]'.</msg>
-<msg time="2026-05-13T19:20:45.523368" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:41.038937" elapsed="4.484431"/>
-</kw>
-<arg>${btn_menu}</arg>
-<status status="PASS" start="2026-05-13T19:20:36.586767" elapsed="8.936601"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:45.523368" elapsed="0.103256"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:45.628621" level="INFO">Clicking element 'accessibility_id=Cá nhân'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:45.626624" elapsed="0.111003"/>
-</kw>
-<arg>${btn_ca_nhan}</arg>
-<status status="PASS" start="2026-05-13T19:20:45.523368" elapsed="0.214259"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:45.737627" elapsed="4.556269"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:50.294896" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:50.293896" elapsed="0.933936"/>
-</kw>
-<arg>${btn_open_login}</arg>
-<status status="PASS" start="2026-05-13T19:20:45.737627" elapsed="5.491214"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:51.330800" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:51.228841" elapsed="0.101959"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:51.332800" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Số điện thoại']'.</msg>
-<msg time="2026-05-13T19:20:51.450600" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:51.330800" elapsed="0.119800"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<status status="PASS" start="2026-05-13T19:20:51.228841" elapsed="0.221759"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:52.553332" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:51.450600" elapsed="1.102732"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:52.555342" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T19:20:52.622331" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:52.554342" elapsed="0.067989"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:52.623353" level="INFO">Typing text '0989628827' into text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T19:20:52.700110" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:52.622331" elapsed="0.077779"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<arg>${so_dien_thoai}</arg>
-<status status="PASS" start="2026-05-13T19:20:51.450600" elapsed="1.249510"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:53.241022" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:52.701105" elapsed="0.539917"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:53.243025" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Mật khẩu']'.</msg>
-<msg time="2026-05-13T19:20:54.002810" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:53.241022" elapsed="0.761788"/>
-</kw>
-<arg>${input_password}</arg>
-<status status="PASS" start="2026-05-13T19:20:52.701105" elapsed="1.301705"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:54.147253" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:54.003813" elapsed="0.143440"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:54.149252" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T19:20:54.275483" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:54.147253" elapsed="0.128230"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:54.276658" level="INFO">Typing text 'Dung123@' into text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T19:20:54.356423" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:54.275483" elapsed="0.080940"/>
-</kw>
-<arg>${input_password}</arg>
-<arg>${mat_khau}</arg>
-<status status="PASS" start="2026-05-13T19:20:54.002810" elapsed="0.353613"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:54.963604" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:54.357421" elapsed="0.606183"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:20:54.964607" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đăng nhập"]'.</msg>
-<msg time="2026-05-13T19:20:55.086200" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:20:54.963604" elapsed="0.122596"/>
-</kw>
-<arg>${btn_login}</arg>
-<status status="PASS" start="2026-05-13T19:20:54.357421" elapsed="0.728779"/>
-</kw>
 <arg>${dt_phone_number}</arg>
 <arg>${dt_password}</arg>
-<status status="PASS" start="2026-05-13T19:20:36.586767" elapsed="18.499433"/>
+<status status="NOT RUN" start="2026-05-13T19:40:22.848075" elapsed="0.000000"/>
 </kw>
-<kw name="Thuc Hien Dang Ky Can Ho Khi Chua Login" owner="dang_ky_xem_can_ho_keywords">
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:00.198389" level="INFO">xpath criteria: (//android.widget.Button[@content-desc="Xem chi tiết"])[1]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:20:55.087194" elapsed="5.111195"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:00.201388" level="INFO">Clicking element 'xpath=(//android.widget.Button[@content-desc="Xem chi tiết"])[1]'.</msg>
-<msg time="2026-05-13T19:21:04.545944" level="INFO">xpath criteria: (//android.widget.Button[@content-desc="Xem chi tiết"])[1]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:00.199391" elapsed="4.346553"/>
-</kw>
-<arg>${btn_xem_chi_tiet_can_ho}</arg>
-<status status="PASS" start="2026-05-13T19:20:55.087194" elapsed="9.458750"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:05.473385" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng ký xem căn hộ"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:04.546945" elapsed="0.926440"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:05.475383" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đăng ký xem căn hộ"]'.</msg>
-<msg time="2026-05-13T19:21:06.553412" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng ký xem căn hộ"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:05.474400" elapsed="1.079012"/>
-</kw>
-<arg>${btn_dang_ky_xem_can_ho}</arg>
-<status status="PASS" start="2026-05-13T19:21:04.546945" elapsed="2.006467"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:06.688889" level="INFO">xpath criteria: //android.view.View[@resource-id="viewing_date"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:06.554428" elapsed="0.134461"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:06.690886" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="viewing_date"]'.</msg>
-<msg time="2026-05-13T19:21:06.815768" level="INFO">xpath criteria: //android.view.View[@resource-id="viewing_date"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:06.688889" elapsed="0.126879"/>
-</kw>
-<arg>${viewing_date_xem_can_ho}</arg>
-<status status="PASS" start="2026-05-13T19:21:06.554428" elapsed="0.261340"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:07.363758" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:06.817282" elapsed="0.547478"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:07.366760" level="INFO">Clicking element 'xpath=//android.widget.Button[contains(@content-desc, 'Today')]'.</msg>
-<msg time="2026-05-13T19:21:07.506889" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:07.364760" elapsed="0.142129"/>
-</kw>
-<arg>${date_picker_today}</arg>
-<status status="PASS" start="2026-05-13T19:21:06.815768" elapsed="0.691121"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:07.506889" elapsed="0.526730"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:08.034619" level="INFO">Clicking element 'accessibility_id=Chọn'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:08.033619" elapsed="0.089770"/>
-</kw>
-<arg>${btn_chon}</arg>
-<status status="PASS" start="2026-05-13T19:21:07.506889" elapsed="0.616500"/>
-</kw>
-<kw name="Get Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:08.878180" level="INFO">Element 'xpath=//android.view.View[@resource-id="full_name"]' text is 'Kim Dung' </msg>
-<msg time="2026-05-13T19:21:08.878180" level="INFO">xpath criteria: //android.view.View[@resource-id="full_name"]</msg>
-<msg time="2026-05-13T19:21:08.878180" level="INFO">${actual_ho_ten} = Kim Dung</msg>
-<var>${actual_ho_ten}</var>
-<arg>${input_ho_ten}</arg>
-<doc>Returns the text of the element with the ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:08.123389" elapsed="0.754791"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${dt_ho_ten}</arg>
-<arg>${actual_ho_ten}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-13T19:21:08.878180" elapsed="0.001012"/>
-</kw>
-<kw name="Get Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:08.963395" level="INFO">Element 'xpath=//android.view.View[@resource-id="email"]' text is 'dungltk96@gmail.com' </msg>
-<msg time="2026-05-13T19:21:08.963395" level="INFO">xpath criteria: //android.view.View[@resource-id="email"]</msg>
-<msg time="2026-05-13T19:21:08.964394" level="INFO">${actual_email} = dungltk96@gmail.com</msg>
-<var>${actual_email}</var>
-<arg>${input_email}</arg>
-<doc>Returns the text of the element with the ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:08.879192" elapsed="0.085202"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${dt_email}</arg>
-<arg>${actual_email}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-13T19:21:08.964394" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:09.045399" level="INFO">Element 'xpath=//android.view.View[@resource-id="form_phone_number"]' text is '0989628827' </msg>
-<msg time="2026-05-13T19:21:09.045399" level="INFO">xpath criteria: //android.view.View[@resource-id="form_phone_number"]</msg>
-<msg time="2026-05-13T19:21:09.045399" level="INFO">${actual_so_dien_thoai} = 0989628827</msg>
-<var>${actual_so_dien_thoai}</var>
-<arg>${input_so_dien_thoai}</arg>
-<doc>Returns the text of the element with the ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:08.964394" elapsed="0.081005"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${dt_phone_number}</arg>
-<arg>${actual_so_dien_thoai}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-13T19:21:09.046408" elapsed="0.000000"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:09.046408" elapsed="0.053362"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:09.101774" level="INFO">Clicking element 'accessibility_id=Xác nhận'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:09.099770" elapsed="0.099362"/>
-</kw>
-<arg>${btn_xac_nhan}</arg>
-<status status="PASS" start="2026-05-13T19:21:09.046408" elapsed="0.152724"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>${msg_thanh_cong}</arg>
-<doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-05-13T19:21:09.199132" elapsed="1.254824"/>
-</kw>
+<kw name="Thuc Hien Dang Ky Can Ho Khi Chua Login">
 <arg>${dt_ho_ten}</arg>
 <arg>${dt_email}</arg>
 <arg>${dt_phone_number}</arg>
-<status status="PASS" start="2026-05-13T19:20:55.087194" elapsed="15.366762"/>
+<status status="NOT RUN" start="2026-05-13T19:40:22.849087" elapsed="0.000000"/>
 </kw>
 <kw name="Teardown - Close application" owner="keywords">
-<kw name="Close Application" owner="AppiumLibrary">
-<doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2026-05-13T19:21:10.454972" elapsed="0.565748"/>
-</kw>
-<status status="PASS" start="2026-05-13T19:21:10.454972" elapsed="0.565748"/>
+<status status="NOT RUN" start="2026-05-13T19:40:22.849087" elapsed="0.000000"/>
 </kw>
 <tag>open_app</tag>
-<status status="PASS" start="2026-05-13T19:20:30.896939" elapsed="40.123781"/>
+<status status="FAIL" start="2026-05-13T19:40:21.598686" elapsed="1.250401">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </test>
-<status status="PASS" start="2026-05-13T19:20:30.887800" elapsed="40.133924"/>
+<status status="FAIL" start="2026-05-13T19:40:21.590682" elapsed="1.258405"/>
 </suite>
 <suite id="s1-s3" name="03 Thue Can Ho" source="D:\xanhstay_automation\tests\03_thue_can_ho.robot">
 <test id="s1-s3-t1" name="TC_01_Dang_ky_thue_can_ho_thanh_cong" line="5">
 <kw name="Setup-Open application" owner="keywords">
 <kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-05-13T19:40:24.058159" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-05-13T19:40:24.058159" elapsed="0.000000">No application is open</status>
+</kw>
+<msg time="2026-05-13T19:40:24.060166" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-13T19:40:24.060166" level="FAIL">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</msg>
 <arg>remote_url=${remote_url}</arg>
 <arg>automationName=${automationName}</arg>
 <arg>platformName=${platformName}</arg>
@@ -553,434 +236,82 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-13T19:21:11.028724" elapsed="5.701023"/>
+<status status="FAIL" start="2026-05-13T19:40:22.857093" elapsed="1.203073">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </kw>
-<status status="PASS" start="2026-05-13T19:21:11.028724" elapsed="5.701023"/>
+<status status="FAIL" start="2026-05-13T19:40:22.857093" elapsed="1.203073">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </kw>
 <kw name="Thuc Hien Dang Nhap" owner="dang_nhap_keywords">
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:21.201976" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:16.730726" elapsed="4.471250"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:21.202995" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]'.</msg>
-<msg time="2026-05-13T19:21:25.682479" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:21.201976" elapsed="4.481586"/>
-</kw>
-<arg>${btn_menu}</arg>
-<status status="PASS" start="2026-05-13T19:21:16.730726" elapsed="8.952836"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:25.684553" elapsed="0.094722"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:25.783274" level="INFO">Clicking element 'accessibility_id=Cá nhân'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:25.779275" elapsed="0.129524"/>
-</kw>
-<arg>${btn_ca_nhan}</arg>
-<status status="PASS" start="2026-05-13T19:21:25.683562" elapsed="0.225237"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:25.909808" elapsed="4.509854"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:30.420662" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:30.419662" elapsed="0.106327"/>
-</kw>
-<arg>${btn_open_login}</arg>
-<status status="PASS" start="2026-05-13T19:21:25.908799" elapsed="4.617190"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:31.388635" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:30.526990" elapsed="0.862647"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:31.391700" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Số điện thoại']'.</msg>
-<msg time="2026-05-13T19:21:32.516532" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:31.389637" elapsed="1.126895"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<status status="PASS" start="2026-05-13T19:21:30.526990" elapsed="1.989542"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:32.611083" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:32.517530" elapsed="0.093553"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:32.613083" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T19:21:32.693274" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:32.611083" elapsed="0.082191"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:32.695283" level="INFO">Typing text '0989628827' into text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T19:21:32.782195" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:32.693274" elapsed="0.088921"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<arg>${so_dien_thoai}</arg>
-<status status="PASS" start="2026-05-13T19:21:32.517530" elapsed="0.264665"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:33.366071" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:32.783200" elapsed="0.582871"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:33.367082" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Mật khẩu']'.</msg>
-<msg time="2026-05-13T19:21:34.120437" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:33.366071" elapsed="0.754366"/>
-</kw>
-<arg>${input_password}</arg>
-<status status="PASS" start="2026-05-13T19:21:32.782195" elapsed="1.338242"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:34.208794" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:34.121447" elapsed="0.087347"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:34.210796" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T19:21:34.279593" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:34.208794" elapsed="0.070799"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:34.280597" level="INFO">Typing text 'Dung123@' into text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T19:21:34.348150" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:34.279593" elapsed="0.068557"/>
-</kw>
-<arg>${input_password}</arg>
-<arg>${mat_khau}</arg>
-<status status="PASS" start="2026-05-13T19:21:34.120437" elapsed="0.227713"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:34.935982" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:34.349149" elapsed="0.586833"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:34.936989" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đăng nhập"]'.</msg>
-<msg time="2026-05-13T19:21:39.697356" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:34.935982" elapsed="4.761374"/>
-</kw>
-<arg>${btn_login}</arg>
-<status status="PASS" start="2026-05-13T19:21:34.348150" elapsed="5.349206"/>
-</kw>
 <arg>${dt_phone_number}</arg>
 <arg>${dt_password}</arg>
-<status status="PASS" start="2026-05-13T19:21:16.730726" elapsed="22.966630"/>
+<status status="NOT RUN" start="2026-05-13T19:40:24.061157" elapsed="0.000000"/>
 </kw>
 <kw name="Thuc Hien Thue Can Ho" owner="thue_can_ho.keywords">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-13T19:21:41.698670" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-13T19:21:39.698354" elapsed="2.000316"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:44.532990" level="INFO">xpath criteria: (//android.widget.Button[@content-desc="Xem chi tiết"])[1]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:41.698670" elapsed="2.834320"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:44.533989" level="INFO">Clicking element 'xpath=(//android.widget.Button[@content-desc="Xem chi tiết"])[1]'.</msg>
-<msg time="2026-05-13T19:21:44.647857" level="INFO">xpath criteria: (//android.widget.Button[@content-desc="Xem chi tiết"])[1]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:44.532990" elapsed="0.114867"/>
-</kw>
-<arg>${btn_xem_chi_tiet_can_ho}</arg>
-<status status="PASS" start="2026-05-13T19:21:41.698670" elapsed="2.949187"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:45.561364" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Thuê căn hộ"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:44.648857" elapsed="0.912507"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:45.564364" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Thuê căn hộ"]'.</msg>
-<msg time="2026-05-13T19:21:45.690710" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Thuê căn hộ"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:45.562363" elapsed="0.128347"/>
-</kw>
-<arg>${btn_thue_can_ho}</arg>
-<status status="PASS" start="2026-05-13T19:21:44.647857" elapsed="1.042853"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:46.536815" level="INFO">xpath criteria: //android.widget.Button[@resource-id="contract_type"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:45.690710" elapsed="0.846105"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:46.539320" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="contract_type"]'.</msg>
-<msg time="2026-05-13T19:21:46.658302" level="INFO">xpath criteria: //android.widget.Button[@resource-id="contract_type"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:46.536815" elapsed="0.121487"/>
-</kw>
-<arg>${viewing_contract}</arg>
-<status status="PASS" start="2026-05-13T19:21:45.690710" elapsed="0.967592"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:47.511510" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Theo tháng"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:46.658302" elapsed="0.853208"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:47.513510" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Theo tháng"]'.</msg>
-<msg time="2026-05-13T19:21:47.633682" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Theo tháng"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:47.511510" elapsed="0.122172"/>
-</kw>
-<arg>${chon_thang}</arg>
-<status status="PASS" start="2026-05-13T19:21:46.658302" elapsed="0.976377"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:48.532987" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Lựa chọn"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:47.634679" elapsed="0.898308"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:48.534985" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Lựa chọn"]'.</msg>
-<msg time="2026-05-13T19:21:48.622276" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Lựa chọn"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:48.532987" elapsed="0.089289"/>
-</kw>
-<arg>${viewing_thoi_han_thue}</arg>
-<status status="PASS" start="2026-05-13T19:21:47.634679" elapsed="0.987597"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:49.501237" level="INFO">xpath criteria: //android.widget.Button[@content-desc="3 tháng"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:48.623288" elapsed="0.877949"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:49.502239" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="3 tháng"]'.</msg>
-<msg time="2026-05-13T19:21:49.610040" level="INFO">xpath criteria: //android.widget.Button[@content-desc="3 tháng"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:49.501237" elapsed="0.109801"/>
-</kw>
-<arg>${chon_thoi_han_thue}</arg>
-<status status="PASS" start="2026-05-13T19:21:48.622276" elapsed="0.988762"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:50.504212" level="INFO">xpath criteria: //android.view.View[@resource-id="move_in_date"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:49.611038" elapsed="0.893174"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:50.506213" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="move_in_date"]'.</msg>
-<msg time="2026-05-13T19:21:50.607919" level="INFO">xpath criteria: //android.view.View[@resource-id="move_in_date"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:50.504212" elapsed="0.103707"/>
-</kw>
-<arg>${viewing_date_thue_can_ho}</arg>
-<status status="PASS" start="2026-05-13T19:21:49.611038" elapsed="0.996881"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:51.135670" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:50.607919" elapsed="0.527751"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:51.137681" level="INFO">Clicking element 'xpath=//android.widget.Button[contains(@content-desc, 'Today')]'.</msg>
-<msg time="2026-05-13T19:21:51.249625" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:51.136678" elapsed="0.112947"/>
-</kw>
-<arg>${date_picker_today}</arg>
-<status status="PASS" start="2026-05-13T19:21:50.607919" elapsed="0.641706"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:51.250624" elapsed="0.536572"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:51.789195" level="INFO">Clicking element 'accessibility_id=OK'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:51.787196" elapsed="0.118158"/>
-</kw>
-<arg>${btn_ok}</arg>
-<status status="PASS" start="2026-05-13T19:21:51.249625" elapsed="0.655729"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:52.645069" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="occupant_count"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:51.906352" elapsed="0.738717"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:52.647074" level="INFO">Clicking element 'xpath=//android.widget.EditText[@resource-id="occupant_count"]'.</msg>
-<msg time="2026-05-13T19:21:53.841202" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="occupant_count"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:52.645069" elapsed="1.196133"/>
-</kw>
-<arg>${input_so_nguoi_o}</arg>
-<status status="PASS" start="2026-05-13T19:21:51.906352" elapsed="1.935850"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:53.895479" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="occupant_count"]</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:53.842202" elapsed="0.053277"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:53.896481" level="INFO">Clear text field 'xpath=//android.widget.EditText[@resource-id="occupant_count"]'</msg>
-<msg time="2026-05-13T19:21:53.939309" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="occupant_count"]</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:53.895479" elapsed="0.043830"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:53.940310" level="INFO">Typing text '1' into text field 'xpath=//android.widget.EditText[@resource-id="occupant_count"]'</msg>
-<msg time="2026-05-13T19:21:54.510867" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="occupant_count"]</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:53.939309" elapsed="0.571558"/>
-</kw>
-<arg>${input_so_nguoi_o}</arg>
-<arg>${so_nguoi_o}</arg>
-<status status="PASS" start="2026-05-13T19:21:53.842202" elapsed="0.669667"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:54.511869" elapsed="0.547031"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:55.059899" level="INFO">Clicking element 'accessibility_id=Xác nhận'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:55.058900" elapsed="0.068489"/>
-</kw>
-<arg>${btn_xac_nhan}</arg>
-<status status="PASS" start="2026-05-13T19:21:54.511869" elapsed="0.615520"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-13T19:21:58.128746" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-13T19:21:55.127389" elapsed="3.001357"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:58.180477" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đóng"]</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T19:21:58.128746" elapsed="0.051731"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T19:21:58.182483" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đóng"]'.</msg>
-<msg time="2026-05-13T19:21:58.940210" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đóng"]</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T19:21:58.181477" elapsed="0.758733"/>
-</kw>
-<arg>${btn_dong}</arg>
-<status status="PASS" start="2026-05-13T19:21:58.128746" elapsed="0.812465"/>
-</kw>
 <arg>${dt_so_nguoi_o}</arg>
-<status status="PASS" start="2026-05-13T19:21:39.698354" elapsed="19.242857"/>
+<status status="NOT RUN" start="2026-05-13T19:40:24.061157" elapsed="0.000000"/>
 </kw>
 <kw name="Teardown - Close application" owner="keywords">
-<kw name="Close Application" owner="AppiumLibrary">
-<doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2026-05-13T19:21:58.942209" elapsed="0.616381"/>
+<status status="NOT RUN" start="2026-05-13T19:40:24.061157" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-05-13T19:21:58.941211" elapsed="0.617379"/>
-</kw>
-<status status="PASS" start="2026-05-13T19:21:11.028724" elapsed="48.530869"/>
+<status status="FAIL" start="2026-05-13T19:40:22.857093" elapsed="1.204064">WebDriverException: Message: Full reset requires an app capability, use fastReset if app is not provided
+Stacktrace:
+UnknownError: Full reset requires an app capability, use fastReset if app is not provided
+    at getResponseForW3CError (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Full reset requires an app capability, use fastReset if app is not provided
+    at Object.errorWithException (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.initAUT (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:783:24)
+    at AndroidUiautomator2Driver.performSessionExecution (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:611:12)
+    at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:680:5)
+    at AndroidUiautomator2Driver.createSession (C:\Users\PC\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:407:22)
+    at AppiumDriver.createSession (C:\Users\PC\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)</status>
 </test>
-<status status="PASS" start="2026-05-13T19:21:11.021724" elapsed="48.537869"/>
+<status status="FAIL" start="2026-05-13T19:40:22.850085" elapsed="1.211072"/>
 </suite>
-<status status="PASS" start="2026-05-13T19:20:05.133612" elapsed="114.426978"/>
+<status status="FAIL" start="2026-05-13T19:40:20.199081" elapsed="3.863076"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">open_app</stat>
+<stat pass="0" fail="1" skip="0">open_app</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="3" fail="0" skip="0">Tests</stat>
-<stat name="01 Dang Nhap" id="s1-s1" pass="1" fail="0" skip="0">Tests.01 Dang Nhap</stat>
-<stat name="02 Dang Ky Xem Can Ho" id="s1-s2" pass="1" fail="0" skip="0">Tests.02 Dang Ky Xem Can Ho</stat>
-<stat name="03 Thue Can Ho" id="s1-s3" pass="1" fail="0" skip="0">Tests.03 Thue Can Ho</stat>
+<stat name="Tests" id="s1" pass="0" fail="3" skip="0">Tests</stat>
+<stat name="01 Dang Nhap" id="s1-s1" pass="0" fail="1" skip="0">Tests.01 Dang Nhap</stat>
+<stat name="02 Dang Ky Xem Can Ho" id="s1-s2" pass="0" fail="1" skip="0">Tests.02 Dang Ky Xem Can Ho</stat>
+<stat name="03 Thue Can Ho" id="s1-s3" pass="0" fail="1" skip="0">Tests.03 Thue Can Ho</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-05-13T19:40:21.585683" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-13T19:40:21.588682" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-13T19:40:22.847561" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-13T19:40:24.060166" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>

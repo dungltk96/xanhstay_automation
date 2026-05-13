@@ -6,9 +6,9 @@ TC_01_Dang_ky_xem_can_ho_thanh_cong
     [Tags]    open_app
     Setup-Open Application
 
-    Thuc Hien Dang Nhap    ${phone_number}    ${password}
+    Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
 
-    Thuc Hien Dang Ky Xem Can Ho Khi Login    ${ho_ten}    ${email}    ${phone_number}
+    Thuc Hien Dang Ky Can Ho Khi Chua Login    ${dt_ho_ten}    ${dt_email}    ${dt_phone_number}
 
     Teardown - Close Application
 
