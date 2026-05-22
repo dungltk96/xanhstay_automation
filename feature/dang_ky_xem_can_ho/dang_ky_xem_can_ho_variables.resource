@@ -1,18 +1,61 @@
 *** Variables ***
-#Nút bấm
-${btn_xem_chi_tiet_can_ho}    xpath=(//android.widget.Button[@content-desc="Xem chi tiết"])[1]
-${btn_dang_ky_xem_can_ho}    xpath=//android.widget.Button[@content-desc="Đăng ký xem căn hộ"]
-
-${viewing_date_xem_can_ho}    xpath=//android.view.View[@resource-id="viewing_date"]
-#${date_picker_today}    xpath=//android.widget.Button[contains(@content-desc, 'Today')]
-${btn_chon}    accessibility_id=Chọn
-
-#Các trường thông tin khác
-${input_ho_ten}    xpath=//android.view.View[@resource-id="full_name"]
-${input_email}    xpath=//android.view.View[@resource-id="email"]
-${input_so_dien_thoai}    xpath=//android.view.View[@resource-id="form_phone_number"]
+#Nút bấm và Form
+${btn_dang_ky_xem_can_ho}    accessibility_id=Đăng ký xem căn hộ
+${viewing_date_xem_can_ho}    id=viewing_date
+#${viewing_date_xem_can_ho}    xpath=//android.view.View[@content-desc="Ngày xem *"]/following-sibling::android.view.View[1]
+${btn_chon}    xpath=//android.widget.Button[@content-desc="Chọn"]
+${btn_xem_chi_tiet_can_ho_da_thue}    xpath=//*[contains(@content-desc, '[Đã thuê] Cho thuê căn hộ cao cấp')]//*[@content-desc='Xem chi tiết']
 ${btn_xac_nhan}    accessibility_id=Xác nhận
 ${btn_huy_bo}    accessibility_id=Hủy bỏ
+${lbl_da_dang_ky_lich}    xpath=//android.view.View[contains(@content-desc, 'Bạn đã đăng ký xem căn hộ này vào ngày')]
 
-#Thông báo thành công
-${msg_thanh_cong}    thành công
+#Các trường thông tin nhập liệu (Chỉ dùng để điền, không lấy data ở đây)
+${input_ho_ten}    id=full_name
+${input_email}    id=email
+${input_so_dien_thoai}    id=form_phone_number
+
+#${input_ho_ten}    xpath=//android.view.View[@content-desc="Họ và tên *"]/following-sibling::android.view.View[1]
+#${input_email}    xpath=//android.view.View[@content-desc="Email *"]/following-sibling::android.view.View[1]
+#${input_so_dien_thoai}    xpath=//android.view.View[@content-desc="Số điện thoại *"]/following-sibling::android.view.View[1]
+
+#UI màn chi tiết căn hộ (dùng để lấy data gốc lưu vào dictionary)
+${ngay_xem_phong_man_dang_ky_can_ho}    xpath=//android.widget.Button[contains(@content-desc, 'Today')]
+${sdt_chu_tro_man_chi_tiet_can_ho}      accessibility_id=Liên hệ:
+#${dia_chi_can_ho_man_chi_tiet_can_ho}
+${ten_can_ho_man_chi_tiet_can_ho}    accessibility_id=Tên căn hộ:
+
+#UI màn hình module [Yêu cầu xem phòng] (dùng để lấy data thực tế so sánh)
+${ngay_xem_phong_man_ycxp}
+${sdt_chu_tro_man_ycxp}
+${dia_chi_can_ho_man_ycxp}    xpath=
+${ten_can_ho_man_ycxp}
+${trang_thai_man_ycxp}
+
+#Thông báo từ hệ thống
+${msg_dat_lich_thanh_cong}    Bạn đã đặt lịch xem phòng thành công.
+${msg_doi_lich_thanh_cong}    Bạn đã đổi lịch xem phòng thành công.
+${msg_loi_can_ho_da_cho_thue}    Căn hộ đang có người ở hoặc đã ngừng sử dụng, không thể đặt lịch xem!
+
+#Khởi tạo biến dictionary trống (global variable)
+&{dic_thong_tin_yeu_cau_xem_can_ho}    sdt_can_ho=${NONE}    dia_chi_can_ho=${NONE}    ten_can_ho=${NONE}    ngay_xem_can_ho=${NONE}
+
+
+
+
+
+
+##Locator = ID
+##Nút bấm
+#${btn_dang_ky_xem_can_ho}    accessibility_id=Đăng ký xem căn hộ
+#${viewing_date_xem_can_ho}    id=viewing_date
+#${btn_chon}    accessibility_id=Chọn
+#
+##Các trường thông tin khác
+#${input_ho_ten}    id=full_name
+#${input_email}    id=email
+#${input_so_dien_thoai}    id=form_phone_number
+#${btn_xac_nhan}    accessibility_id=Xác nhận
+#${btn_huy_bo}    accessibility_id=Hủy bỏ
+#
+##Thông báo thành công
+#${msg_thanh_cong}    thành công

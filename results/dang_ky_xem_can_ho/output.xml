@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-13T14:33:14.407579" rpa="false" schemaversion="5">
-<suite id="s1" name="Dang Ky Xem Can Ho" source="D:\xanhstay_automation\tests\dang_ky_xem_can_ho.robot">
-<test id="s1-t1" name="TC_01_Dang_ky_xem_can_ho_thanh_cong" line="5">
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-22T23:45:23.857353" rpa="false" schemaversion="5">
+<suite id="s1" name="02 Dang Ky Xem Can Ho" source="D:\xanhstay_automation\tests\02_dang_ky_xem_can_ho.robot">
+<kw name="Mo Ung Dung Va Dang Nhap He Thong" owner="keywords" type="SETUP">
 <kw name="Setup-Open application" owner="keywords">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>remote_url=${remote_url}</arg>
@@ -12,348 +12,419 @@
 <arg>appPackage=${appPackage}</arg>
 <arg>appActivity=${appActivity}</arg>
 <arg>noReset=${noReset}</arg>
+<arg>fullReset=${fullReset}</arg>
+<arg>disableIdLocatorAutocompletion=${disableIdLocatorAutocompletion}</arg>
 <doc>Opens a new application to the given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-13T14:33:14.594179" elapsed="5.581014"/>
+<status status="PASS" start="2026-05-22T23:45:24.087227" elapsed="5.636578"/>
 </kw>
-<status status="PASS" start="2026-05-13T14:33:14.593186" elapsed="5.582007"/>
+<status status="PASS" start="2026-05-22T23:45:24.087227" elapsed="5.637581"/>
 </kw>
 <kw name="Thuc Hien Dang Nhap" owner="dang_nhap_keywords">
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:24.695307" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
+<msg time="2026-05-22T23:45:34.141302" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:20.176193" elapsed="4.519114"/>
+<status status="PASS" start="2026-05-22T23:45:29.724808" elapsed="4.416494"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:24.697309" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]'.</msg>
-<msg time="2026-05-13T14:33:24.844048" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]</msg>
+<msg time="2026-05-22T23:45:34.144307" level="INFO">Clicking element 'xpath=//*[@bounds='[60,2762][270,2972]']'.</msg>
+<msg time="2026-05-22T23:45:38.664507" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:24.695307" elapsed="0.148741"/>
+<status status="PASS" start="2026-05-22T23:45:34.141302" elapsed="4.524206"/>
 </kw>
 <arg>${btn_menu}</arg>
-<status status="PASS" start="2026-05-13T14:33:20.176193" elapsed="4.667855"/>
+<status status="PASS" start="2026-05-22T23:45:29.724808" elapsed="8.940700"/>
+</kw>
+<kw name="Common - Click Element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-22T23:45:38.700494" level="INFO">criteria is btn_menu_personal</msg>
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-22T23:45:38.665508" elapsed="0.034986"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-05-22T23:45:38.702496" level="INFO">Clicking element 'id=btn_menu_personal'.</msg>
+<msg time="2026-05-22T23:45:43.369572" level="INFO">criteria is btn_menu_personal</msg>
+<arg>${locator}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-22T23:45:38.700494" elapsed="4.669078"/>
+</kw>
+<arg>${btn_option_ca_nhan}</arg>
+<status status="PASS" start="2026-05-22T23:45:38.665508" elapsed="4.705075"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:24.844048" elapsed="4.379056"/>
+<status status="PASS" start="2026-05-22T23:45:43.370583" elapsed="0.040643"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:29.225115" level="INFO">Clicking element 'accessibility_id=Cá nhân'.</msg>
+<msg time="2026-05-22T23:45:43.415224" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:29.224103" elapsed="0.112387"/>
+<status status="PASS" start="2026-05-22T23:45:43.411226" elapsed="0.875004"/>
 </kw>
-<arg>${btn_ca_nhan}</arg>
-<status status="PASS" start="2026-05-13T14:33:24.844048" elapsed="4.492442"/>
+<arg>${btn_open_form_login}</arg>
+<status status="PASS" start="2026-05-22T23:45:43.370583" elapsed="0.915647"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-22T23:45:44.324552" level="INFO">criteria is login_phone_number</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:29.337490" elapsed="4.596905"/>
+<status status="PASS" start="2026-05-22T23:45:44.287227" elapsed="0.037325"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:33.937382" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
+<msg time="2026-05-22T23:45:44.326555" level="INFO">Clicking element 'id=login_phone_number'.</msg>
+<msg time="2026-05-22T23:45:44.399110" level="INFO">criteria is login_phone_number</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:33.935399" elapsed="0.967156"/>
-</kw>
-<arg>${btn_open_login}</arg>
-<status status="PASS" start="2026-05-13T14:33:29.337490" elapsed="5.566061"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:35.069261" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:34.904555" elapsed="0.164706"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:35.071271" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Số điện thoại']'.</msg>
-<msg time="2026-05-13T14:33:35.202271" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:35.069261" elapsed="0.133010"/>
+<status status="PASS" start="2026-05-22T23:45:44.324552" elapsed="0.075607"/>
 </kw>
 <arg>${input_phone_number}</arg>
-<status status="PASS" start="2026-05-13T14:33:34.903551" elapsed="0.298720"/>
+<status status="PASS" start="2026-05-22T23:45:44.286230" elapsed="0.113929"/>
 </kw>
 <kw name="Common - Input Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:36.239499" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
+<msg time="2026-05-22T23:45:45.404269" level="INFO">criteria is login_phone_number</msg>
 <arg>${input_locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:35.203503" elapsed="1.035996"/>
+<status status="PASS" start="2026-05-22T23:45:44.400159" elapsed="1.004110"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:36.241576" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T14:33:36.341782" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
+<msg time="2026-05-22T23:45:45.406268" level="INFO">Clear text field 'id=login_phone_number'</msg>
+<msg time="2026-05-22T23:45:45.443825" level="INFO">criteria is login_phone_number</msg>
 <arg>${input_locator}</arg>
 <doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:36.239499" elapsed="0.102283"/>
+<status status="PASS" start="2026-05-22T23:45:45.404269" elapsed="0.039556"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:36.343787" level="INFO">Typing text '0989628827' into text field 'xpath=//android.widget.EditText[@hint='Số điện thoại']'</msg>
-<msg time="2026-05-13T14:33:36.426632" level="INFO">xpath criteria: //android.widget.EditText[@hint='Số điện thoại']</msg>
+<msg time="2026-05-22T23:45:45.445832" level="INFO">Typing text '0989628827' into text field 'id=login_phone_number'</msg>
+<msg time="2026-05-22T23:45:45.486802" level="INFO">criteria is login_phone_number</msg>
 <arg>${input_locator}</arg>
 <arg>${value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:36.341782" elapsed="0.084850"/>
+<status status="PASS" start="2026-05-22T23:45:45.443825" elapsed="0.042977"/>
 </kw>
 <arg>${input_phone_number}</arg>
 <arg>${so_dien_thoai}</arg>
-<status status="PASS" start="2026-05-13T14:33:35.202271" elapsed="1.224361"/>
+<status status="PASS" start="2026-05-22T23:45:44.400159" elapsed="1.087639"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:37.021931" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<msg time="2026-05-22T23:45:46.026687" level="INFO">criteria is login_password</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:36.427627" elapsed="0.594304"/>
+<status status="PASS" start="2026-05-22T23:45:45.487798" elapsed="0.539889"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:37.023930" level="INFO">Clicking element 'xpath=//android.widget.EditText[@hint='Mật khẩu']'.</msg>
-<msg time="2026-05-13T14:33:37.178584" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<msg time="2026-05-22T23:45:46.030205" level="INFO">Clicking element 'id=login_password'.</msg>
+<msg time="2026-05-22T23:45:46.704374" level="INFO">criteria is login_password</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:37.022931" elapsed="0.155653"/>
+<status status="PASS" start="2026-05-22T23:45:46.027687" elapsed="0.676687"/>
 </kw>
 <arg>${input_password}</arg>
-<status status="PASS" start="2026-05-13T14:33:36.426632" elapsed="0.751952"/>
+<status status="PASS" start="2026-05-22T23:45:45.487798" elapsed="1.216576"/>
 </kw>
 <kw name="Common - Input Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:37.885189" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<msg time="2026-05-22T23:45:46.740360" level="INFO">criteria is login_password</msg>
 <arg>${input_locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:37.178584" elapsed="0.706605"/>
+<status status="PASS" start="2026-05-22T23:45:46.705374" elapsed="0.034986"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:37.889195" level="INFO">Clear text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T14:33:38.021584" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<msg time="2026-05-22T23:45:46.742355" level="INFO">Clear text field 'id=login_password'</msg>
+<msg time="2026-05-22T23:45:46.775349" level="INFO">criteria is login_password</msg>
 <arg>${input_locator}</arg>
 <doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:37.886191" elapsed="0.135393"/>
+<status status="PASS" start="2026-05-22T23:45:46.740360" elapsed="0.034989"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:38.022597" level="INFO">Typing text 'Dung123@' into text field 'xpath=//android.widget.EditText[@hint='Mật khẩu']'</msg>
-<msg time="2026-05-13T14:33:38.097937" level="INFO">xpath criteria: //android.widget.EditText[@hint='Mật khẩu']</msg>
+<msg time="2026-05-22T23:45:46.777332" level="INFO">Typing text 'Dung123@' into text field 'id=login_password'</msg>
+<msg time="2026-05-22T23:45:46.811506" level="INFO">criteria is login_password</msg>
 <arg>${input_locator}</arg>
 <arg>${value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:38.021584" elapsed="0.076353"/>
+<status status="PASS" start="2026-05-22T23:45:46.775349" elapsed="0.036157"/>
 </kw>
 <arg>${input_password}</arg>
 <arg>${mat_khau}</arg>
-<status status="PASS" start="2026-05-13T14:33:37.178584" elapsed="0.919353"/>
+<status status="PASS" start="2026-05-22T23:45:46.705374" elapsed="0.106132"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:38.720853" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
+<msg time="2026-05-22T23:45:47.369019" level="INFO">criteria is btn_login</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:38.097937" elapsed="0.622916"/>
+<status status="PASS" start="2026-05-22T23:45:46.812494" elapsed="0.556525"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:38.722866" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đăng nhập"]'.</msg>
-<msg time="2026-05-13T14:33:43.538556" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng nhập"]</msg>
+<msg time="2026-05-22T23:45:47.371026" level="INFO">Clicking element 'id=btn_login'.</msg>
+<msg time="2026-05-22T23:45:51.871154" level="INFO">criteria is btn_login</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:38.720853" elapsed="4.817703"/>
+<status status="PASS" start="2026-05-22T23:45:47.369019" elapsed="4.502135"/>
 </kw>
-<arg>${btn_login}</arg>
-<status status="PASS" start="2026-05-13T14:33:38.097937" elapsed="5.440619"/>
+<arg>${btn_nav_login}</arg>
+<status status="PASS" start="2026-05-22T23:45:46.811506" elapsed="5.059648"/>
 </kw>
 <arg>${dt_phone_number}</arg>
 <arg>${dt_password}</arg>
-<status status="PASS" start="2026-05-13T14:33:20.176193" elapsed="23.362363"/>
+<status status="PASS" start="2026-05-22T23:45:29.724808" elapsed="22.146346"/>
 </kw>
-<kw name="Thuc Hien Dang Ky Can Ho Khi Chua Login" owner="dang_ky_xem_can_ho_keywords">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[Info] Đã mở App và Đăng nhập thành công!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-22T23:45:51.872149" elapsed="0.000000"/>
+</kw>
+<arg>${dt_phone_number}</arg>
+<arg>${dt_password}</arg>
+<doc>Gộp bước mở Appium và Đăng nhập để dùng cho Suite Setup</doc>
+<status status="PASS" start="2026-05-22T23:45:24.087227" elapsed="27.784922"/>
+</kw>
+<test id="s1-t1" name="TC_01_Dang_ky_xem_can_ho_thanh_cong" line="7">
+<kw name="Thuc Hien Dang ky Xem Can Ho" owner="dang_ky_xem_can_ho_keywords">
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:43.691965" level="INFO">xpath criteria: (//android.widget.Button[@content-desc="Xem chi tiết"])[1]</msg>
+<msg time="2026-05-22T23:45:51.947858" level="INFO">xpath criteria: //*[@bounds='[368,2792][606,2942]']</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:43.539559" elapsed="0.152406"/>
+<status status="PASS" start="2026-05-22T23:45:51.873149" elapsed="0.074709"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:43.693951" level="INFO">Clicking element 'xpath=(//android.widget.Button[@content-desc="Xem chi tiết"])[1]'.</msg>
-<msg time="2026-05-13T14:33:44.696019" level="INFO">xpath criteria: (//android.widget.Button[@content-desc="Xem chi tiết"])[1]</msg>
+<msg time="2026-05-22T23:45:51.951383" level="INFO">Clicking element 'xpath=//*[@bounds='[368,2792][606,2942]']'.</msg>
+<msg time="2026-05-22T23:45:56.573541" level="INFO">xpath criteria: //*[@bounds='[368,2792][606,2942]']</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:43.691965" elapsed="1.004054"/>
+<status status="PASS" start="2026-05-22T23:45:51.949363" elapsed="4.624178"/>
+</kw>
+<arg>${menu_tim_nha}</arg>
+<status status="PASS" start="2026-05-22T23:45:51.873149" elapsed="4.700392"/>
+</kw>
+<kw name="Common - Click Element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-22T23:45:56.640504" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id='btn_view_ads_detail'][1]</msg>
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-22T23:45:56.575547" elapsed="0.064957"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-05-22T23:45:56.643506" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@resource-id='btn_view_ads_detail'][1]'.</msg>
+<msg time="2026-05-22T23:45:57.561003" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id='btn_view_ads_detail'][1]</msg>
+<arg>${locator}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-22T23:45:56.640504" elapsed="0.920499"/>
 </kw>
 <arg>${btn_xem_chi_tiet_can_ho}</arg>
-<status status="PASS" start="2026-05-13T14:33:43.539559" elapsed="1.156460"/>
+<status status="PASS" start="2026-05-22T23:45:56.574543" elapsed="0.986460"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:44.835823" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng ký xem căn hộ"]</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:44.696019" elapsed="0.139804"/>
+<status status="PASS" start="2026-05-22T23:45:57.561003" elapsed="0.052192"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:44.840828" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Đăng ký xem căn hộ"]'.</msg>
-<msg time="2026-05-13T14:33:45.052091" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Đăng ký xem căn hộ"]</msg>
+<msg time="2026-05-22T23:45:57.616212" level="INFO">Clicking element 'accessibility_id=Đăng ký xem căn hộ'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:44.836827" elapsed="0.215264"/>
+<status status="PASS" start="2026-05-22T23:45:57.614214" elapsed="0.882251"/>
 </kw>
 <arg>${btn_dang_ky_xem_can_ho}</arg>
-<status status="PASS" start="2026-05-13T14:33:44.696019" elapsed="0.356072"/>
+<status status="PASS" start="2026-05-22T23:45:57.561003" elapsed="0.935462"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:46.063907" level="INFO">xpath criteria: //android.view.View[@resource-id="viewing_date"]</msg>
+<msg time="2026-05-22T23:45:58.529210" level="INFO">criteria is viewing_date</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:45.053084" elapsed="1.011808"/>
+<status status="PASS" start="2026-05-22T23:45:58.496465" elapsed="0.032745"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:46.066883" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="viewing_date"]'.</msg>
-<msg time="2026-05-13T14:33:46.213140" level="INFO">xpath criteria: //android.view.View[@resource-id="viewing_date"]</msg>
+<msg time="2026-05-22T23:45:58.531491" level="INFO">Clicking element 'id=viewing_date'.</msg>
+<msg time="2026-05-22T23:45:58.594209" level="INFO">criteria is viewing_date</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:46.064892" elapsed="0.148248"/>
+<status status="PASS" start="2026-05-22T23:45:58.529210" elapsed="0.064999"/>
 </kw>
 <arg>${viewing_date_xem_can_ho}</arg>
-<status status="PASS" start="2026-05-13T14:33:45.053084" elapsed="1.161052"/>
+<status status="PASS" start="2026-05-22T23:45:58.496465" elapsed="0.097744"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:46.850608" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
+<msg time="2026-05-22T23:45:59.426312" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:46.215125" elapsed="0.635483"/>
+<status status="PASS" start="2026-05-22T23:45:58.594209" elapsed="0.832103"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:46.852603" level="INFO">Clicking element 'xpath=//android.widget.Button[contains(@content-desc, 'Today')]'.</msg>
-<msg time="2026-05-13T14:33:47.043994" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
+<msg time="2026-05-22T23:45:59.428309" level="INFO">Clicking element 'xpath=//android.widget.Button[contains(@content-desc, 'Today')]'.</msg>
+<msg time="2026-05-22T23:46:00.039097" level="INFO">xpath criteria: //android.widget.Button[contains(@content-desc, 'Today')]</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:46.850608" elapsed="0.193386"/>
+<status status="PASS" start="2026-05-22T23:45:59.426312" elapsed="0.612785"/>
 </kw>
 <arg>${date_picker_today}</arg>
-<status status="PASS" start="2026-05-13T14:33:46.214136" elapsed="0.829858"/>
+<status status="PASS" start="2026-05-22T23:45:58.594209" elapsed="1.444888"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-05-22T23:46:00.121452" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Chọn"]</msg>
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:47.045005" elapsed="0.561906"/>
+<status status="PASS" start="2026-05-22T23:46:00.039097" elapsed="0.082355"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:47.608475" level="INFO">Clicking element 'accessibility_id=Chọn'.</msg>
+<msg time="2026-05-22T23:46:00.123454" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Chọn"]'.</msg>
+<msg time="2026-05-22T23:46:00.896404" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Chọn"]</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:47.606911" elapsed="0.146240"/>
+<status status="PASS" start="2026-05-22T23:46:00.122452" elapsed="0.773952"/>
 </kw>
 <arg>${btn_chon}</arg>
-<status status="PASS" start="2026-05-13T14:33:47.043994" elapsed="0.710155"/>
+<status status="PASS" start="2026-05-22T23:46:00.039097" elapsed="0.857307"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2026-05-22T23:46:00.939068" level="INFO">xpath criteria: //android.view.View[@content-desc="Họ và tên *"]/following-sibling::android.view.View[1]</msg>
+<arg>${input_ho_ten}</arg>
+<arg>30s</arg>
+<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-22T23:46:00.896404" elapsed="0.042664"/>
 </kw>
 <kw name="Get Text" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:48.505124" level="INFO">Element 'xpath=//android.view.View[@resource-id="full_name"]' text is 'Kim Dung' </msg>
-<msg time="2026-05-13T14:33:48.505124" level="INFO">xpath criteria: //android.view.View[@resource-id="full_name"]</msg>
-<msg time="2026-05-13T14:33:48.505124" level="INFO">${actual_ho_ten} = Kim Dung</msg>
+<msg time="2026-05-22T23:46:00.994367" level="INFO">Element 'xpath=//android.view.View[@content-desc="Họ và tên *"]/following-sibling::android.view.View[1]' text is 'LÊ THỊ KIM DUNG' </msg>
+<msg time="2026-05-22T23:46:00.994367" level="INFO">xpath criteria: //android.view.View[@content-desc="Họ và tên *"]/following-sibling::android.view.View[1]</msg>
+<msg time="2026-05-22T23:46:00.995367" level="INFO">${actual_ho_ten} = LÊ THỊ KIM DUNG</msg>
 <var>${actual_ho_ten}</var>
 <arg>${input_ho_ten}</arg>
 <doc>Returns the text of the element with the ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:47.754149" elapsed="0.750975"/>
+<status status="PASS" start="2026-05-22T23:46:00.939068" elapsed="0.056299"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${dt_ho_ten}</arg>
 <arg>${actual_ho_ten}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-13T14:33:48.505124" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-22T23:46:00.995367" elapsed="0.000000"/>
 </kw>
 <kw name="Get Text" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:48.609331" level="INFO">Element 'xpath=//android.view.View[@resource-id="email"]' text is 'dungltk96@gmail.com' </msg>
-<msg time="2026-05-13T14:33:48.609331" level="INFO">xpath criteria: //android.view.View[@resource-id="email"]</msg>
-<msg time="2026-05-13T14:33:48.609331" level="INFO">${actual_email} = dungltk96@gmail.com</msg>
+<msg time="2026-05-22T23:46:01.053251" level="INFO">Element 'xpath=//android.view.View[@content-desc="Email *"]/following-sibling::android.view.View[1]' text is 'dungltk96@gmail.com' </msg>
+<msg time="2026-05-22T23:46:01.053251" level="INFO">xpath criteria: //android.view.View[@content-desc="Email *"]/following-sibling::android.view.View[1]</msg>
+<msg time="2026-05-22T23:46:01.053251" level="INFO">${actual_email} = dungltk96@gmail.com</msg>
 <var>${actual_email}</var>
 <arg>${input_email}</arg>
 <doc>Returns the text of the element with the ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:48.505124" elapsed="0.104207"/>
+<status status="PASS" start="2026-05-22T23:46:00.995367" elapsed="0.057884"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${dt_email}</arg>
 <arg>${actual_email}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-13T14:33:48.609331" elapsed="0.000992"/>
+<status status="PASS" start="2026-05-22T23:46:01.053251" elapsed="0.000000"/>
 </kw>
 <kw name="Get Text" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:48.691041" level="INFO">Element 'xpath=//android.view.View[@resource-id="form_phone_number"]' text is '0989628827' </msg>
-<msg time="2026-05-13T14:33:48.691041" level="INFO">xpath criteria: //android.view.View[@resource-id="form_phone_number"]</msg>
-<msg time="2026-05-13T14:33:48.691041" level="INFO">${actual_so_dien_thoai} = 0989628827</msg>
+<msg time="2026-05-22T23:46:01.106648" level="INFO">Element 'xpath=//android.view.View[@content-desc="Số điện thoại *"]/following-sibling::android.view.View[1]' text is '0989628827' </msg>
+<msg time="2026-05-22T23:46:01.106648" level="INFO">xpath criteria: //android.view.View[@content-desc="Số điện thoại *"]/following-sibling::android.view.View[1]</msg>
+<msg time="2026-05-22T23:46:01.106648" level="INFO">${actual_so_dien_thoai} = 0989628827</msg>
 <var>${actual_so_dien_thoai}</var>
 <arg>${input_so_dien_thoai}</arg>
 <doc>Returns the text of the element with the ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:48.610323" elapsed="0.080718"/>
+<status status="PASS" start="2026-05-22T23:46:01.053251" elapsed="0.054405"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${dt_phone_number}</arg>
 <arg>${actual_so_dien_thoai}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-13T14:33:48.691041" elapsed="0.000989"/>
+<status status="PASS" start="2026-05-22T23:46:01.107656" elapsed="0.000000"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-13T14:33:48.692030" elapsed="0.053681"/>
+<status status="PASS" start="2026-05-22T23:46:01.107656" elapsed="0.037807"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-13T14:33:48.748718" level="INFO">Clicking element 'accessibility_id=Xác nhận'.</msg>
+<msg time="2026-05-22T23:46:01.148461" level="INFO">Clicking element 'accessibility_id=Xác nhận'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-13T14:33:48.746722" elapsed="1.099513"/>
+<status status="PASS" start="2026-05-22T23:46:01.145463" elapsed="0.967178"/>
 </kw>
 <arg>${btn_xac_nhan}</arg>
-<status status="PASS" start="2026-05-13T14:33:48.692030" elapsed="1.154205"/>
+<status status="PASS" start="2026-05-22T23:46:01.107656" elapsed="1.004985"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>${msg_thanh_cong}</arg>
 <doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-05-13T14:33:49.846235" elapsed="0.101360"/>
+<status status="PASS" start="2026-05-22T23:46:02.112641" elapsed="0.062228"/>
 </kw>
 <arg>${dt_ho_ten}</arg>
 <arg>${dt_email}</arg>
 <arg>${dt_phone_number}</arg>
-<status status="PASS" start="2026-05-13T14:33:43.539559" elapsed="6.408036"/>
+<status status="PASS" start="2026-05-22T23:45:51.873149" elapsed="10.301720"/>
 </kw>
-<kw name="Teardown - Close application" owner="keywords">
+<kw name="Go Back" owner="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" start="2026-05-22T23:46:02.174869" elapsed="0.072697"/>
+</kw>
+<doc>Đăng ký xem căn hộ thành công</doc>
+<tag>flow</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-05-22T23:45:51.872149" elapsed="10.375417"/>
+</test>
+<test id="s1-t2" name="TC_02_Dang_ky_xem_can_ho_da_bi_thue" line="13">
+<if>
+<branch type="IF" condition="${can_ho_da_thue_status}">
+<kw name="Skip" owner="BuiltIn">
+<msg time="2026-05-22T23:46:02.250082" level="SKIP">Skip chức năng Đăng ký căn hộ bị thuê</msg>
+<arg>Skip chức năng Đăng ký căn hộ bị thuê</arg>
+<doc>Skips the rest of the current test.</doc>
+<status status="SKIP" start="2026-05-22T23:46:02.250082" elapsed="0.000000">Skip chức năng Đăng ký căn hộ bị thuê</status>
+</kw>
+<status status="SKIP" start="2026-05-22T23:46:02.249076" elapsed="0.001006">Skip chức năng Đăng ký căn hộ bị thuê</status>
+</branch>
+<branch type="ELSE">
+<kw name="Thuc Hien Dang Ky Can Ho Da Thue" owner="dang_ky_xem_can_ho_keywords">
+<status status="NOT RUN" start="2026-05-22T23:46:02.251092" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-05-22T23:46:02.250082" elapsed="0.001010"/>
+</branch>
+<status status="SKIP" start="2026-05-22T23:46:02.249076" elapsed="0.002016">Skip chức năng Đăng ký căn hộ bị thuê</status>
+</if>
+<doc>Đăng ký xem căn hộ đã bị thuê</doc>
+<tag>flow</tag>
+<status status="SKIP" start="2026-05-22T23:46:02.249076" elapsed="0.002016">Skip chức năng Đăng ký căn hộ bị thuê</status>
+</test>
+<kw name="Teardown - Close application" owner="keywords" type="TEARDOWN">
 <kw name="Close Application" owner="AppiumLibrary">
 <doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2026-05-13T14:33:49.948593" elapsed="0.560683"/>
+<status status="PASS" start="2026-05-22T23:46:02.252082" elapsed="0.548933"/>
 </kw>
-<status status="PASS" start="2026-05-13T14:33:49.947595" elapsed="0.561681"/>
+<status status="PASS" start="2026-05-22T23:46:02.252082" elapsed="0.548933"/>
 </kw>
-<tag>open_app</tag>
-<status status="PASS" start="2026-05-13T14:33:14.593186" elapsed="35.916090"/>
-</test>
-<status status="PASS" start="2026-05-13T14:33:14.408579" elapsed="36.101698"/>
+<status status="PASS" start="2026-05-22T23:45:23.858799" elapsed="38.942216"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="1">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">open_app</stat>
+<stat pass="1" fail="0" skip="1">flow</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Dang Ky Xem Can Ho" id="s1" pass="1" fail="0" skip="0">Dang Ky Xem Can Ho</stat>
+<stat name="02 Dang Ky Xem Can Ho" id="s1" pass="1" fail="0" skip="1">02 Dang Ky Xem Can Ho</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-05-22T23:45:24.080719" level="WARN">Imported resource file 'D:\xanhstay_automation\feature\thanh_toan_hoa_don\thanh_toan_hoa_don.variables.resource' is empty.</msg>
+<msg time="2026-05-22T23:45:24.085231" level="WARN">Imported resource file 'D:\xanhstay_automation\feature\quang_cao\danh_sach_quang_cao.variables.resource' is empty.</msg>
 </errors>
 </robot>

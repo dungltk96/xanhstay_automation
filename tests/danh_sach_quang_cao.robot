@@ -4,8 +4,6 @@ Test Setup    Setup-Open Application
 Test Teardown    Teardown - Close Application
 
 *** Test Cases ***
-TC_01_Thue_can_ho_thanh_cong
-    [Documentation]    Đăng ký thuê căn hộ thành công
-    [Tags]    smoke
+TC_MAU
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
-    Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}
+    Di Vao Man Hinh Danh Sach Hoa Don

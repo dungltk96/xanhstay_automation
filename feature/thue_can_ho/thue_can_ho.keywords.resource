@@ -23,7 +23,7 @@ Thuc Hien Thue Can Ho
     Common - Input Element    ${input_so_nguoi_o}    ${so_nguoi_o}
     
     Common - Click Element    ${btn_xac_nhan}
-    Sleep    3s
+    Page Should Contain Text    ${msg_thanh_cong}
     Common - Click Element    ${btn_dong}
 
     
