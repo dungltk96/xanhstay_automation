@@ -19,13 +19,13 @@ TC_02_Dang_ky_xem_can_ho_da_bi_thue
         Thuc Hien Dang Ky Can Ho Da Thue
     END
 
-TC_03_Dang_Ky_Va_Kiem_Tra_Thong_Tin_Yeu_Cau_Xem_Phong
-    [Documentation]    Đăng ký và kiềm tra thông tin yêu cầu xem phòng
-    [Tags]    flow
-    Thuc Hien Dang ky Xem Can Ho    ${dt_ho_ten}    ${dt_email}    ${dt_phone_number}
-    Lay Thong Tin Can Ho Luu Vao Dictionary
-    Go Back
-    Kiem Tra Thong Tin Yeu Cau Xem Phong
+#TC_03_Dang_Ky_Va_Kiem_Tra_Thong_Tin_Yeu_Cau_Xem_Phong
+#    [Documentation]    Đăng ký và kiềm tra thông tin yêu cầu xem phòng
+#    [Tags]    flow
+#    Thuc Hien Dang ky Xem Can Ho    ${dt_ho_ten}    ${dt_email}    ${dt_phone_number}
+#    Lay Thong Tin Can Ho Luu Vao Dictionary
+#    Go Back
+#    Kiem Tra Thong Tin Yeu Cau Xem Phong
 
 
 

@@ -1,5 +1,5 @@
 *** Variables ***
-${lbl_trang_thai}    xpath=//android.view.View[contains(@content-desc, 'Chờ lập hợp đồng')]
+${danh_sach_hop_dong_co_trang_cho_lap_hd}    xpath=//android.view.View[contains(@content-desc, 'Chờ lập hợp đồng')]
 ${btn_detail_yc_hop_dong}    accessibility_id=Chi tiết hợp đồng
 ${locator_chi_tiet_hop_dong}    
 ${tick_checkbox}    xpath=//android.widget.CheckBox

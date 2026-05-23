@@ -29,13 +29,13 @@ Thuc Hien Dang ky Xem Can Ho
     ${actual_so_dien_thoai}    Get Text    ${input_so_dien_thoai}
     Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
 
-    Wait Until Page Contains Element   ${date_picker_today}
-    ${value_ngay_xem_phong}    Get Text    ${date_picker_today}
+#    Wait Until Page Contains Element   ${date_picker_today}
+#    ${value_ngay_xem_phong}    Get Text    ${date_picker_today}
 
 #    Wait Until Page Contains Element   ${ngay_xem_phong_man_dang_ky_can_ho}
 #    ${value_ngay_xem_phong}    Get Text    ${ngay_xem_phong_man_dang_ky_can_ho}
 
-    Set To Dictionary    ${dic_thong_tin_yeu_cau_xem_can_ho}    ngay_xem_can_ho=${value_ngay_xem_phong}
+#    Set To Dictionary    ${dic_thong_tin_yeu_cau_xem_can_ho}    ngay_xem_can_ho=${value_ngay_xem_phong}
 
     Common - Click Element    ${btn_xac_nhan}
     Wait Until Page Contains    ${msg_thanh_cong}

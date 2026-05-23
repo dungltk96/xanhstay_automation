@@ -25,4 +25,4 @@ TC04_De_Trong_SDT_Va_Mat_Khau
     [Documentation]    Bỏ trống trường SĐT và mật khẩu
     [Tags]    verify
     Thuc Hien Dang Nhap That Bai    ${dt_phone_number_null}    ${dt_password_null}
-    Wait Until Page Contains Element    ${msg_loi_dang_nhap_mat_khau}
+    Wait Until Page Contains Element    ${msg_loi_dang_nhap_sdt}

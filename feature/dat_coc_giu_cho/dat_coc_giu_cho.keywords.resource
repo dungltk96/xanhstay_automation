@@ -9,5 +9,5 @@ Thuc Hien Dat Coc Giu Cho
     Sleep    2s
     Common - Click Element    ${btn_tiep_tuc}
     Sleep    3s
-    Wait Until Page Contains Element    ${lbl_nav_thanh_toan_payos}    error=LỖI NGHIỆP VỤ: Đã xác nhận đặt cọc nhưng không chuyển sang màn thanh toán
-    Page Should Contain Element    ${lbl_nav_thanh_toan_payos}
+    Wait Until Page Contains Element    ${nav_ui_thanh_toan_payos}    error=LỖI NGHIỆP VỤ: Đã xác nhận đặt cọc nhưng không chuyển sang màn thanh toán
+    Page Should Contain Element    ${nav_ui_thanh_toan_payos}

@@ -92,3 +92,8 @@ Mo Ung Dung Va Dang Nhap He Thong
     Setup-Open Application
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
     Log To Console         \n[Info] Đã mở App và Đăng nhập thành công!
+
+#Dọn dẹp
+Don Dep Man Hinh Sau Khi Test
+    Run Keyword If Test Failed    Capture Page Screenshot    loi_kich_ban\${test_name}.png
+    Run Keyword And Ignore Error    Go Back

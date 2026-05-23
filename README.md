@@ -1,5 +1,6 @@
 Cách chạy Project
 1. Chạy toàn bộ các kịch bản test: robot -d results/ -v env:product tests/
+2. Chạy toàn bộ TC theo thẻ tag smoke: robot -d D:\xanhstay_automation\results -v env:product -i smoke D:\xanhstay_automation\tests
 2. Chạy TC Đăng nhập: robot -d D:\xanhstay_automation\results\dang_nhap -v env:product D:\xanhstay_automation\tests\01_dang_nhap.robot
 
 -----------Vấn đề khác

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-22T18:58:38.953708" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-05-23T19:07:01.775948" rpa="false" schemaversion="5">
 <suite id="s1" name="01 Dang Nhap" source="D:\xanhstay_automation\tests\01_dang_nhap.robot">
 <test id="s1-t1" name="TC_01_Dang_nhap_thanh_cong" line="7">
 <kw name="Setup-Open application" owner="keywords" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-05-23T19:07:08.725758" elapsed="0.000000">Execution terminated by signal</status>
+</kw>
+<msg time="2026-05-23T19:07:08.728760" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 <arg>remote_url=${remote_url}</arg>
 <arg>automationName=${automationName}</arg>
 <arg>platformName=${platformName}</arg>
@@ -20,535 +25,70 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-22T18:58:39.196741" elapsed="7.900499"/>
+<status status="FAIL" start="2026-05-23T19:07:02.006678" elapsed="6.723082">Execution terminated by signal</status>
 </kw>
-<status status="PASS" start="2026-05-22T18:58:39.196741" elapsed="7.900499"/>
-</kw>
-<kw name="Thuc Hien Dang Nhap Thanh Cong" owner="dang_nhap_keywords">
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:58:56.005889" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:58:47.098250" elapsed="8.907639"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:58:56.008881" level="INFO">Clicking element 'xpath=//*[@bounds='[60,2762][270,2972]']'.</msg>
-<msg time="2026-05-22T18:59:00.721647" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:58:56.005889" elapsed="4.715758"/>
-</kw>
-<arg>${btn_menu}</arg>
-<status status="PASS" start="2026-05-22T18:58:47.098250" elapsed="13.623397"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:00.787329" level="INFO">criteria is btn_menu_personal</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:00.721647" elapsed="0.065682"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:00.789908" level="INFO">Clicking element 'id=btn_menu_personal'.</msg>
-<msg time="2026-05-22T18:59:05.423303" level="INFO">criteria is btn_menu_personal</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:00.788330" elapsed="4.634973"/>
-</kw>
-<arg>${btn_option_ca_nhan}</arg>
-<status status="PASS" start="2026-05-22T18:59:00.721647" elapsed="4.701656"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:05.424304" elapsed="0.072558"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:05.500943" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:05.496862" elapsed="0.900085"/>
-</kw>
-<arg>${btn_open_form_login}</arg>
-<status status="PASS" start="2026-05-22T18:59:05.423303" elapsed="0.973644"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:06.445983" level="INFO">criteria is login_phone_number</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:06.398028" elapsed="0.047955"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:06.447991" level="INFO">Clicking element 'id=login_phone_number'.</msg>
-<msg time="2026-05-22T18:59:06.534818" level="INFO">criteria is login_phone_number</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:06.445983" elapsed="0.089834"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<status status="PASS" start="2026-05-22T18:59:06.396947" elapsed="0.138870"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:07.963501" level="INFO">criteria is login_phone_number</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:06.536818" elapsed="1.426683"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:07.966504" level="INFO">Clear text field 'id=login_phone_number'</msg>
-<msg time="2026-05-22T18:59:08.008998" level="INFO">criteria is login_phone_number</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:07.964502" elapsed="0.044496"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:08.010502" level="INFO">Typing text '0989628827' into text field 'id=login_phone_number'</msg>
-<msg time="2026-05-22T18:59:08.057581" level="INFO">criteria is login_phone_number</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:08.008998" elapsed="0.048583"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<arg>${so_dien_thoai}</arg>
-<status status="PASS" start="2026-05-22T18:59:06.535817" elapsed="1.521764"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:08.623158" level="INFO">criteria is login_password</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:08.058596" elapsed="0.564562"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:08.625161" level="INFO">Clicking element 'id=login_password'.</msg>
-<msg time="2026-05-22T18:59:09.373818" level="INFO">criteria is login_password</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:08.623158" elapsed="0.750660"/>
-</kw>
-<arg>${input_password}</arg>
-<status status="PASS" start="2026-05-22T18:59:08.057581" elapsed="1.316237"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:09.422714" level="INFO">criteria is login_password</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:09.374815" elapsed="0.047899"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:09.424725" level="INFO">Clear text field 'id=login_password'</msg>
-<msg time="2026-05-22T18:59:09.475751" level="INFO">criteria is login_password</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:09.422714" elapsed="0.053037"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:09.477746" level="INFO">Typing text 'Dung123@' into text field 'id=login_password'</msg>
-<msg time="2026-05-22T18:59:09.531174" level="INFO">criteria is login_password</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:09.475751" elapsed="0.055423"/>
-</kw>
-<arg>${input_password}</arg>
-<arg>${mat_khau}</arg>
-<status status="PASS" start="2026-05-22T18:59:09.374815" elapsed="0.156359"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:10.094877" level="INFO">criteria is btn_login</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:09.532173" elapsed="0.562704"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:10.096879" level="INFO">Clicking element 'id=btn_login'.</msg>
-<msg time="2026-05-22T18:59:14.774053" level="INFO">criteria is btn_login</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:10.094877" elapsed="4.679176"/>
-</kw>
-<arg>${btn_nav_login}</arg>
-<status status="PASS" start="2026-05-22T18:59:09.531174" elapsed="5.242879"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-22T18:59:16.774503" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-22T18:59:14.774053" elapsed="2.000450"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:19.635368" level="INFO">xpath criteria: //*[@bounds='[606,2792][844,2942]']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:16.774503" elapsed="2.860865"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:19.637376" level="INFO">Clicking element 'xpath=//*[@bounds='[606,2792][844,2942]']'.</msg>
-<msg time="2026-05-22T18:59:23.603075" level="INFO">xpath criteria: //*[@bounds='[606,2792][844,2942]']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:19.635368" elapsed="3.967707"/>
-</kw>
-<arg>${menu_can_ho_da_luu}</arg>
-<status status="PASS" start="2026-05-22T18:59:16.774503" elapsed="6.828572"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:23.718597" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc, 'Chào mừng')]</msg>
-<arg>${lbl_chao_mung_user}</arg>
-<arg>10s</arg>
-<arg>error=LỖI HỆ THỐNG: Không tìm thấy phần tử hiển thị thông tin Chào mừng tại menu Đã lưu!</arg>
-<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2026-05-22T18:59:23.603075" elapsed="0.115522"/>
-</kw>
-<kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:23.827110" level="INFO">Element 'xpath=//android.widget.ImageView[contains(@content-desc, 'Chào mừng')]' attribute 'content-desc' value 'Chào mừng
-LÊ THỊ KIM DUNG' </msg>
-<msg time="2026-05-22T18:59:23.827110" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc, 'Chào mừng')]</msg>
-<msg time="2026-05-22T18:59:23.827110" level="INFO">${actual_text} = Chào mừng
-LÊ THỊ KIM DUNG</msg>
-<var>${actual_text}</var>
-<arg>${lbl_chao_mung_user}</arg>
-<arg>content-desc</arg>
-<doc>Returns the element attribute using the given ``attribute``, e.g. name, value, etc.</doc>
-<status status="PASS" start="2026-05-22T18:59:23.718597" elapsed="0.108513"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-22T18:59:23.827110" level="INFO">${expected_text} = Chào mừng
-LÊ THỊ KIM DUNG</msg>
-<var>${expected_text}</var>
-<arg>Chào mừng\n${display_name}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-22T18:59:23.827110" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${expected_text}</arg>
-<arg>${actual_text}</arg>
-<arg>msg=LỖI NGHIỆP VỤ: Kết quả thực tế [${actual_text}] không khớp với kết quả mong muốn [${expected_text}]!</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-22T18:59:23.827110" elapsed="0.001001"/>
-</kw>
-<arg>${dt_phone_number}</arg>
-<arg>${dt_password}</arg>
-<arg>${dt_display_name}</arg>
-<status status="PASS" start="2026-05-22T18:58:47.098250" elapsed="36.729861"/>
+<status status="FAIL" start="2026-05-23T19:07:02.006678" elapsed="6.723082">Execution terminated by signal</status>
 </kw>
 <kw name="Teardown - Close application" owner="keywords" type="TEARDOWN">
 <kw name="Close Application" owner="AppiumLibrary">
-<doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2026-05-22T18:59:23.828111" elapsed="0.813940"/>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-05-23T19:07:08.730759" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-05-23T19:07:08.730759" elapsed="0.002002">No application is open</status>
 </kw>
-<status status="PASS" start="2026-05-22T18:59:23.828111" elapsed="0.813940"/>
+<msg time="2026-05-23T19:07:08.735266" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-05-23T19:07:08.736271" level="FAIL">No application is open</msg>
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="FAIL" start="2026-05-23T19:07:08.730759" elapsed="0.005512">No application is open</status>
+</kw>
+<status status="FAIL" start="2026-05-23T19:07:08.730759" elapsed="0.005512">No application is open</status>
 </kw>
 <doc>Đăng nhập thành công</doc>
 <tag>flow</tag>
 <tag>smoke</tag>
-<status status="PASS" start="2026-05-22T18:58:39.195747" elapsed="45.446304"/>
+<status status="FAIL" start="2026-05-23T19:07:02.005683" elapsed="6.730588">Setup failed:
+Execution terminated by signal
+
+Also teardown failed:
+No application is open</status>
 </test>
 <test id="s1-t2" name="TC02_De_Trong_SDT" line="12">
-<kw name="Setup-Open application" owner="keywords" type="SETUP">
-<kw name="Open Application" owner="AppiumLibrary">
-<arg>remote_url=${remote_url}</arg>
-<arg>automationName=${automationName}</arg>
-<arg>platformName=${platformName}</arg>
-<arg>deviceName=${deviceName}</arg>
-<arg>platformVersion=${platformVersion}</arg>
-<arg>appPackage=${appPackage}</arg>
-<arg>appActivity=${appActivity}</arg>
-<arg>noReset=${noReset}</arg>
-<arg>fullReset=${fullReset}</arg>
-<arg>disableIdLocatorAutocompletion=${disableIdLocatorAutocompletion}</arg>
-<doc>Opens a new application to the given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://appium.io/docs/en/2.19/guides/caps/
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-22T18:59:24.643051" elapsed="6.775818"/>
-</kw>
-<status status="PASS" start="2026-05-22T18:59:24.643051" elapsed="6.775818"/>
-</kw>
-<kw name="Thuc Hien Dang Nhap That Bai" owner="dang_nhap_keywords">
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:40.354377" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:31.419863" elapsed="8.935514"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:40.357377" level="INFO">Clicking element 'xpath=//*[@bounds='[60,2762][270,2972]']'.</msg>
-<msg time="2026-05-22T18:59:45.062726" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:40.355377" elapsed="4.707349"/>
-</kw>
-<arg>${btn_menu}</arg>
-<status status="PASS" start="2026-05-22T18:59:31.419863" elapsed="13.642863"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:45.127490" level="INFO">criteria is btn_menu_personal</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:45.062726" elapsed="0.064764"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:45.128504" level="INFO">Clicking element 'id=btn_menu_personal'.</msg>
-<msg time="2026-05-22T18:59:45.208700" level="INFO">criteria is btn_menu_personal</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:45.127490" elapsed="0.081210"/>
-</kw>
-<arg>${btn_option_ca_nhan}</arg>
-<status status="PASS" start="2026-05-22T18:59:45.062726" elapsed="0.145974"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:45.208700" elapsed="4.621154"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:49.831897" level="INFO">Clicking element 'accessibility_id=Đăng nhập'.</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:49.829854" elapsed="0.123175"/>
-</kw>
-<arg>${btn_open_form_login}</arg>
-<status status="PASS" start="2026-05-22T18:59:45.208700" elapsed="4.744329"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:50.774098" level="INFO">criteria is login_phone_number</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:49.954027" elapsed="0.820071"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:50.776098" level="INFO">Clicking element 'id=login_phone_number'.</msg>
-<msg time="2026-05-22T18:59:51.950980" level="INFO">criteria is login_phone_number</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:50.774098" elapsed="1.177882"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<status status="PASS" start="2026-05-22T18:59:49.953029" elapsed="1.998951"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:51.986873" level="INFO">criteria is login_phone_number</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:51.951980" elapsed="0.034893"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:51.988876" level="INFO">Clear text field 'id=login_phone_number'</msg>
-<msg time="2026-05-22T18:59:52.027444" level="INFO">criteria is login_phone_number</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:51.986873" elapsed="0.040571"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:52.028448" level="INFO">Typing text '' into text field 'id=login_phone_number'</msg>
-<msg time="2026-05-22T18:59:52.070685" level="INFO">criteria is login_phone_number</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:52.027444" elapsed="0.043241"/>
-</kw>
-<arg>${input_phone_number}</arg>
-<arg>${so_dien_thoai}</arg>
-<status status="PASS" start="2026-05-22T18:59:51.951980" elapsed="0.118705"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:52.108640" level="INFO">criteria is login_password</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:52.071689" elapsed="0.036951"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:52.111155" level="INFO">Clicking element 'id=login_password'.</msg>
-<msg time="2026-05-22T18:59:52.808990" level="INFO">criteria is login_password</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:52.108640" elapsed="0.700350"/>
-</kw>
-<arg>${input_password}</arg>
-<status status="PASS" start="2026-05-22T18:59:52.071689" elapsed="0.737301"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:52.857057" level="INFO">criteria is login_password</msg>
-<arg>${input_locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:52.810499" elapsed="0.046558"/>
-</kw>
-<kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:52.859057" level="INFO">Clear text field 'id=login_password'</msg>
-<msg time="2026-05-22T18:59:52.903625" level="INFO">criteria is login_password</msg>
-<arg>${input_locator}</arg>
-<doc>Clears the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:52.857057" elapsed="0.046568"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:52.905624" level="INFO">Typing text 'Dung123@' into text field 'id=login_password'</msg>
-<msg time="2026-05-22T18:59:52.959875" level="INFO">criteria is login_password</msg>
-<arg>${input_locator}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:52.903625" elapsed="0.056250"/>
-</kw>
-<arg>${input_password}</arg>
-<arg>${mat_khau}</arg>
-<status status="PASS" start="2026-05-22T18:59:52.809986" elapsed="0.149889"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:53.523204" level="INFO">criteria is btn_login</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T18:59:52.959875" elapsed="0.563329"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T18:59:53.525202" level="INFO">Clicking element 'id=btn_login'.</msg>
-<msg time="2026-05-22T18:59:54.100001" level="INFO">criteria is btn_login</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-22T18:59:53.523204" elapsed="0.576797"/>
-</kw>
-<arg>${btn_nav_login}</arg>
-<status status="PASS" start="2026-05-22T18:59:52.959875" elapsed="1.140126"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-22T18:59:57.101317" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-22T18:59:54.100001" elapsed="3.001316"/>
-</kw>
-<arg>${dt_phone_number_null}</arg>
-<arg>${dt_password}</arg>
-<status status="PASS" start="2026-05-22T18:59:31.419863" elapsed="25.681454"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<arg>${msg_loi_dang_nhap_sdt}</arg>
-<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2026-05-22T18:59:57.101317" elapsed="0.032524"/>
-</kw>
-<kw name="Teardown - Close application" owner="keywords" type="TEARDOWN">
-<kw name="Close Application" owner="AppiumLibrary">
-<doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2026-05-22T18:59:57.134843" elapsed="0.947216"/>
-</kw>
-<status status="PASS" start="2026-05-22T18:59:57.133841" elapsed="0.948218"/>
-</kw>
 <doc>Bỏ trống trường SĐT</doc>
+<tag>robot:exit</tag>
 <tag>verify</tag>
-<status status="PASS" start="2026-05-22T18:59:24.642051" elapsed="33.440008"/>
+<status status="FAIL" start="2026-05-23T19:07:08.737273" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t3" name="TC03_De_Trong_Mat_Khau" line="18">
-<kw name="Setup-Open application" owner="keywords" type="SETUP">
-<kw name="Open Application" owner="AppiumLibrary">
-<arg>remote_url=${remote_url}</arg>
-<arg>automationName=${automationName}</arg>
-<arg>platformName=${platformName}</arg>
-<arg>deviceName=${deviceName}</arg>
-<arg>platformVersion=${platformVersion}</arg>
-<arg>appPackage=${appPackage}</arg>
-<arg>appActivity=${appActivity}</arg>
-<arg>noReset=${noReset}</arg>
-<arg>fullReset=${fullReset}</arg>
-<arg>disableIdLocatorAutocompletion=${disableIdLocatorAutocompletion}</arg>
-<doc>Opens a new application to the given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://appium.io/docs/en/2.19/guides/caps/
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-05-22T18:59:58.084057" elapsed="6.741701"/>
-</kw>
-<status status="PASS" start="2026-05-22T18:59:58.084057" elapsed="6.741701"/>
-</kw>
-<kw name="Thuc Hien Dang Nhap That Bai" owner="dang_nhap_keywords">
-<kw name="Common - Click Element" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-05-22T19:00:13.698638" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
-<arg>${locator}</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-22T19:00:04.826758" elapsed="8.871880"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-05-22T19:00:13.701178" level="INFO">Clicking element 'xpath=//*[@bounds='[60,2762][270,2972]']'.</msg>
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2026-05-22T19:00:18.411205" elapsed="0.000000">Execution terminated by signal</status>
-</kw>
-<msg time="2026-05-22T19:00:18.413202" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<msg time="2026-05-22T19:00:18.413202" level="INFO">xpath criteria: //*[@bounds='[60,2762][270,2972]']</msg>
-<arg>${locator}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="FAIL" start="2026-05-22T19:00:13.698638" elapsed="4.714564">Execution terminated by signal</status>
-</kw>
-<arg>${btn_menu}</arg>
-<status status="FAIL" start="2026-05-22T19:00:04.826758" elapsed="13.586444">Execution terminated by signal</status>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<arg>${btn_option_ca_nhan}</arg>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<arg>${btn_open_form_login}</arg>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<arg>${input_phone_number}</arg>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<arg>${input_phone_number}</arg>
-<arg>${so_dien_thoai}</arg>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<arg>${input_password}</arg>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Common - Input Element" owner="keywords">
-<arg>${input_password}</arg>
-<arg>${mat_khau}</arg>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Common - Click Element" owner="keywords">
-<arg>${btn_nav_login}</arg>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<arg>${dt_phone_number}</arg>
-<arg>${dt_password_null}</arg>
-<status status="FAIL" start="2026-05-22T19:00:04.826758" elapsed="13.587445">Execution terminated by signal</status>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<arg>${msg_loi_dang_nhap_mat_khau}</arg>
-<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2026-05-22T19:00:18.414203" elapsed="0.000000"/>
-</kw>
-<kw name="Teardown - Close application" owner="keywords" type="TEARDOWN">
-<kw name="Close Application" owner="AppiumLibrary">
+<doc>Bỏ trống trường mật khẩu</doc>
+<tag>robot:exit</tag>
+<tag>verify</tag>
+<status status="FAIL" start="2026-05-23T19:07:08.737273" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t4" name="TC04_De_Trong_SDT_Va_Mat_Khau" line="24">
+<doc>Bỏ trống trường SĐT và mật khẩu</doc>
+<tag>robot:exit</tag>
+<tag>verify</tag>
+<status status="FAIL" start="2026-05-23T19:07:08.738272" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2026-05-23T19:07:01.777127" elapsed="6.961145"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="0" fail="1" skip="0">NOT robot:exit</stat>
+<stat pass="0" fail="1" skip="0">flow</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="3" skip="0">verify</stat>
+</tag>
+<suite>
+<stat name="01 Dang Nhap" id="s1" pass="0" fail="4" skip="0">01 Dang Nhap</stat>
+</suite>
+</statistics>
 <errors>
-<msg time="2026-05-22T18:58:39.192747" level="WARN">Imported resource file 'D:\xanhstay_automation\feature\thanh_toan_hoa_don\thanh_toan_hoa_don.variables.resource' is empty.</msg>
-<msg time="2026-05-22T19:00:18.413202" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<msg time="2026-05-22T19:00:19.152514" level="ERROR">Execution stopped by user.</msg>
+<msg time="2026-05-23T19:07:02.004672" level="WARN">Imported resource file 'D:\xanhstay_automation\feature\quang_cao\danh_sach_quang_cao.variables.resource' is empty.</msg>
+<msg time="2026-05-23T19:07:08.728760" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg time="2026-05-23T19:07:08.735266" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
