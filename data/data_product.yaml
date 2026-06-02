@@ -1,7 +1,8 @@
+#===============Dữ liệu app user===============
 #Valid data login 1
 dt_phone_number: "0989628827"
 dt_password: "Dung123@"
-dt_display_name: "LÊ THỊ KIM DUNG"
+dt_display_name: "Lê Thị Kim Dung"
 
 #Valid data login 2
 #dt_phone_number: 0909113113
@@ -12,9 +13,11 @@ dt_phone_number_invalid: "0989628820"
 dt_password_invalid: "Dung123@@"
 dt_phone_number_null: ""
 dt_password_null: ""
+dt_phone_number_space: " 0989628827 "
+dt_password_space: " Dung123@ "
 
 #Dang ky xem phong
-dt_ho_ten: "LÊ THỊ KIM DUNG"
+dt_ho_ten: "Lê Thị Kim Dung"
 dt_email: "dungltk96@gmail.com"
 
 #Thue can ho
@@ -23,6 +26,16 @@ dt_so_nguoi_o: 2
 #So sánh msg lỗi
 dt_msg_loi_mong_muon: "Tài khoản không tồn tại"
 
+#Check SKIP
 kyc_status: True
-
 can_ho_da_thue_status:  True
+
+#===============Dữ liệu app admin===============
+dt_tai_khoan_admin: "dungltk"
+dt_mat_khau_admin: "Dung123@"
+dt_display_name_admin: "Lê Tiến Đạt"
+
+#===============Dữ liệu website===============
+#Dữ liệu webadmin
+ten_tai_khoan_admin: "dungltk"
+mat_khau: "Abc123"

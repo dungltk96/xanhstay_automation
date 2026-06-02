@@ -26,3 +26,15 @@ TC04_De_Trong_SDT_Va_Mat_Khau
     [Tags]    verify
     Thuc Hien Dang Nhap That Bai    ${dt_phone_number_null}    ${dt_password_null}
     Wait Until Page Contains Element    ${msg_loi_dang_nhap_sdt}
+
+#TC_05_Nhap_Khoang_Trang_Dau_Va_Cuoi_Truong_SDT
+#    [Documentation]    Nhập khoảng  trắng đâầu và cuối SĐT
+#    [Tags]    verify
+#    Thuc Hien Dang Nhap Thanh Cong    ${dt_phone_number_space}   ${dt_password}    ${dt_display_name}
+#    Wait Until Page Contains Element    ${msg_loi_dang_nhap_sdt}
+#
+#TC_06_Nhap_Khoang_Trang_Dau_Va_Cuoi_Truong_Mat_Khau
+#    [Documentation]    Nhập khoảng  trắng đâầu và cuối Mật khẩu
+#    [Tags]    verify
+#    Thuc Hien Dang Nhap That Bai    ${dt_phone_number}    ${dt_password_space}
+#    Wait Until Page Contains   Tên đăng nhập hoặc mật khẩu không đúng

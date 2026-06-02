@@ -1,9 +1,11 @@
 *** Variables ***
+${xuong_dong}    ${\n}
 #Nút bấm và Form
 ${btn_dang_ky_xem_can_ho}    accessibility_id=Đăng ký xem căn hộ
 ${viewing_date_xem_can_ho}    id=viewing_date
 #${viewing_date_xem_can_ho}    xpath=//android.view.View[@content-desc="Ngày xem *"]/following-sibling::android.view.View[1]
 ${btn_chon}    xpath=//android.widget.Button[@content-desc="Chọn"]
+${btn_chon_gio_xem}    accessibility_id=08:00
 ${btn_xem_chi_tiet_can_ho_da_thue}    xpath=//*[contains(@content-desc, '[Đã thuê] Cho thuê căn hộ cao cấp')]//*[@content-desc='Xem chi tiết']
 ${btn_xac_nhan}    accessibility_id=Xác nhận
 ${btn_huy_bo}    accessibility_id=Hủy bỏ
@@ -19,17 +21,10 @@ ${input_so_dien_thoai}    id=form_phone_number
 #${input_so_dien_thoai}    xpath=//android.view.View[@content-desc="Số điện thoại *"]/following-sibling::android.view.View[1]
 
 #UI màn chi tiết căn hộ (dùng để lấy data gốc lưu vào dictionary)
-${ngay_xem_phong_man_dang_ky_can_ho}    xpath=//android.widget.Button[contains(@content-desc, 'Today')]
-${sdt_chu_tro_man_chi_tiet_can_ho}      accessibility_id=Liên hệ:
-#${dia_chi_can_ho_man_chi_tiet_can_ho}
-${ten_can_ho_man_chi_tiet_can_ho}    accessibility_id=Tên căn hộ:
-
-#UI màn hình module [Yêu cầu xem phòng] (dùng để lấy data thực tế so sánh)
-${ngay_xem_phong_man_ycxp}
-${sdt_chu_tro_man_ycxp}
-${dia_chi_can_ho_man_ycxp}    xpath=
-${ten_can_ho_man_ycxp}
-${trang_thai_man_ycxp}
+${ngay_xem_phong_man_dang_ky_can_ho}    xpath=//android.view.View[@content-desc='Ngày xem *']/following-sibling::android.view.View[1]
+${sdt_chu_tro_man_chi_tiet_can_ho}      xpath=//android.view.View[@content-desc='Liên hệ:']/following-sibling::android.view.View[1]
+${dia_chi_can_ho_man_chi_tiet_can_ho}    xpath=//android.view.View[contains(@content-desc, 'đánh giá')]/following-sibling::android.view.View[1]
+${ten_can_ho_man_chi_tiet_can_ho}    xpath=//android.view.View[@content-desc='Tên căn hộ:']/following-sibling::android.view.View[1]
 
 #Thông báo từ hệ thống
 ${msg_dat_lich_thanh_cong}    Bạn đã đặt lịch xem phòng thành công.

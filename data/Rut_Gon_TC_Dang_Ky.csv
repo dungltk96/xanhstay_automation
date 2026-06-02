@@ -1,0 +1,14 @@
+﻿*** testcase ***;${fullname};${phone};${email};${password};${confirm_password};${expected_message}
+nhap_ten_dang_nhap_khong_co_space;HoangVanSon;0909123116;test06@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_min_3;Anh Chien;0909123113;test03@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_max_100;Hoang Van AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;0909123114;test04@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_tren_max_101;Hoang Van AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;0909123115;test05@gmail.com;Abc123;Abc123;Tên đăng nhập tối đa 100 ký tự
+nhap_ten_dang_nhap_1_tu;Hoang;0909123117;test07@gmail.com;Abc123;Abc123;Tên đăng nhập phải chứa họ và tên
+nhap_ten_dang_nhap_chua_ky_tu_dac_biet;Hoang@Van#Son;909123120;test10@gmail.com;Abc123;Abc123;Tên đăng nhập không được chứa ký tự đặc biệt
+nhap_ten_dang_nhap_chua_dau_gach_duoi;Hoang_Van_Son;909123121;test11@gmail.com;Abc123;Abc123;Tên đăng nhập không được chứa ký tự đặc biệt
+nhap_ten_dang_nhap_chua_dau_gach_ngang;Hoang-Van-Son;909123122;test12@gmail.com;Abc123;Abc123;Tên đăng nhập không được chứa ký tự đặc biệt
+nhap_ten_dang_nhap_chua_emoji;Hoang 😊 Son;909123123;test13@gmail.com;Abc123;Abc123;Tên đăng nhập không được chứa emoji
+nhap_ten_dang_nhap_chua_tieng_viet_co_dau;Hoàng Văn Sơn;909123124;test14@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_trim_space_dau; Hoang Van Son;909123125;test15@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_trim_space_cuoi;Hoang Van Son ;909123126;test16@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_chi_chua_space;   ${EMPTY};909123127;test17@gmail.com;Abc123;Abc123;Tên đăng nhập không được để trống

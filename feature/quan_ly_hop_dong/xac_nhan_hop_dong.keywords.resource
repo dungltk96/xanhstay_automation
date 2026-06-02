@@ -19,16 +19,12 @@ Di Vao Man Hinh Chi Tiet Hop Dong
     Log To Console    \n[Info] Đã truy cập màn hình Chi tiết hợp đồng thành công!
 
 Di Vao Man Hinh Chi Tiet Hop Dong Hop Le
-    [Documentation]    Tìm data trạng thái [Chờ lập hợp đồng] và click vào chi tiết
+    [Documentation]    Tìm data trạng thái [Chờ lập hợp đồng] và click vào chi tiết hợp đồng đầu tiên
     Common - Click Element    ${btn_menu}
     Common - Click Element    ${btn_option_tim_nha}
     Common - Click Element    ${menu_yeu_cau_ky}
-    
-    Wait Until Page Contains Element    ${locator_chi_tiet_hop_dong}    error:Không tìm thấy locator hợp đồng hợp lệ
-    Common - Click Element    ${locator_chi_tiet_hop_dong}
-    
-    Wait Until Page Contains Element    ${btn_detail_yc_hop_dong}    error:Không kích được vào chi tiết hợp đồng
-    Common - Click Element    ${btn_detail_yc_hop_dong}
+    Common - Vuot Man Hinh Tim Element    ${ds_hop_dong_co_trang_cho_lap_hd_chon_pt01}    3
+    Common - Click Element    ${ds_hop_dong_co_trang_cho_lap_hd_chon_pt01}    Không kích được vào chi tiết hợp đồng
     Log To Console    \n[Info] Đã truy cập màn hình Chi tiết hợp đồng thành công!
 
 # --- THẺ 2: KIỂM CHỨNG GIAO DIỆN (UNTICK) ---
@@ -45,26 +41,26 @@ Kiem Tra Loi Nghiep Vu Chua Xac Thuc KYC
     [Documentation]    Tích checkbox và verify lỗi linh hoạt dựa theo trạng thái Account
     Common - Click Element    ${tick_checkbox}
     Common - Click Element    ${btn_xac_nhan_hop_dong}
-    Wait Until Page Contains    ${cau_thong_bao_mong_doi}
+    Wait Until Page Contains Element    ${cau_thong_bao_mong_doi}
     Log To Console    \n[Pass] TC02: Báo lỗi nghiệp vụ -> ${cau_thong_bao_mong_doi}
-    Wait Until Page Does Not Contain    ${cau_thong_bao_mong_doi}
+    Wait Until Page Does Not Contain Element    ${cau_thong_bao_mong_doi}
 
 Kiem Tra Loi Nghiep Vu Chua Xac Thanh Toán Bill
     [Arguments]    ${cau_thong_bao_mong_doi}
     [Documentation]    Tích checkbox và verify lỗi linh hoạt dựa theo trạng thái Account
     Common - Click Element    ${tick_checkbox}
     Common - Click Element    ${btn_xac_nhan_hop_dong}
-    Wait Until Page Contains    ${cau_thong_bao_mong_doi}
+    Wait Until Page Contains Element    ${cau_thong_bao_mong_doi}
     Log To Console    \n[Pass] TC03: Báo lỗi nghiệp vụ -> ${cau_thong_bao_mong_doi}
-    Wait Until Page Does Not Contain    ${cau_thong_bao_mong_doi}
+    Wait Until Page Does Not Contain Element    ${cau_thong_bao_mong_doi}
 
 Kiem Tra Xac Nhan Hop Dong Thanh Cong
     [Arguments]    ${cau_thong_bao_mong_doi}
     [Documentation]    Tích checkbox và verify lỗi linh hoạt dựa theo trạng thái Account
     Common - Click Element    ${tick_checkbox}
-
-    Wait Until Page Contains    ${cau_thong_bao_mong_doi}
     Common - Click Element    ${btn_xac_nhan_hop_dong}
-    Log To Console    \n[Pass] TC04: Báo lỗi nghiệp vụ -> ${cau_thong_bao_mong_doi}
-    Wait Until Page Does Not Contain    ${cau_thong_bao_mong_doi}
+    Sleep    5s
+    Wait Until Page Contains Element    ${cau_thong_bao_mong_doi}
+    Sleep    3s
+    Wait Until Page Does Not Contain Element   ${cau_thong_bao_mong_doi}
     Common - Click Element    ${btn_dong}
