@@ -37,17 +37,29 @@ Teardown - Close application
     Close Application
 
 Teardown - Chup Anh Va Dong App
-    # 1. Kiểm tra nếu TC bị FAIL thì tiến hành chụp ảnh màn hình
-    Run Keyword If Test Failed    Capture Page Screenshot    ${TEST_NAME}.png
+    # 1. Lấy tên Test Case gốc
+    ${raw_name}=    Set Variable    ${TEST_NAME}
 
-    # 2. Sau khi chụp xong (hoặc nếu Pass không chụp) thì đóng App để dọn dẹp môi trường
+    # 2. Xóa các ký tự cấm của Windows (\ / : * ? " < > |) và thay bằng dấu gạch dưới (_)
+    # Sử dụng Regular Expression (Regexp) để quét sạch một lần
+    ${safe_name}=    Replace String Using Regexp    ${raw_name}    [:\\\\/*?"<>|]    _
+
+    # 3. Xử lý khoảng trắng: Biến tất cả khoảng trắng thành 1 dấu gạch dưới
+    ${safe_name}=    Replace String Using Regexp    ${safe_name}    \\s+    _
+
+    # (Tùy chọn) 4. Cắt bỏ dấu gạch dưới ở 2 đầu tên file nếu có (để tên file gọn gàng hơn)
+    ${safe_name}=    Strip String    ${safe_name}    characters=_
+
+    # 5. Chụp ảnh nếu TC Fail với tên file
+    Run Keyword If Test Failed    Capture Page Screenshot    ${safe_name}.png
+
+    # 6. Đóng App
     Teardown - Close Application
 
 Common - Click Element
     [Arguments]    ${locator}
     Wait Until Element Is Visible    ${locator}    30s
     Click Element    ${locator}
-
 
 Common - Input Element
 #    Khai báo các tham số đầu vào (parameters) bắt buộc khi gọi hàm
@@ -60,7 +72,6 @@ Common - Input Element
     Clear Text    ${input_locator}
 #    Nhập dữ liệu mới
     Input Text    ${input_locator}    ${value}
-
 
 Common - Chon Ngay Tuong Lai
     [Arguments]    ${so_ngay_cong_them}
@@ -125,6 +136,30 @@ Mo Ung Dung Va Dang Nhap He Thong
 #Dọn dẹp
 Don Dep Man Hinh Sau Khi Test
     Run Keyword And Ignore Error    Go Back
+
+Common - Lay AccessToken Tu API Dang Nhap
+    Create Session    XanhStay    http://smart-homestay-api-dev.m2wdemo.id.vn
+    &{dic_data_login}    Create Dictionary    username=${dt_phone_number}    password=${dt_password}
+    ${response}=    POST On Session    XanhStay    /api/v1/Auth/login    json=${dic_data_login}
+    Log To Console     ${response.json()}[data][accessToken]
+    RETURN    ${response.json()}[data][accessToken]
+
+Common - Chuan Hoa Ngay Thang Tu API
+    [Arguments]    ${api_date_raw}
+
+    # Thư viện DateTime của Robot Framework tự động hiểu định dạng ISO có chữ T
+    ${formatted_date}=    Convert Date    ${api_date_raw}    result_format=%d/%m/%Y
+    RETURN    ${formatted_date}
+
+Common - Chuan Hoa Tien Te Tu API
+    [Arguments]    ${api_price_raw}
+
+    # Sử dụng Evaluate để chạy hàm Format số của Python:
+    # 1. Ép kiểu về float. 2. Format có dấu phẩy (7,000,000). 3. Đổi phẩy thành chấm (7.000.000)
+    ${formatted_price}=    Evaluate    "{:,.0f}".format(float('${api_price_raw}')).replace(',', '.')
+    RETURN    ${formatted_price}
+
+
 
 
 #Common - Dang Nhap WebAdmin

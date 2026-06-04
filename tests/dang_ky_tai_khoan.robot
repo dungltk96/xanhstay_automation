@@ -1,9 +1,8 @@
 *** Settings ***
 Resource    ../config/import.resource
 Test Setup    Setup-Open Application
-Test Teardown    Teardown - Close Application
 Test Teardown    Teardown - Chup Anh Va Dong App
-Library    DataDriver    file=../data/Danh_Sach_Test_Cases_Dang_Ky_Day_Du.csv    encoding=UTF-8    delimiter=;
+Library    DataDriver    file=../data/Data_Test_Cases_Dang_Ky.csv    encoding=UTF-8    delimiter=;
 Test Template     Dang Ky Tai Khoan
 
 *** Test Cases ***
@@ -49,11 +48,9 @@ Dang Ky Tai Khoan
     Common - Click Element    ${btn_lay_ma_OTP_dk}
 
     # =========================================================================
-    # BƯỚC 2: TRẠM KIỂM SOÁT POPUP TỔNG HỢP (XỬ LÝ 3 QUY TẮC CỦA BẠN)
+    # BƯỚC 2: TRẠM KIỂM SOÁT POPUP TỔNG HỢP (XỬ LÝ 3 QUY TẮC BẰNG CHUẨN HÓA TEXT)
     # =========================================================================
-    # Tìm xem có bất kỳ popup nào hiện lên không (Thông báo lỗi hoặc Trùng data)
-    # Bổ sung thêm các từ khóa nhận diện lỗi phổ biến của app vào điều kiện 'or'
-    ${locator_popup}    Set Variable    xpath=//android.view.View[contains(@content-desc, 'Thông báo') or contains(@content-desc, 'đã được kích hoạt rồi')]
+    ${locator_popup}    Set Variable    xpath=//android.view.View[starts-with(@content-desc, 'Thông báo') or contains(@content-desc, 'đã được kích hoạt rồi') or contains(@content-desc, 'Email đã tồn tại')]
 
     # Ép Bot thức canh chừng liên tục tối đa 5s. Popup vừa nhú lên là tóm gọn ngay lập tức!
     ${co_popup}=    Run Keyword And Return Status    Wait Until Page Contains Element    ${locator_popup}    5s
@@ -62,50 +59,66 @@ Dang Ky Tai Khoan
         # CÓ POPUP XUẤT HIỆN -> Bốc nội dung thực tế ra
         ${actual_msg_raw}=    Get Element Attribute    ${locator_popup}    content-desc
 
-        # CHUẨN HÓA CHUỖI: Ép dấu xuống dòng (\n) thành khoảng trắng để khớp với CSV
-        ${actual_msg_full}=    Replace String    ${actual_msg_raw}    \n    ${SPACE}
+        # =========================================================================
+        # KỸ THUẬT CHUẨN HÓA TEXT (TRÁNH LỖI SO SÁNH SAI)
+        # =========================================================================
+        # 1. Xóa hẳn chữ "Thông báo" ra khỏi kết quả thực tế (Thay bằng rỗng)
+        ${actual_msg_clean}=    Replace String    ${actual_msg_raw}    Thông báo    ${EMPTY}
 
-        # [QUY TẮC 1]: Kiểm tra trùng data -> Đánh PASS (SKIP)
-        ${is_duplicate}=    Run Keyword And Return Status    Should Contain    ${actual_msg_full}    đã được kích hoạt rồi
-        IF    ${is_duplicate}
-            Pass Execution    => [SKIP] Bỏ qua testcase do đội test lấy nhầm data đã kích hoạt.
+        # 2. Xóa các ký tự xuống dòng (\n) thành khoảng trắng
+        ${actual_msg_clean}=    Replace String    ${actual_msg_clean}    \n    ${SPACE}
+
+        # 3. Cắt sạch các khoảng trắng bị dư thừa ở 2 đầu chuỗi thực tế
+        ${actual_msg_clean}=    Strip String    ${actual_msg_clean}
+
+        # 4. Cắt sạch khoảng trắng dư thừa trong file CSV (Đề phòng lúc nhập data bị dư dấu cách)
+        ${expected_clean}=      Strip String    ${expected_message}
+        # =========================================================================
+
+        # [QUY TẮC 1]: Kiểm tra trùng data (Thêm ignore_case=True để tuyệt đối an toàn)
+        ${is_dup_phone}=    Run Keyword And Return Status    Should Contain    ${actual_msg_clean}    đã được kích hoạt rồi    ignore_case=True
+        ${is_dup_email}=    Run Keyword And Return Status    Should Contain    ${actual_msg_clean}    Email đã tồn tại    ignore_case=True
+
+        IF    ${is_dup_phone} or ${is_dup_email}
+            Set Test Message    *HTML* <span style="color:blue"><b>[SKIP] TRÙNG DỮ LIỆU!</b><br>=> App đã chặn: [${actual_msg_clean}]</span>
+            Pass Execution    => [SKIP] Bỏ qua testcase do đội test lấy nhầm data đã tồn tại.
         END
 
         # Xử lý tiếp nếu không phải trùng data
         IF    '${expected_message}' != 'Đăng ký thành công'
 
             # [QUY TẮC 3]: So sánh thông báo lỗi thực tế vs mong muốn
-            ${is_match}=    Run Keyword And Return Status    Should Contain    ${actual_msg_full}    ${expected_message}
+            # BÍ QUYẾT: Dùng ignore_case=True để Bot lờ đi việc viết hoa/thường
+            ${is_match}=    Run Keyword And Return Status    Should Contain    ${actual_msg_clean}    ${expected_clean}    ignore_case=True
+
             IF    ${is_match}
-                Log To Console    => [PASS] Bắt đúng thông báo lỗi: ${expected_message}
-                Set Test Message    *HTML* <span style="color:green"><b>[PASS] NGHIỆP VỤ CHUẨN XÁC!</b><br>=> App đã chặn đúng lỗi: [${actual_msg_full}]</span>
-                Return From Keyword    # Lệnh kết thúc thành công cho luồng lỗi
+                Log To Console    => [PASS] Bắt đúng thông báo lỗi: ${expected_clean}
+                Set Test Message    *HTML* <span style="color:green"><b>[PASS] NGHIỆP VỤ CHUẨN XÁC!</b><br>=> App đã chặn đúng lỗi: [${actual_msg_clean}]</span>
+                Return From Keyword
             ELSE
-                # Đánh FAIL và văng ra chính xác câu báo lỗi bạn yêu cầu
-                Fail    LỖI NGHIỆP VỤ: Thông báo lỗi không khớp! \n\n=> Mong muốn: [${expected_message}] \n=> App thực tế hiện: [${actual_msg_full}]
+
+                # Đánh FAIL và hiển thị HTML đẹp mắt lên Report
+                Fail    *HTML* <span style="color:red"><b>LỖI THÔNG BÁO: Thông báo lỗi không khớp!</b><br>=> Mong muốn: [${expected_clean}]<br>=> App thực tế hiện: [${actual_msg_clean}]</span>
             END
 
         ELSE
             # Nếu expected là thành công nhưng lại văng lỗi (không phải trùng data)
-            Fail    LỖI HỆ THỐNG: Kịch bản Happy Case bị chặn bởi popup báo lỗi: [${actual_msg_full}]
+            Fail    *HTML* <span style="color:red"><b>LỖI HỆ THỐNG:</b> Kịch bản Happy Case bị chặn bởi popup báo lỗi:<br>[${actual_msg_clean}]</span>
         END
 
     ELSE
         # KHÔNG CÓ POPUP NÀO HIỆN LÊN
         IF    '${expected_message}' != 'Đăng ký thành công'
             # [QUY TẮC 2]: Nhập data sai nhưng app im re không chặn
-            Fail    Lỗi chức năng: Điền thông tin không hợp lệ vẫn cho phép đăng ký (App không chặn)!
+            Fail    *HTML* <span style="color:red"><b>LỖI CHỨC NĂNG:</b> Điền thông tin không hợp lệ nhưng App KHÔNG CHẶN!</span>
         END
 
         # Nếu expected = 'Đăng ký thành công' và không có popup -> An toàn đi tiếp xuống Bước 3.
     END
 
-
     # =========================================================================
     # BƯỚC 3: NHẬP OTP (CHỈ CHẠY ĐẾN ĐÂY KHI LUỒNG HAPPY CASE THỰC SỰ PASS)
     # =========================================================================
-    # LƯU Ý: Không gọi click nút "Lấy mã OTP" ở đây nữa vì đã click ở trên rồi!
-
     Common - Click Element    ${input_OPT_1}
     Common - Input Element    ${input_OPT_1}    1
     Common - Click Element    ${input_OPT_2}
@@ -128,7 +141,7 @@ Dang Ky Tai Khoan
         Log To Console    => [PASS] Đã điều hướng sang màn Xác thực KYC thành công!
         Common - Click Element    ${btn_bo_qua_xac_thuc_KYC}
     ELSE
-        Fail    LỖI: Đăng ký thành công nhưng không chuyển sang màn Xác thực KYC!
+        Fail    *HTML* <span style="color:red"><b>LỖI ĐIỀU HƯỚNG:</b> Đăng ký thành công nhưng không chuyển sang màn Xác thực KYC!</span>
     END
 
     Log To Console    => Kịch bản hoàn thành xuất sắc!

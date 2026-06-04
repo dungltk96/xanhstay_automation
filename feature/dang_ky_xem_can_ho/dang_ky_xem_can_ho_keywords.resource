@@ -154,7 +154,6 @@ Kiem Tra Thong Tin Thoi Gian Va Dia Chi Xem Phong
     ...    msg=\n[NGHIỆM THU LOGIC] PHÁT HIỆN LỖI HIỂN THỊ TRÊN GIAO DIỆN:\n- Trạng thái Thời gian: ${status_thoi_gian} (Nếu False -> LỖI CHỨC NĂNG: Giao diện hiển thị sai lệch khung giờ hoặc ngày tháng, không tìm thấy: [${raw_thoi_gian}])\n- Trạng thái Địa chỉ: ${status_dia_chi} (Nếu False -> LỖI ĐỐI SOÁT: Địa chỉ trên giao diện không trùng khớp hoặc không đồng bộ với dữ liệu hệ thống, thiếu hoặc sai lệch cụm từ: [${raw_dia_chi}])
 
 
-
 Thuc Hien Doi Lich Can Ho
     Common - Click Element    ${btn_xem_chi_tiet_can_ho}
     Common - Click Element    ${btn_dang_ky_xem_can_ho}

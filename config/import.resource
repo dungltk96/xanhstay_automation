@@ -4,6 +4,7 @@ Library    AppiumLibrary    #Cung cấp các keyword để open app, click phầ
 Library    DateTime    #Dùng để xử lý ngày giờ
 Library    String    #Dùng để xử lý chuỗi ký tự
 Library    Collections    #Xử lý mảng
+Library    RequestsLibrary
 #Library    SeleniumLibrary
 Variables   ../data/device.yaml
 Variables   ../data/data_${env}.yaml
@@ -16,3 +17,4 @@ Resource    ../feature/dang_xuat/dang_xuat.keywords.resource
 Resource    ../feature/thanh_toan_hoa_don/thanh_toan_hoa_don.keywords.resource
 Resource    ../feature/dat_coc_giu_cho/dat_coc_giu_cho.keywords.resource
 Resource    ../feature/dang_ky_tai_khoan/dang_ky_tai_khoan_keywords.resource
+Resource    ../feature/api_hop_dong/api_hop_dong_keywords.resource

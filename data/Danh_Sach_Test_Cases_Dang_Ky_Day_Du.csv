@@ -1,83 +1,83 @@
 ﻿*** testcase ***;${fullname};${phone};${email};${password};${confirm_password};${expected_message}
-nhap_ten_dang_nhap_rong;${EMPTY};0909123111;test01@gmail.com;Abc123;Abc123;Vui lòng nhập họ và tên.
-nhap_ten_dang_nhap_duoi_min_2;An;0909123112;test02@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_min_3;A An;0909129113;test03aa@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_ten_dang_nhap_max_100;Hoang Van AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;0909126114;test04b@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_ten_dang_nhap_tren_max_101;Hoang Van AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;0909123115;test05@gmail.com;Abc123;Abc123;Tên đăng nhập tối đa 100 ký tự
-nhap_ten_dang_nhap_khong_co_space;HoangVanSon;0909123116;test06@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_1_tu;Hoang;0909123117;test07@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_nhieu_space;Hoang   Van   Son;0909123118;test08@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_ten_dang_nhap_chua_so;Hoang Van Son123;0909123119;test09@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_chua_ky_tu_dac_biet;Hoang@Van#Son;0909123120;test10@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_chua_dau_gach_duoi;Hoang_Van_Son;0909123121;test11@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_chua_dau_gach_ngang;Hoang-Van-Son;0909123122;test12@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_chua_emoji;Hoang 😊 Son;0909123123;test13@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
-nhap_ten_dang_nhap_chua_tieng_viet_co_dau;Hoàng Văn Sơn;0909123124;test14@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_ten_dang_nhap_trim_space_dau; Hoang Van Son;0909123125;test15@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_ten_dang_nhap_trim_space_cuoi;Hoang Van Son ;0909123126;test16@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_ten_dang_nhap_chi_chua_space;   ${EMPTY};0909123127;test17@gmail.com;Abc123;Abc123;Tên đăng nhập không được để trống
-nhap_sdt_rong;Hoàng Văn Tuấn;${EMPTY};test18@gmail.com;Abc123;Abc123;Số điện thoại không được để trống
-nhap_sdt_9_so;Hoàng Văn Tuấn;090912311;test19@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
-nhap_sdt_10_so;Hoàng Văn Tuấn;0909123111;test20@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_sdt_11_so;Hoàng Văn Tuấn;09091231111;test21@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_ten_dang_nhap_rong;${EMPTY};909123111;test01@gmail.com;Abc123;Abc123;Vui lòng nhập họ và tên.
+nhap_ten_dang_nhap_duoi_min_2;An;909123112;test02@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_min_3;A An;909129113;test03aa@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_max_100;Hoang Van AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;909126114;test04b@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_tren_max_101;Hoang Van AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;909123115;test05@gmail.com;Abc123;Abc123;Tên đăng nhập tối đa 100 ký tự
+nhap_ten_dang_nhap_khong_co_space;HoangVanSon;909123116;test06@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_1_tu;Hoang;909123117;test07@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_nhieu_space;Hoang   Van   Son;909123118;test08@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_chua_so;Hoang Van Son123;909123119;test09@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_ky_tu_dac_biet;Hoang@Van#Son;909123120;test10@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_dau_gach_duoi;Hoang_Van_Son;909123121;test11@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_dau_gach_ngang;Hoang-Van-Son;909123122;test12@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_emoji;Hoang 😊 Son;909123123;test13@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_tieng_viet_co_dau;Hoàng Văn Sơn;909123124;test14@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_trim_space_dau; Hoang Van Son;909123125;test15@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_trim_space_cuoi;Hoang Van Son ;909123126;test16@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_chi_chua_space;   ${EMPTY};909123127;test17@gmail.com;Abc123;Abc123;Vui lòng nhập họ và tên.
+nhap_sdt_rong;Hoàng Văn Tuấn;${EMPTY};test18@gmail.com;Abc123;Abc123;Vui lòng nhập số điện thoại.
+nhap_sdt_9_so;Hoàng Văn Tuấn;90912311;test19@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_10_so;Hoàng Văn Tuấn;909123111;test20@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_sdt_11_so;Hoàng Văn Tuấn;9091231111;test21@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
 nhap_sdt_khong_bat_dau_0;Hoàng Văn Tuấn;1909123111;test22@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
 nhap_sdt_chua_ky_tu_chu;Hoàng Văn Tuấn;09091abc11;test23@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
 nhap_sdt_chua_ky_tu_dac_biet;Hoàng Văn Tuấn;0909@23111;test24@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
 nhap_sdt_chua_space;Hoàng Văn Tuấn;0909 123111;test25@gmail.com;Abc123;Abc123;Số điện thoại không được chứa khoảng trắng
-nhap_sdt_space_dau;Hoàng Văn Tuấn; 0909123111;test26@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
-nhap_sdt_space_cuoi;Hoàng Văn Tuấn;0909123111 ;test27@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
-nhap_sdt_co_dau_cham;Hoàng Văn Tuấn;0909.123.111;test28@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_space_dau;Hoàng Văn Tuấn;909123111;test26@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_space_cuoi;Hoàng Văn Tuấn;909123111;test27@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_co_dau_cham;Hoàng Văn Tuấn;909.123.111;test28@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
 nhap_sdt_co_dau_gach_ngang;Hoàng Văn Tuấn;0909-123-111;test29@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
-nhap_sdt_co_ma_quoc_gia_84;Hoàng Văn Tuấn;+84909123111;test30@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
-nhap_sdt_toan_so_0;Hoàng Văn Tuấn;0000000000;test31@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
-nhap_sdt_da_ton_tai;Hoàng Văn Sơn;0909123114;test32@gmail.com;Abc123;Abc123;Số điện thoại đã tồn tại
-nhap_email_rong;Hoàng Văn Tuấn;0909123131;${EMPTY};Abc123;Abc123;Email không được để trống
-nhap_email_hop_le;Hoàng Văn Tuấn;0909123132;valid.email@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_email_thieu_a_cong;Hoàng Văn Tuấn;0909123133;testgmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_thieu_local;Hoàng Văn Tuấn;0909123134;@gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_thieu_domain;Hoàng Văn Tuấn;0909123135;test@;Abc123;Abc123;Email không hợp lệ
-nhap_email_thieu_duoi_domain;Hoàng Văn Tuấn;0909123136;test@gmail;Abc123;Abc123;Email không hợp lệ
-nhap_email_khong_co_dau_cham_domain;Hoàng Văn Tuấn;0909123137;test@gmailcom;Abc123;Abc123;Email không hợp lệ
-nhap_email_nhieu_a_cong;Hoàng Văn Tuấn;0909123138;test@@gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_chua_space;Hoàng Văn Tuấn;0909123139;test @gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_space_dau;Hoàng Văn Tuấn;0909123140; test@gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_space_cuoi;Hoàng Văn Tuấn;0909123141;test@gmail.com ;Abc123;Abc123;Email không hợp lệ
-nhap_email_chua_ky_tu_dac_biet_khong_hop_le;Hoàng Văn Tuấn;0909123142;test#gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_chua_chu_viet_hoa;Hoàng Văn Tuấn;0909123143;TEST@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_email_domain_viet_hoa;Hoàng Văn Tuấn;0909123144;test@GMAIL.COM;Abc123;Abc123;Đăng ký thành công
-nhap_email_local_co_dau_cham;Hoàng Văn Tuấn;0909123145;test.user@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_email_local_bat_dau_bang_dau_cham;Hoàng Văn Tuấn;0909123146;.test@gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_local_ket_thuc_bang_dau_cham;Hoàng Văn Tuấn;0909123147;test.@gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_domain_bat_dau_bang_dau_gach;Hoàng Văn Tuấn;0909123148;test@-gmail.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_domain_ket_thuc_bang_dau_gach;Hoàng Văn Tuấn;0909123149;test@gmail-.com;Abc123;Abc123;Email không hợp lệ
-nhap_email_domain_khong_co_tld;Hoàng Văn Tuấn;0909123150;test@gmail;Abc123;Abc123;Email không hợp lệ
-nhap_email_tld_1_ky_tu;Hoàng Văn Tuấn;0909123151;test@gmail.c;Abc123;Abc123;Email không hợp lệ
-nhap_email_tld_hop_le;Hoàng Văn Tuấn;0909123152;test@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_email_do_dai_max_100;Hoàng Văn Tuấn;0909123153;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_email_vuot_tren_max_101;Hoàng Văn Tuấn;0909123154;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com;Abc123;Abc123;Email tối đa 100 ký tự
-nhap_email_da_ton_tai;Hoàng Văn Sơn;0909123114;test05@gmail.com;Abc123;Abc123;Email đã tồn tại
-nhap_mat_khau_rong;Hoàng Văn Tuấn;0909123161;test61@gmail.com;${EMPTY};${EMPTY};Mật khẩu không được để trống
-nhap_mat_khau_duoi_min_5;Hoàng Văn Tuấn;0909123162;test62@gmail.com;Ab12;Ab12;Mật khẩu từ 6 đến 20 ký tự
-nhap_mat_khau_min_6;Hoàng Văn Tuấn;0909123163;test63@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_mat_khau_max_20;Hoàng Văn Tuấn;0909123164;test64@gmail.com;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Đăng ký thành công
-nhap_mat_khau_tren_max_21;Hoàng Văn Tuấn;0909123165;test65@gmail.com;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Mật khẩu từ 6 đến 20 ký tự
-nhap_mat_khau_khong_chua_chu_hoa;Hoàng Văn Tuấn;0909123166;test66@gmail.com;abc123;abc123;Đăng ký thành công
-nhap_mat_khau_khong_chua_chu_thuong;Hoàng Văn Tuấn;0909123167;test67@gmail.com;ABC123;ABC123;Đăng ký thành công
-nhap_mat_khau_khong_chua_so;Hoàng Văn Tuấn;0909123168;test68@gmail.com;Abcdef;Abcdef;Đăng ký thành công
-nhap_mat_khau_chi_chua_so;Hoàng Văn Tuấn;0909123169;test69@gmail.com;123456;123456;Đăng ký thành công
-nhap_mat_khau_chi_chua_chu;Hoàng Văn Tuấn;0909123170;test70@gmail.com;abcdef;abcdef;Đăng ký thành công
-nhap_mat_khau_chua_ky_tu_dac_biet;Hoàng Văn Tuấn;0909123171;test71@gmail.com;Abc@123;Abc@123;Đăng ký thành công
-nhap_mat_khau_chua_space_giua;Hoàng Văn Tuấn;0909123172;test72@gmail.com;Abc 123;Abc 123;Đăng ký thành công
-nhap_mat_khau_space_dau;Hoàng Văn Tuấn;0909123173;test73@gmail.com; Abc123; Abc123;Đăng ký thành công
-nhap_mat_khau_space_cuoi;Hoàng Văn Tuấn;0909123174;test74@gmail.com;Abc123 ;Abc123 ;Mật khẩu không hợp lệ
-nhap_mat_khau_chi_chua_space;Hoàng Văn Tuấn;0909123175;test75@gmail.com;   ${EMPTY};   ${EMPTY};Mật khẩu không được để trống
-nhap_mat_khau_tieng_viet_co_dau;Hoàng Văn Tuấn;0909123176;test76@gmail.com;Ábc123;Ábc123;Mật khẩu không được chứa tiếng Việt có dấu
-nhap_mat_khau_co_emoji;Hoàng Văn Tuấn;0909123177;test77@gmail.com;Abc😊123;Abc😊123;Mật khẩu không được chứa ký tự không hợp lệ
-nhap_lai_mat_khau_rong;Hoàng Văn Tuấn;0909123181;test81@gmail.com;Abc123;${EMPTY};Xác nhận mật khẩu không được để trống
-nhap_lai_mat_khau_khong_khop;Hoàng Văn Tuấn;0909123182;test82@gmail.com;Abc123;Abc124;Xác nhận mật khẩu chưa trùng khớp
-nhap_lai_mat_khau_khop;Hoàng Văn Tuấn;0909123183;test83@gmail.com;Abc123;Abc123;Đăng ký thành công
-nhap_lai_mat_khau_khac_chu_hoa_thuong;Hoàng Văn Tuấn;0909123184;test84@gmail.com;Abc123;abc123;Xác nhận mật khẩu chưa trùng khớp
-nhap_lai_mat_khau_thieu_1_ky_tu;Hoàng Văn Tuấn;0909123185;test85@gmail.com;Abc123;Abc12;Xác nhận mật khẩu chưa trùng khớp
-nhap_lai_mat_khau_du_1_ky_tu;Hoàng Văn Tuấn;0909123186;test86@gmail.com;Abc123;Abc1234;Xác nhận mật khẩu chưa trùng khớp
-nhap_lai_mat_khau_space_dau;Hoàng Văn Tuấn;0909123188;test88@gmail.com;Abc123; Abc123;Xác nhận mật khẩu chưa trùng khớp
-nhap_lai_mat_khau_space_cuoi;Hoàng Văn Tuấn;0909123189;test89@gmail.com;Abc123;Abc123 ;Xác nhận mật khẩu chưa trùng khớp
+nhap_sdt_co_ma_quoc_gia_84;Hoàng Văn Tuấn;84909123111;test30@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_toan_so_0;Hoàng Văn Tuấn;0;test31@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_da_ton_tai;Hoàng Văn Sơn;909123114;test32@gmail.com;Abc123;Abc123;Số điện thoại đã tồn tại
+nhap_email_rong;Hoàng Văn Tuấn;909123131;${EMPTY};Abc123;Abc123;Vui lòng nhập email.
+nhap_email_hop_le;Hoàng Văn Tuấn;909123132;valid.email@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_thieu_a_cong;Hoàng Văn Tuấn;909123133;testgmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_thieu_local;Hoàng Văn Tuấn;909123134;@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_thieu_domain;Hoàng Văn Tuấn;909123135;test@;Abc123;Abc123;Email không hợp lệ
+nhap_email_thieu_duoi_domain;Hoàng Văn Tuấn;909123136;test@gmail;Abc123;Abc123;Email không hợp lệ
+nhap_email_khong_co_dau_cham_domain;Hoàng Văn Tuấn;909123137;test@gmailcom;Abc123;Abc123;Email không hợp lệ
+nhap_email_nhieu_a_cong;Hoàng Văn Tuấn;909123138;test@@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_chua_space;Hoàng Văn Tuấn;909123139;test @gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_space_dau;Hoàng Văn Tuấn;909123140; test@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_space_cuoi;Hoàng Văn Tuấn;909123141;test@gmail.com ;Abc123;Abc123;Email không hợp lệ
+nhap_email_chua_ky_tu_dac_biet_khong_hop_le;Hoàng Văn Tuấn;909123142;test#gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_chua_chu_viet_hoa;Hoàng Văn Tuấn;909123143;TEST@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_domain_viet_hoa;Hoàng Văn Tuấn;909123144;test@GMAIL.COM;Abc123;Abc123;Đăng ký thành công
+nhap_email_local_co_dau_cham;Hoàng Văn Tuấn;909123145;test.user@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_local_bat_dau_bang_dau_cham;Hoàng Văn Tuấn;909123146;.test@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_local_ket_thuc_bang_dau_cham;Hoàng Văn Tuấn;909123147;test.@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_domain_bat_dau_bang_dau_gach;Hoàng Văn Tuấn;909123148;test@-gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_domain_ket_thuc_bang_dau_gach;Hoàng Văn Tuấn;909123149;test@gmail-.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_domain_khong_co_tld;Hoàng Văn Tuấn;909123150;test@gmail;Abc123;Abc123;Email không hợp lệ
+nhap_email_tld_1_ky_tu;Hoàng Văn Tuấn;909123151;test@gmail.c;Abc123;Abc123;Email không hợp lệ
+nhap_email_tld_hop_le;Hoàng Văn Tuấn;909123152;test@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_do_dai_max_100;Hoàng Văn Tuấn;909123153;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_vuot_tren_max_101;Hoàng Văn Tuấn;909123154;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com;Abc123;Abc123;Email tối đa 100 ký tự
+nhap_email_da_ton_tai;Hoàng Văn Sơn;909123114;test05@gmail.com;Abc123;Abc123;Email đã tồn tại
+nhap_mat_khau_rong;Hoàng Văn Tuấn;909123161;test61@gmail.com;${EMPTY};${EMPTY};Vui lòng nhập mật khẩu.
+nhap_mat_khau_duoi_min_5;Hoàng Văn Tuấn;909123162;test62@gmail.com;Ab12;Ab12;Mật khẩu từ 6 đến 20 ký tự
+nhap_mat_khau_min_6;Hoàng Văn Tuấn;909123163;test63@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_mat_khau_max_20;Hoàng Văn Tuấn;909123164;test64@gmail.com;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Đăng ký thành công
+nhap_mat_khau_tren_max_21;Hoàng Văn Tuấn;909123165;test65@gmail.com;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Mật khẩu từ 6 đến 20 ký tự
+nhap_mat_khau_khong_chua_chu_hoa;Hoàng Văn Tuấn;909123166;test66@gmail.com;abc123;abc123;Đăng ký thành công
+nhap_mat_khau_khong_chua_chu_thuong;Hoàng Văn Tuấn;909123167;test67@gmail.com;ABC123;ABC123;Đăng ký thành công
+nhap_mat_khau_khong_chua_so;Hoàng Văn Tuấn;909123168;test68@gmail.com;Abcdef;Abcdef;Đăng ký thành công
+nhap_mat_khau_chi_chua_so;Hoàng Văn Tuấn;909123169;test69@gmail.com;123456;123456;Đăng ký thành công
+nhap_mat_khau_chi_chua_chu;Hoàng Văn Tuấn;909123170;test70@gmail.com;abcdef;abcdef;Đăng ký thành công
+nhap_mat_khau_chua_ky_tu_dac_biet;Hoàng Văn Tuấn;909123171;test71@gmail.com;Abc@123;Abc@123;Đăng ký thành công
+nhap_mat_khau_chua_space_giua;Hoàng Văn Tuấn;909123172;test72@gmail.com;Abc 123;Abc 123;Đăng ký thành công
+nhap_mat_khau_space_dau;Hoàng Văn Tuấn;909123173;test73@gmail.com; Abc123; Abc123;Đăng ký thành công
+nhap_mat_khau_space_cuoi;Hoàng Văn Tuấn;909123174;test74@gmail.com;Abc123 ;Abc123 ;Đăng ký thành công
+nhap_mat_khau_chi_chua_space;Hoàng Văn Tuấn;909123175;test75@gmail.com;   ${EMPTY};   ${EMPTY};Vui lòng nhập mật khẩu.
+nhap_mat_khau_tieng_viet_co_dau;Hoàng Văn Tuấn;909123176;test76@gmail.com;Ábc123;Ábc123;Mật khẩu không được chứa tiếng Việt có dấu
+nhap_mat_khau_co_emoji;Hoàng Văn Tuấn;909123177;test77@gmail.com;Abc😊123;Abc😊123;Mật khẩu không được chứa ký tự không hợp lệ
+nhap_lai_mat_khau_rong;Hoàng Văn Tuấn;909123181;test81@gmail.com;Abc123;${EMPTY};Xác nhận mật khẩu không được để trống
+nhap_lai_mat_khau_khong_khop;Hoàng Văn Tuấn;909123182;test82@gmail.com;Abc123;Abc124;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_khop;Hoàng Văn Tuấn;909123183;test83@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_lai_mat_khau_khac_chu_hoa_thuong;Hoàng Văn Tuấn;909123184;test84@gmail.com;Abc123;abc123;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_thieu_1_ky_tu;Hoàng Văn Tuấn;909123185;test85@gmail.com;Abc123;Abc12;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_du_1_ky_tu;Hoàng Văn Tuấn;909123186;test86@gmail.com;Abc123;Abc1234;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_space_dau;Hoàng Văn Tuấn;909123188;test88@gmail.com;Abc123; Abc123;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_space_cuoi;Hoàng Văn Tuấn;909123189;test89@gmail.com;Abc123;Abc123 ;Xác nhận mật khẩu chưa trùng khớp
