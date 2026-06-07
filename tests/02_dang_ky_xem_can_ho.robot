@@ -25,6 +25,8 @@ TC_03_Kiem_Tra_Thong_Tin_Thoi_Gian_Va_Dia_Chi_Xem_Phong
     Go Back
     Kiem Tra Thong Tin Thoi Gian Va Dia Chi Xem Phong
 
+
+TC_04_Kiem_Tra_Thong_Tin_Lien_He_Khop_voi_Tai_Khoan_Dang_Nhap
 #TC04_Kiem_tra_he_thong_tu_dong_an_bai_quang_cao_can_ho_da_duoc_thue
 #    [Documentation]    Hệ thống tự động ẩn bài quảng cáo căn hộ đã được thuê
 

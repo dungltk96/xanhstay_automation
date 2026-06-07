@@ -208,7 +208,7 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 <status status="NOT RUN" start="2026-06-02T03:40:38.792111" elapsed="0.000000"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
-<arg>${btn_chon_hoa_don_thanh_toan_coc_t1}</arg>
+<arg>${btn_chon_hoa_don_thanh_toan_coc_t1_admin}</arg>
 <arg>Không tìm thấy hóa đơn cọc cần duyệt</arg>
 <status status="NOT RUN" start="2026-06-02T03:40:38.792111" elapsed="0.000000"/>
 </kw>
@@ -218,7 +218,7 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 <status status="NOT RUN" start="2026-06-02T03:40:38.792111" elapsed="0.000000"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
-<arg>${btn_xac_nhan_thanh_toan}</arg>
+<arg>${btn_xac_nhan_thanh_toan_admin}</arg>
 <status status="NOT RUN" start="2026-06-02T03:40:38.792111" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
@@ -227,7 +227,7 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 <status status="NOT RUN" start="2026-06-02T03:40:38.792111" elapsed="0.000000"/>
 </kw>
 <kw name="Common - Click Element" owner="keywords">
-<arg>${popup_xac_nhan_thanh_toan}</arg>
+<arg>${popup_xac_nhan_thanh_toan_admin}</arg>
 <status status="NOT RUN" start="2026-06-02T03:40:38.792111" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
@@ -236,7 +236,7 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 <status status="NOT RUN" start="2026-06-02T03:40:38.792111" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<arg>${msg_duyet_hoa_don_thanh_cong}</arg>
+<arg>${msg_duyet_hoa_don_thanh_cong_admin}</arg>
 <doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
 <status status="NOT RUN" start="2026-06-02T03:40:38.793410" elapsed="0.000000"/>
 </kw>

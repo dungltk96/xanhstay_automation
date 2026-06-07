@@ -28,7 +28,8 @@ dt_msg_loi_mong_muon: "Tài khoản không tồn tại"
 
 #Check SKIP
 kyc_status: True
-can_ho_da_thue_status:  True
+can_ho_da_thue_status: True
+bill_status: True
 
 #===============Dữ liệu app admin===============
 dt_tai_khoan_admin: "dungltk"

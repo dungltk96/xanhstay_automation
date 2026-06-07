@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3ac1f94-52f4-45e6-a3e9-a63907e7da4a" name="Changes" comment="Build code Login &amp; Register to view rooms">
-      <change afterPath="$PROJECT_DIR$/feature/api_hop_dong/api_hop_dong_keywords.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature/api_hop_dong/api_hop_dong_variables.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/kiem_tra_luong_chinh_ap_user_suite.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/kiem_tra_luong_chinh_app_user_test.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/keywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/common/keywords.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/import.resource" beforeDir="false" afterPath="$PROJECT_DIR$/config/import.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Danh_Sach_Test_Cases_Dang_Ky_Day_Du.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/Danh_Sach_Test_Cases_Dang_Ky_Day_Du.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/dang_ky_xem_can_ho/dang_ky_xem_can_ho_keywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/feature/dang_ky_xem_can_ho/dang_ky_xem_can_ho_keywords.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/06_api_chi_tiet_hop_dong.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/06_api_chi_tiet_hop_dong.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Danh_Sach_Test_Cases_Dang_Ky_Day_Du.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Data_Test_Cases_Dang_Ky.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/Data_Test_Cases_Dang_Ky.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Rut_Gon_TC_Dang_Ky.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_product.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_product.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/dang_ky_tai_khoan/dang_ky_tai_khoan_keywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/feature/dang_ky_tai_khoan/dang_ky_tai_khoan_keywords.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/quan_ly_hop_dong/xac_nhan_hop_dong.keywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/feature/quan_ly_hop_dong/xac_nhan_hop_dong.keywords.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/quan_ly_hop_dong/xac_nhan_hop_dong.variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/feature/quan_ly_hop_dong/xac_nhan_hop_dong.variables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/thanh_toan_hoa_don.keywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/thanh_toan_hoa_don.keywords.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/thanh_toan_hoa_don.variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/feature/thanh_toan_hoa_don/thanh_toan_hoa_don.variables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/dang_nhap/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/dang_nhap/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/dang_nhap/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/dang_nhap/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/dang_nhap/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/dang_nhap/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/02_dang_ky_xem_can_ho.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/02_dang_ky_xem_can_ho.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/05_xac_nhan_hop_dong.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/05_xac_nhan_hop_dong.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/dang_ky_tai_khoan.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/dang_ky_tai_khoan.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/kiem_tra_luong_chinh.robot" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +64,14 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/xanhstay_automation/feature&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/xanhstay_automation/tests&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xanhstay_automation\feature" />
       <recent name="D:\xanhstay_automation\tests" />
+      <recent name="D:\xanhstay_automation\feature" />
       <recent name="D:\xanhstay_automation\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

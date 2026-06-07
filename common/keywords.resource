@@ -3,7 +3,7 @@ Resource    ../config/import.resource
 Resource    ../common/variables.resource
 
 *** Keywords ***
-Setup-Open application
+Setup-Open Application
     [Documentation]    Mở ứng dụng tùy chọn. Mặc định là mở App User. Truyền 'admin' để mở App Admin.
     [Arguments]    ${app_type}=user
 
@@ -33,7 +33,6 @@ Setup-Open application
     Log To Console    \n[Info] Đã mở thành công App: ${app_type}
 
 Teardown - Close application
-    Run Keyword If Test Failed    Capture Page Screenshot    ${TEST_NAME}.png
     Close Application
 
 Teardown - Chup Anh Va Dong App
@@ -56,6 +55,15 @@ Teardown - Chup Anh Va Dong App
     # 6. Đóng App
     Teardown - Close Application
 
+
+Teardown - Chup Anh Khi Loi
+    [Documentation]    Hàm bổ trợ làm sạch tên file ảnh theo chuẩn Windows để tránh lỗi lưu ảnh
+    ${raw_name}=    Set Variable    ${TEST_NAME}
+    ${safe_name}=    Replace String Using Regexp    ${raw_name}    [:\\\\/*?"<>|]    _
+    ${safe_name}=    Replace String Using Regexp    ${safe_name}    \\s+    _
+    ${safe_name}=    Strip String    ${safe_name}    characters=_
+    Capture Page Screenshot    ${safe_name}.png
+
 Common - Click Element
     [Arguments]    ${locator}
     Wait Until Element Is Visible    ${locator}    30s
@@ -66,11 +74,8 @@ Common - Input Element
     [Arguments]    ${input_locator}    ${value}    ${error_msg_input}=Lỗi: Không tìm thấy ô để nhập liệu!
 
 #    Cơ chế chờ đợi chủ động, chờ cho đến khi ô nhập liệu thực sự hiện hình "visible" trên giao diện app rồi mới đi tiếp.
-#    Giải quyết triệt để lỗi ElementNotFound (không tìm thấy phần tử) do thiết bị giật lag, mạng chậm hoặc app tốn thời gian render màn hình.
     Wait Until Element Is Visible    ${input_locator}    5s    error=${error_msg_input}
-#    Xóa trắng dữ liệu cũ
     Clear Text    ${input_locator}
-#    Nhập dữ liệu mới
     Input Text    ${input_locator}    ${value}
 
 Common - Chon Ngay Tuong Lai

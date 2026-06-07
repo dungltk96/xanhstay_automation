@@ -4,7 +4,8 @@ Library    AppiumLibrary    #Cung cấp các keyword để open app, click phầ
 Library    DateTime    #Dùng để xử lý ngày giờ
 Library    String    #Dùng để xử lý chuỗi ký tự
 Library    Collections    #Xử lý mảng
-Library    RequestsLibrary
+Library    RequestsLibrary    #API
+Library    JSONLibrary    #Đọc tệp json or response từ API
 #Library    SeleniumLibrary
 Variables   ../data/device.yaml
 Variables   ../data/data_${env}.yaml
