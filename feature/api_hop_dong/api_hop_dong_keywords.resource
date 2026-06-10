@@ -3,7 +3,7 @@ Resource    ../../config/import.resource
 Resource    api_hop_dong_variables.resource
 
 *** Keywords ***
-Lay Phan Tu API Dau Tien Trong Danh Dach Yeu Cau Ky Hop Dong
+Lay Phan Tu API Dau Tien Trong Danh Dach Hop Dong
     ${access_token}    Common - Lay AccessToken Tu API Dang Nhap
     &{header}    Create Dictionary    Authorization=Bearer ${access_token}    Content-Type=application/json
     &{dic_data}=    Create Dictionary
@@ -134,7 +134,7 @@ Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Chi Tiet Hop Dong
 
 #Lay Thong Tin Hop Dong Dau Tien Da Chuan Hoa Vao Dictionary
 ##    Lấy dữ liệu gốc API
-#    ${first_hop_dong_dau_tien}    Lay Phan Tu API Dau Tien Trong Danh Dach Yeu Cau Ky Hop Dong
+#    ${first_hop_dong_dau_tien}    Lay Phan Tu API Dau Tien Trong Danh Dach Hop Dong
 #
 ##    Chuẩn hóa các trường ngày tháng và tiền tệ
 #    ${api_from_clean}    Common - Chuan Hoa Ngay Thang Tu API    ${first_hop_dong_dau_tien}[contractUu][from]

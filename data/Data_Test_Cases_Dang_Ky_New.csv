@@ -1,0 +1,83 @@
+﻿*** testcase ***;${fullname};${phone};${email};${password};${confirm_password};${expected_message}
+nhap_ten_dang_nhap_rong;${EMPTY};0981000001;demo001@gmail.com;Abc123;Abc123;Vui lòng nhập họ và tên.
+nhap_ten_dang_nhap_duoi_min_2;An;0981000002;demo002@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_min_3_va_chua_khoang_trang;Anh Tuấn;0982000003;redemo003@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_max_100;Hoàng Văn AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;0982000004;redemo004@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_tren_max_101;Hoàng Văn AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;0981000005;demo005@gmail.com;Abc123;Abc123;Tên đăng nhập tối đa 100 ký tự
+nhap_ten_dang_nhap_khong_co_space;HoàngVănTiến;0981000006;demo006@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_1_tu;Hoàng;0981000007;demo007@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_nhieu_space;Hoàng   Văn   Tiến;0982000008;redemo008@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_chua_so;Hoàng Văn Tiến 123;0981000009;demo009@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_ky_tu_dac_biet;Hoàng@Văn#Tiến;0981000010;demo010@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_dau_gach_duoi;Hoàng_Văn_Tiến;0981000011;demo011@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_dau_gach_ngang;Hoàng-Văn-Tiến;0981000012;demo012@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_emoji;Hoàng 😊 Tiến;0981000013;demo013@gmail.com;Abc123;Abc123;Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_chua_tieng_viet_co_dau;Hoàng Văn Tiến;0982000014;redemo014@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_trim_space_dau; Hoàng Văn Tiến;0982000015;redemo015@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_trim_space_cuoi;Hoàng Văn Tiến ;0982000016;redemo016@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_ten_dang_nhap_chi_chua_space;   ${EMPTY};0981000017;demo017@gmail.com;Abc123;Abc123;Vui lòng nhập họ và tên.
+nhap_sdt_rong;Hoàng Văn Tiến;${EMPTY};demo018@gmail.com;Abc123;Abc123;Vui lòng nhập số điện thoại.
+nhap_sdt_9_so;Hoàng Văn Chiến;091234567;demo019@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_10_so;Hoàng Văn Mạnh;0982000018;redemo020@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_sdt_11_so;Hoàng Văn Tuấn;09123456789;demo021@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_khong_bat_dau_0;Hoàng Văn Khải;1981000018;demo022@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_chua_ky_tu_chu;Hoàng Văn Dũng;098abc18;demo023@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_chua_ky_tu_dac_biet;Hoàng Văn Nam;098@1000018;demo024@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_chua_space;Hoàng Văn Hải;098 1000018;demo025@gmail.com;Abc123;Abc123;Số điện thoại không được chứa khoảng trắng
+nhap_sdt_space_dau;Hoàng Văn Kiên; 0981000018;demo026@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_space_cuoi;Hoàng Văn Phúc;0981000018 ;demo027@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_co_dau_cham;Hoàng Văn Tiến;098.111.222;demo028@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_co_dau_gach_ngang;Hoàng Văn Chiến;098-111-222;demo029@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_co_ma_quoc_gia_84;Hoàng Văn Mạnh;+84981000018;demo030@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_toan_so_0;Hoàng Văn Tuấn;0000000000;demo031@gmail.com;Abc123;Abc123;Số điện thoại không hợp lệ
+nhap_sdt_da_ton_tai;Hoàng Văn Khải;0982000018;demo032@gmail.com;Abc123;Abc123;Số điện thoại đã tồn tại
+nhap_email_rong;Hoàng Văn Dũng;0981000019;${EMPTY};Abc123;Abc123;Vui lòng nhập email.
+nhap_email_hop_le;Hoàng Văn Nam;0982000020;redemo033@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_thieu_a_cong;Hoàng Văn Hải;0981000021;demo034gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_thieu_local;Hoàng Văn Kiên;0981000022;@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_thieu_domain;Hoàng Văn Phúc;0981000023;demo034@;Abc123;Abc123;Email không hợp lệ
+nhap_email_thieu_duoi_domain;Hoàng Văn Tiến;0981000024;demo034@gmail;Abc123;Abc123;Email không hợp lệ
+nhap_email_khong_co_dau_cham_domain;Hoàng Văn Chiến;0981000025;demo034@gmailcom;Abc123;Abc123;Email không hợp lệ
+nhap_email_nhieu_a_cong;Hoàng Văn Mạnh;0981000026;demo034@@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_chua_space;Hoàng Văn Tuấn;0981000027;demo 034@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_space_dau;Hoàng Văn Khải;0981000028; demo034@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_space_cuoi;Hoàng Văn Dũng;0981000029;demo034@gmail.com ;Abc123;Abc123;Email không hợp lệ
+nhap_email_chua_ky_tu_dac_biet_khong_hop_le;Hoàng Văn Nam;0981000030;demo#034@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_chua_chu_viet_hoa;Hoàng Văn Hải;0981000031;REDEMO034@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_domain_viet_hoa;Hoàng Văn Kiên;0982000032;redemo034@GMAIL.COM;Abc123;Abc123;Đăng ký thành công
+nhap_email_local_co_dau_cham;Hoàng Văn Phúc;0982000033;redemo.034@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_local_bat_dau_bang_dau_cham;Hoàng Văn Tiến;0981000034;.demo034@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_local_ket_thuc_bang_dau_cham;Hoàng Văn Chiến;0981000035;demo034.@gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_domain_bat_dau_bang_dau_gach;Hoàng Văn Mạnh;0981000036;demo034@-gmail.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_domain_ket_thuc_bang_dau_gach;Hoàng Văn Tuấn;0981000037;demo034@gmail-.com;Abc123;Abc123;Email không hợp lệ
+nhap_email_domain_khong_co_tld;Hoàng Văn Khải;0981000038;demo034@gmail;Abc123;Abc123;Email không hợp lệ
+nhap_email_tld_1_ky_tu;Hoàng Văn Dũng;0981000039;demo034@gmail.c;Abc123;Abc123;Email không hợp lệ
+nhap_email_tld_hop_le;Hoàng Văn Nam;0981000040;demo034@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_do_dai_max_100;Hoàng Văn Hải;0981000041;dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_email_vuot_tren_max_101;Hoàng Văn Kiên;0981000042;ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd@gmail.com;Abc123;Abc123;Email tối đa 100 ký tự
+nhap_email_da_ton_tai;Hoàng Văn Phúc;0981000043;demo.trung@gmail.com;Abc123;Abc123;Email đã tồn tại
+nhap_mat_khau_rong;Hoàng Văn Tiến;0981000044;demo035@gmail.com;${EMPTY};${EMPTY};Vui lòng nhập mật khẩu.
+nhap_mat_khau_duoi_min_5;Hoàng Văn Chiến;0981000045;demo036@gmail.com;Ab12;Ab12;Mật khẩu từ 6 đến 20 ký tự
+nhap_mat_khau_min_6;Hoàng Văn Mạnh;0981000046;demo037@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_mat_khau_max_100;Hoàng Văn Tuấn;0981000047;demo038@gmail.com;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Đăng ký thành công
+nhap_mat_khau_tren_max_101;Hoàng Văn Khải;0981000048;demo039@gmail.com;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Abc123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;Mật khẩu từ 6 đến 20 ký tự
+nhap_mat_khau_khong_chua_chu_hoa;Hoàng Văn Dũng;0981000049;demo040@gmail.com;abc123;abc123;Đăng ký thành công
+nhap_mat_khau_khong_chua_chu_thuong;Hoàng Văn Nam;0981000050;demo041@gmail.com;ABC123;ABC123;Đăng ký thành công
+nhap_mat_khau_khong_chua_so;Hoàng Văn Hải;0981000051;demo042@gmail.com;Abcdef;Abcdef;Đăng ký thành công
+nhap_mat_khau_chi_chua_so;Hoàng Văn Kiên;0981000052;demo043@gmail.com;123456;123456;Đăng ký thành công
+nhap_mat_khau_chi_chua_chu;Hoàng Văn Phúc;0981000053;demo044@gmail.com;abcdef;abcdef;Đăng ký thành công
+nhap_mat_khau_chua_ky_tu_dac_biet;Hoàng Văn Tiến;0981000054;demo045@gmail.com;Abc@123;Abc@123;Đăng ký thành công
+nhap_mat_khau_chua_space_giua;Hoàng Văn Chiến;0981000055;demo046@gmail.com;Abc 123;Abc 123;Đăng ký thành công
+nhap_mat_khau_space_dau;Hoàng Văn Mạnh;0981000056;demo047@gmail.com; Abc123; Abc123;Đăng ký thành công
+nhap_mat_khau_space_cuoi;Hoàng Văn Tuấn;0981000057;demo048@gmail.com;Abc123 ;Abc123 ;Đăng ký thành công
+nhap_mat_khau_chi_chua_space;Hoàng Văn Khải;0981000058;demo049@gmail.com;   ${EMPTY};   ${EMPTY};Vui lòng nhập mật khẩu.
+nhap_mat_khau_tieng_viet_co_dau;Hoàng Văn Dũng;0981000059;demo050@gmail.com;Ábc123;Ábc123;Mật khẩu không được chứa tiếng Việt có dấu
+nhap_mat_khau_co_emoji;Hoàng Văn Nam;0981000060;demo051@gmail.com;Abc😊123;Abc😊123;Mật khẩu không được chứa ký tự không hợp lệ
+nhap_lai_mat_khau_rong;Hoàng Văn Hải;0981000061;demo052@gmail.com;Abc123;${EMPTY};Xác nhận mật khẩu không được để trống
+nhap_lai_mat_khau_khong_khop;Hoàng Văn Kiên;0981000062;demo053@gmail.com;Abc123;Abc124;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_khop;Hoàng Văn Phúc;0981000063;demo054@gmail.com;Abc123;Abc123;Đăng ký thành công
+nhap_lai_mat_khau_khac_chu_hoa_thuong;Hoàng Văn Tiến;0981000064;demo055@gmail.com;Abc123;abc123;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_thieu_1_ky_tu;Hoàng Văn Chiến;0981000065;demo056@gmail.com;Abc123;Abc12;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_du_1_ky_tu;Hoàng Văn Mạnh;0981000066;demo057@gmail.com;Abc123;Abc1234;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_space_dau;Hoàng Văn Tuấn;0981000067;demo058@gmail.com;Abc123; Abc123;Xác nhận mật khẩu chưa trùng khớp
+nhap_lai_mat_khau_space_cuoi;Hoàng Văn Khải;0981000068;demo059@gmail.com;Abc123;Abc123 ;Xác nhận mật khẩu chưa trùng khớp

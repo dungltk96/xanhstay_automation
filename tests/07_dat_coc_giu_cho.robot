@@ -6,7 +6,7 @@ Test Teardown    Teardown - Close Application
 *** Test Cases ***
 TC01_Dat_coc_giu_cho_that_bai
     [Documentation]    Đặt cọc giữ chỗ thất bại do không thanh toán hóa đơn thành công (yêu cầu chuyển khoản qua payos)
-    [Tags]    smoke    flow
+    [Tags]    flow
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
     Thuc Hien Dat Coc Giu Cho
 

@@ -28,7 +28,6 @@ Thuc Hien Duyet Hoa Don Thanh Toan Tien Coc
     Common - Click Element    ${popup_xac_nhan_thanh_toan_admin}
     Sleep    7s
     Wait Until Page Contains Element    ${msg_duyet_hoa_don_thanh_cong_admin}
-    Sleep    5s
     Common - Click Element    ${btn_back_admin}
 
 Thuc Hien Duyet Hoa Don Thanh Toan Tien Thue Nha
@@ -39,7 +38,6 @@ Thuc Hien Duyet Hoa Don Thanh Toan Tien Thue Nha
     Common - Click Element    ${btn_xac_nhan_thanh_toan_admin}
     Sleep    5s
     Common - Click Element    ${popup_xac_nhan_thanh_toan_admin}
-    Sleep    7s
     Wait Until Page Contains Element    ${msg_duyet_hoa_don_thanh_cong_admin}    30s
 
 Thuc Hien Thanh Toan Hoa Don Tien Thue

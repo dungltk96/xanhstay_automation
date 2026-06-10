@@ -6,7 +6,7 @@ Test Teardown    Teardown - Chup Anh Va Dong App
 *** Test Cases ***
 TC_01_So_Sanh_Du_Lieu_API_Va_UI_Phan_Tu_Dau_Tien_Trong_Danh_Sach_Hop-Dong
 #    Bước 1: Lấy dữ liệu từ API
-    ${first_hop_dong_dau_tien}=    Lay Phan Tu API Dau Tien Trong Danh Dach Yeu Cau Ky Hop Dong
+    ${first_hop_dong_dau_tien}=    Lay Phan Tu API Dau Tien Trong Danh Dach Hop Dong
     ${api_code_hop_dong}=    Set Variable    ${first_hop_dong_dau_tien}[contractUu][code]    #mã hợp đồng
     ${api_from_hop_dong}=    Set Variable    ${first_hop_dong_dau_tien}[contractUu][from]    #ngày bắt đầu thuê
     ${api_to_hop_dong}=    Set Variable    ${first_hop_dong_dau_tien}[contractUu][to]    #ngày gia hạn tiếp theo
@@ -39,16 +39,16 @@ TC_01_So_Sanh_Du_Lieu_API_Va_UI_Phan_Tu_Dau_Tien_Trong_Danh_Sach_Hop-Dong
     Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Danh Sach Hop Dong
     ...    ${api_code_hop_dong}
     ...    ${api_from_clean}
-    ...    ${api_to_clean}    
-    ...    ${api_apartmentUu_name_phong}    
-    ...    ${api_address_hop_dong}    
+    ...    ${api_to_clean}
+    ...    ${api_apartmentUu_name_phong}
+    ...    ${api_address_hop_dong}
     ...    ${api_adRentPrice_clean}
 
 
 
 TC_02_So_Sanh_Du_Lieu_API_Va_UI_Phan_Tu_Dau_Tien_Trong_Chi_Tiet_Hop-Dong
 #    Bước 1: Lấy dữ liệu từ API
-    ${first_hop_dong_dau_tien}=    Lay Phan Tu API Dau Tien Trong Danh Dach Yeu Cau Ky Hop Dong
+    ${first_hop_dong_dau_tien}=    Lay Phan Tu API Dau Tien Trong Danh Dach Hop Dong
     ${api_code_hop_dong}=    Set Variable    ${first_hop_dong_dau_tien}[contractUu][code]    #mã hợp đồng
     ${api_from_hop_dong}=    Set Variable    ${first_hop_dong_dau_tien}[contractUu][from]    #ngày bắt đầu thuê
 #    ${api_to_hop_dong}=    Set Variable    ${first_hop_dong_dau_tien}[contractUu][to]    #ngày gia hạn tiếp theo
@@ -98,7 +98,7 @@ TC_02_So_Sanh_Du_Lieu_API_Va_UI_Phan_Tu_Dau_Tien_Trong_Chi_Tiet_Hop-Dong
     ...    ${api_renterUu_name_hop_dong}    
     ...    ${api_renterUu_phoneNumber_hop_dong}
 
-
+    Sleep    7s
 
 
 

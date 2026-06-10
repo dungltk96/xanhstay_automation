@@ -16,7 +16,7 @@ TC_02_Dang_ky_xem_can_ho_thanh_cong
     Thuc Hien Dang ky Xem Can Ho    ${dt_ho_ten}    ${dt_email}    ${dt_phone_number}
     Go Back
 
-TC_03_Thue_can_ho_thanh_cong
+TC_03_Dang_ky_thue_can_ho_thanh_cong
     [Documentation]    Đăng ký thuê căn hộ thành công
     [Tags]    smoke
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
@@ -24,7 +24,7 @@ TC_03_Thue_can_ho_thanh_cong
 
 TC_04_Duyet_Hoa_Don_Thanh_Toan_Tien_Coc
     [Documentation]    Admin duyệt hóa đơn tiền cọc
-    [Tags]    smoke flow
+    [Tags]    smoke    flow
     [Setup]    Setup-Open Application    admin
     Thuc Hien Dang Nhap App Admin    ${dt_tai_khoan_admin}    ${dt_mat_khau_admin}    ${dt_display_name_admin}
     Thuc Hien Duyet Hoa Don Thanh Toan Tien Coc
@@ -32,7 +32,7 @@ TC_04_Duyet_Hoa_Don_Thanh_Toan_Tien_Coc
 
 TC_05_Duyet_Hoa_Don_Thanh_Toan_Tien_Thue
     [Documentation]    Admin duyệt hóa đơn tiền cọc
-    [Tags]    smoke flow
+    [Tags]    smoke    flow
     [Setup]    Setup-Open Application    admin
     Thuc Hien Dang Nhap App Admin    ${dt_tai_khoan_admin}    ${dt_mat_khau_admin}    ${dt_display_name_admin}
     Thuc Hien Duyet Hoa Don Thanh Toan Tien Thue Nha

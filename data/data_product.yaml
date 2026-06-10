@@ -34,7 +34,7 @@ bill_status: True
 #===============Dữ liệu app admin===============
 dt_tai_khoan_admin: "dungltk"
 dt_mat_khau_admin: "Dung123@"
-dt_display_name_admin: "Lê Tiến Đạt"
+dt_display_name_admin: "MobiPlus Support"
 
 #===============Dữ liệu website===============
 #Dữ liệu webadmin
