@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../../config/import.resource
-Resource    thue_can_ho.variables.resource
+Resource    thue_can_ho_variables.resource
 
 *** Keywords ***
 Thuc Hien Thue Can Ho

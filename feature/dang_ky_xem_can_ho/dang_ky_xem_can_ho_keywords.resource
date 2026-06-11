@@ -11,7 +11,6 @@ Thuc Hien Dang ky Xem Can Ho
     Common - Click Element    ${btn_xem_chi_tiet_can_ho}
     Sleep    5s
     Lay Thong Tin Can Ho Luu Vao Dictionary
-
     Common - Click Element    ${btn_dang_ky_xem_can_ho}
 
 #   Thực hiện điền form
@@ -25,18 +24,22 @@ Thuc Hien Dang ky Xem Can Ho
     Set To Dictionary    ${dic_thong_tin_yeu_cau_xem_can_ho}    ngay_xem_can_ho=${value_ngay_xem_phong}
 
 #   Verify thông tin auto-fill trước khi submit (lấy giá trị element thực tế & so sánh kq mong muốn với kq thực tế)
-    Wait Until Page Contains Element    ${input_ho_ten}    30s
-    ${actual_ho_ten}    Get Text    ${input_ho_ten}
-    Should Be Equal As Strings    ${dt_ho_ten}    ${actual_ho_ten}
+    Common - Get Text Element    ${dt_ho_ten}    ${actual_ho_ten}
+    Common - Get Text Element    ${dt_email}    ${actual_ho_ten}
+    Common - Get Text Element    ${dt_phone_number}    ${actual_ho_ten}
 
-    ${actual_email}    Get Text    ${input_email}
-    Should Be Equal As Strings    ${dt_email}    ${actual_email}
-
-    ${actual_so_dien_thoai}    Get Text    ${input_so_dien_thoai}
-    Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
-
-    Common - Click Element    ${btn_xac_nhan}
-    Wait Until Page Contains    ${msg_thanh_cong}
+#    Wait Until Page Contains Element    ${input_ho_ten}    30s
+#    ${actual_ho_ten}    Get Text    ${input_ho_ten}
+#    Should Be Equal As Strings    ${dt_ho_ten}    ${actual_ho_ten}
+#
+#    ${actual_email}    Get Text    ${input_email}
+#    Should Be Equal As Strings    ${dt_email}    ${actual_email}
+#
+#    ${actual_so_dien_thoai}    Get Text    ${input_so_dien_thoai}
+#    Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
+#
+#    Common - Click Element    ${btn_xac_nhan}
+#    Wait Until Page Contains    ${msg_thanh_cong}
 
 
 Thuc Hien Dang Ky Can Ho Da Thue

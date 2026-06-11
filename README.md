@@ -1,20 +1,56 @@
-Cách chạy Project
-1. Chạy toàn bộ các kịch bản test: robot -d results/ -v env:product tests/
-2. Chạy toàn bộ TC theo thẻ tag smoke: robot -d D:\xanhstay_automation\results -v env:product -i smoke D:\xanhstay_automation\tests
-2. Chạy TC Đăng nhập: robot -d D:\xanhstay_automation\results\dang_nhap -v env:product D:\xanhstay_automation\tests\01_dang_nhap.robot
+# 📱 Xanhstay Mobile Automation Testing Project
 
------------Vấn đề khác
-Chạy một/ nhiều testcase đơn trong một suite: robot -t TCs_name   -t TCs2_name   đường dẫn file
+Dự án kiểm thử tự động (Automation Testing) cho ứng dụng di động quản lý phòng trọ **Xanhstay** sử dụng hệ sinh thái Robot Framework và Appium. Tài liệu này hướng dẫn chi tiết từ cấu trúc nguồn, thiết lập môi trường đến quy trình thực thi kịch bản kiểm thử.
 
-noReset: false --> Mỗi lần chạy test, ứng dụng xóa sạch dữ liệu cũ (cache, tk đăng nhập), giúp TC luôn bắt đầu từ trạng thái sạch, tránh lỗi do dl của lần chạy trước
+---
 
-fullReset: false --> Giúp ngăn chặn việc Appium tự động gỡ cài đặt (Uninstall) ứng dụng sau khi chạy xong. Nhờ đó, app vẫn sẽ nằm trên điện thoại, giúp bạn tiết kiệm thời gian vì không phải chờ hệ thống cài lại app từ đầu cho mỗi lần chạy test tiếp theo
+## 🛠️ 1. Công Nghệ Sử Dụng
 
-Wait Until Page Contains (Chờ đến khi xuất hiện): Yêu cầu Bot tạm dừng mọi hành động và liên tục "nhìn" vào màn hình điện thoại để tìm một chuỗi văn bản (text). Ngay khi dòng chữ đó xuất hiện, Bot sẽ lập tức chạy lệnh tiếp theo.
+Dự án được xây dựng và phát triển dựa trên các công nghệ cốt lõi sau:
+* **Ngôn ngữ lập trình:** Python 3.x
+* **Kiểm thử Framework:** Robot Framework
+* **Thư viện hỗ trợ:**
+    * `robotframework-appiumlibrary` (Tương tác UI Mobile)
+    * `robotframework-requestslibrary` (Kiểm thử API / Hỗ trợ tiền xử lý dữ liệu)
+    * `robotframework-pabot` (Thực thi song song - Parallel Execution nhằm tối ưu thời gian)
+    * `robotframework-datadriver` (Kiểm thử hướng dữ liệu ngoại vi qua file CSV/Excel)
+* **Công cụ bổ trợ:**
+    * **IDE:** PyCharm (Kèm plugin *Robot Framework Language Server*)
+    * **Mobile Driver:** Appium Server (v2.x) & UiAutomator2 Driver
+    * **Locator Viewer:** Appium Inspector
+    * **Giả lập/Thiết bị thật:** Android Studio (Emulator) hoặc Điện thoại Android vật lý.
 
-Wait Until Page Does Not Contain (Chờ đến khi biến mất): Yêu cầu Bot tạm dừng và liên tục theo dõi một dòng chữ đang có sẵn trên màn hình. Ngay khi dòng chữ đó hoàn toàn biến mất (mờ đi hoặc bị đóng lại), Bot mới được phép chạy lệnh tiếp theo.
+---
 
-Suite Setup / Suite Teardown = Đóng/mở app 1 LẦN DUY NHẤT cho NHIỀU Test Cases, Mô phỏng đúng luồng trải nghiệm liên tục của người dùng thực tế
+## 📂 2. Cấu Trúc Thư Mục Chuẩn (Layered Architecture)
 
-Test Setup / Test Teardown = Đóng/mở app LIÊN TỤC cho TỪNG Test Case.
+Dự án tuân thủ nghiêm ngặt mô hình phân lớp nhằm tách biệt tầng kịch bản (Test Cases), tầng xử lý nghiệp vụ (Keywords) và tầng dữ liệu (Test Data).
 
+```text
+xanhstay_automation/
+│
+├── configs/            # Cấu hình môi trường toàn cục (Biến hệ thống, Desired Capabilities)
+│   └── import.resource
+│
+├── common/             # Từ khóa dùng chung cho toàn dự án (Mở/Đóng app, tương tác cơ bản)
+│   ├── common_keywords.resource
+│   └── common_variables.resource
+│
+├── feature/            # Tầng nghiệp vụ bọc (Page Object Model / Business Keywords)
+│   ├── dang_nhap/
+│   └── dang_ky_xem_can_ho/
+│
+├── data/               # Dữ liệu kiểm thử ngoại vi (Dùng cho Data-Driven Testing)
+│   └── dang_ky_tai_khoan.csv
+│
+├── tests/              # Tầng chứa kịch bản kiểm thử (Test Suites - Tập tin *.robot)
+│   ├── 01_dang_nhap.robot
+│   └── 02_dang_ky_xem_can_ho.robot
+│
+├── results/            # Kết quả thực thi sau khi chạy test
+│   ├── log.html        # Nhật ký chi tiết
+│   ├── report.html     # Báo cáo tổng quan
+│   ├── output.xml      # File kết quả cho CI/CD
+│   └── screenshots/    # Ảnh chụp màn hình tự động khi kịch bản xảy ra lỗi (Failures)
+│
+└── requirements.txt    # Danh sách thư viện Python cần thiết cho dự án

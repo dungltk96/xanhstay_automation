@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../config/import.resource
 Test Setup    Setup-Open Application
-Test Teardown    Teardown - Close Application
+Test Teardown    Teardown - Chup Anh Va Dong App
 
 *** Test Cases ***
 TC01_Dang_xuat_thanh_cong

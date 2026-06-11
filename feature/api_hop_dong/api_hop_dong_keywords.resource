@@ -69,9 +69,6 @@ Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Chi Tiet Hop Dong
     END
 
 
-
-
-
 #Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Chi Tiet Hop Dong NEW
 #    [Arguments]    ${dic_api_hop_dong}
 #    Common - Click Element    ${btn_menu}

@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../../config/import.resource
-Resource    dat_coc_giu_cho.variables.resource
+Resource    dat_coc_giu_cho_variables.resource
 
 *** Keywords ***
 Thuc Hien Dat Coc Giu Cho

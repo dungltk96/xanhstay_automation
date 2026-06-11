@@ -7,22 +7,42 @@ ${btn_option_can_ho}    id=btn_menu_apartment
 ${btn_option_tim_nha}    id=btn_menu_find_house
 
 #${btn_option_ca_nhan} --> Lấy tất cả dữ liệu
-${btn_menu_ca_nhan}    xpath=//*[@bounds='[368,2792][606,2942]']
-${btn_menu_tat_ca_can_ho}    xpath=//*[@bounds='[606,2792][844,2942]']
-${btn_menu_tat_ca_hop_dong}    xpath=//*[@bounds='[844,2792][1082,2942]']
-${btn_menu_tat_ca_hoa_don}    xpath=//*[@bounds='[1082,2792][1320,2942]']
+${btn_menu_ca_nhan}    id=nav_tab_Cá nhân
+${btn_menu_tat_ca_can_ho}    id=nav_tab_Căn hộ
+${btn_menu_tat_ca_hop_dong}    id=nav_tab_Hợp đồng
+${btn_menu_tat_ca_hoa_don}    id=nav_tab_Phiếu thanh toán
 
 #${btn_option_can_ho} --> Chỉ lấy dữ liệu của căn hộ đang chọn
-${btn_menu_dashboard}    xpath=//*[@bounds='[368,2792][606,2942]']
-${btn_menu_yeu_cau_sua_chua}    xpath=//*[@bounds='[606,2792][844,2942]']
-${btn_menu_hop_dong}    xpath=//*[@bounds='[844,2792][1082,2942]']
-${btn_menu_tat_ca_hoa_don}    xpath=//*[@bounds='[1082,2792][1320,2942]']
+${btn_menu_dashboard}    id=nav_tab_Căn hộ
+${btn_menu_yeu_cau_sua_chua}    id=nav_tab_Yêu cầu sửa chữa
+${btn_menu_hop_dong}    id=nav_tab_Hợp đồng
+${btn_menu_hoa_don}    id=nav_tab_Phiếu thanh toán
 
 #${btn_option_tim_nha}
-${menu_tim_nha}    xpath=//*[@bounds='[368,2792][606,2942]']
-${menu_can_ho_da_luu}    xpath=//*[@bounds='[606,2792][844,2942]']
-${menu_yeu_cau_xem_phong}    xpath=//*[@bounds='[844,2792][1082,2942]']
-${menu_yeu_cau_ky}    xpath=//*[@bounds='[1082,2792][1320,2942]']
+${menu_tim_nha}    id=nav_tab_Tìm nhà
+${menu_can_ho_da_luu}    id=nav_tab_Đã lưu
+${menu_yeu_cau_xem_phong}    id=nav_tab_Yêu cầu xem phòng
+${menu_yeu_cau_ky}    id=nav_tab_Yêu cầu ký hợp đồng
+
+
+
+##${btn_option_ca_nhan} --> Lấy tất cả dữ liệu
+#${btn_menu_ca_nhan}    xpath=//*[@bounds='[368,2792][606,2942]']
+#${btn_menu_tat_ca_can_ho}    xpath=//*[@bounds='[606,2792][844,2942]']
+#${btn_menu_tat_ca_hop_dong}    xpath=//*[@bounds='[844,2792][1082,2942]']
+#${btn_menu_tat_ca_hoa_don}    xpath=//*[@bounds='[1082,2792][1320,2942]']
+#
+##${btn_option_can_ho} --> Chỉ lấy dữ liệu của căn hộ đang chọn
+#${btn_menu_dashboard}    xpath=//*[@bounds='[368,2792][606,2942]']
+#${btn_menu_yeu_cau_sua_chua}    xpath=//*[@bounds='[606,2792][844,2942]']
+#${btn_menu_hop_dong}    xpath=//*[@bounds='[844,2792][1082,2942]']
+#${btn_menu_tat_ca_hoa_don}    xpath=//*[@bounds='[1082,2792][1320,2942]']
+#
+##${btn_option_tim_nha}
+#${menu_tim_nha}    xpath=//*[@bounds='[368,2792][606,2942]']
+#${menu_can_ho_da_luu}    xpath=//*[@bounds='[606,2792][844,2942]']
+#${menu_yeu_cau_xem_phong}    xpath=//*[@bounds='[844,2792][1082,2942]']
+#${menu_yeu_cau_ky}    xpath=//*[@bounds='[1082,2792][1320,2942]']
 
 #Button khác
 ${btn_xem_chi_tiet_can_ho}    xpath=//android.widget.ImageView[@resource-id='btn_view_ads_detail'][1]

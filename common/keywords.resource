@@ -55,15 +55,6 @@ Teardown - Chup Anh Va Dong App
     # 6. Đóng App
     Teardown - Close Application
 
-
-Teardown - Chup Anh Khi Loi
-    [Documentation]    Hàm bổ trợ làm sạch tên file ảnh theo chuẩn Windows để tránh lỗi lưu ảnh
-    ${raw_name}=    Set Variable    ${TEST_NAME}
-    ${safe_name}=    Replace String Using Regexp    ${raw_name}    [:\\\\/*?"<>|]    _
-    ${safe_name}=    Replace String Using Regexp    ${safe_name}    \\s+    _
-    ${safe_name}=    Strip String    ${safe_name}    characters=_
-    Capture Page Screenshot    ${safe_name}.png
-
 Common - Click Element
     [Arguments]    ${locator}
     Wait Until Element Is Visible    ${locator}    30s
@@ -78,6 +69,12 @@ Common - Input Element
     Clear Text    ${input_locator}
     Input Text    ${input_locator}    ${value}
 
+Common - Get Text Element
+    [Arguments]    ${expected_locator}    ${actual_locator}
+    Wait Until Page Contains Element    ${actual_locator}
+    ${actual_locator}    Get Text    ${actual_locator}
+    Should Be Equal As Strings    ${actual_locator}    ${expected_locator}
+
 Common - Chon Ngay Tuong Lai
     [Arguments]    ${so_ngay_cong_them}
 
@@ -90,7 +87,6 @@ Common - Chon Ngay Tuong Lai
 
     ${locator_ngay_tuong_lai}=    Set Variable    xpath=//*[contains(@content-desc, '${ngay_chuan},')]
 
-    # 4. Chờ và Click chọn ngày
     Wait Until Page Contains Element    ${locator_ngay_tuong_lai}
     Common - Click Element    ${locator_ngay_tuong_lai}
 
@@ -115,8 +111,6 @@ Common - Vuot Man Hinh Tim Element
         # Dừng lại 1 chút để giao diện load kịp sau khi vuốt
         Sleep    1s
     END
-
-    # Chốt chặn cuối cùng: Đảm bảo phần tử thực sự hiển thị hợp lệ trước khi cho đi tiếp
     Wait Until Page Contains Element    ${locator}    5s    error=LỖI TÌM KIẾM: Đã cuộn hết cỡ nhưng không thấy phần tử ${locator}
 
 Common - Keo De Lam Moi Man Hinh
@@ -127,8 +121,6 @@ Common - Keo De Lam Moi Man Hinh
     # Kéo mạnh xuống phía dưới (X=50%, Y=90%)
     # Thời gian kéo mặc định 2000ms (1 giây)
     Swipe By Percent    50    40    50    90    ${thoi_gian_vuot}
-
-    # Chờ một chút để app xuất hiện icon xoay vòng (loading spinner) và tải dữ liệu mới
     Sleep    3s
 
 Mo Ung Dung Va Dang Nhap He Thong
@@ -165,14 +157,9 @@ Common - Chuan Hoa Tien Te Tu API
     RETURN    ${formatted_price}
 
 
-
-
 #Common - Dang Nhap WebAdmin
 #    Set Library Search Order    SeleniumLibrary    AppiumLibrary
 #    Common - Click Element    ${msg_bat_thong_bao_web}
-#
 #    Common - Click Element    ${ten_tai_khoan_admin}
-#
 #    Common - Click Element    ${mat_khau_admin}
-#
 #    Common - Click Element    ${btn_dang_nhap_admin}

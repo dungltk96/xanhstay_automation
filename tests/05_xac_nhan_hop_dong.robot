@@ -1,10 +1,7 @@
 *** Settings ***
 Resource    ../config/import.resource
-
-# Login 1 lần duy nhất lúc bắt đầu
 Suite Setup   Mo Ung Dung Va Dang Nhap He Thong    ${dt_phone_number}    ${dt_password}
-Suite Teardown   Close Application
-Test Teardown    Run Keyword If Test Failed    Capture Page Screenshot    ${TEST_NAME}.png
+Suite Teardown   Teardown - Chup Anh Va Dong App
 
 *** Test Cases ***
 TC01_Xac_nhan_hop_dong_that_bai_do_chua_tick_dieu_khoan

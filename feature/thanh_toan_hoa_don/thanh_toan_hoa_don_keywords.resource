@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../../common/keywords.resource
-Resource    thanh_toan_hoa_don.variables.resource
+Resource    thanh_toan_hoa_don_variables.resource
 
 *** Keywords ***
 Thuc Hien Thanh Toan Hoa Don Tien Coc

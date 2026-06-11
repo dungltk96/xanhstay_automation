@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../../config/import.resource
-Resource    xac_nhan_hop_dong.variables.resource
+Resource    xac_nhan_hop_dong_variables.resource
 
 *** Keywords ***
 # --- THẺ 1: ĐIỀU HƯỚNG ---

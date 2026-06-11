@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../../config/import.resource
-Resource    dang_xuat.variables.resource
+Resource    dang_xuat_variables.resource
 
 *** Keywords ***
 Thuc Hien Dang Xuat
