@@ -1,7 +1,9 @@
 *** Settings ***
-Resource    ../config/import.resource
-Suite Setup   Mo Ung Dung Va Dang Nhap He Thong    ${dt_phone_number}    ${dt_password}
-Suite Teardown   Teardown - Chup Anh Va Dong App
+Resource            ../config/import.resource
+
+Suite Setup         Mo Ung Dung Va Dang Nhap He Thong    ${dt_phone_number}    ${dt_password}
+Suite Teardown      Teardown - Chup Anh Va Dong App
+
 
 *** Test Cases ***
 TC_01_Dang_nhap_thanh_cong

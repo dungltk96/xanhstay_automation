@@ -21,10 +21,17 @@ Dự án được xây dựng và phát triển dựa trên các công nghệ c�
     * **Giả lập/Thiết bị thật:** Android Studio (Emulator) hoặc Điện thoại Android vật lý.
 
 ---
+## 2. Cách chạy kiểm thử testcase
+1. Chạy toàn bộ kịch bản kiểm thử dự án: robot -d [đường dẫn file lưu kết quả test] -v env:product [đường dẫn folder chứa các chức năng cần chạy của dự án]
+2. Chạy suite (chức năng): robot -d [đường dẫn file lưu kết quả test] -v env:product [đường dẫn file chức năng cần chạy test]
+3. Chạy theo tag (độ ưu tiên testcase hoặc tag cụ thể), vd tag smoke: robot -d [đường dẫn file lưu kết quả test] -v env:product -i smoke [đường dẫn folder chứa các chức năng cần chạy của dự án/ hoặc đường dẫn chức năng cần chạy test]
+4. Chạy một hoặc nhiều testcase trong một suite: robot -t [đường dẫn file lưu kết quả test] -t [tên TC01] -t [tên TC02] -v:env:product [đường dẫn file chức năng cần chạy test]
+5. Chạy lại các testcase failed trong lần chạy gần nhất: robot -d [results/đặt tên foler testcase] -v:env:product [đường dẫn file chức năng cần chạy test]
+6. Chạy testcase và tạo mới đường dẫn file lưu kết quả test
 
-## 📂 2. Cấu Trúc Thư Mục Chuẩn (Layered Architecture)
+## 📂 3 Cấu Trúc Thư Mục
 
-Dự án tuân thủ nghiêm ngặt mô hình phân lớp nhằm tách biệt tầng kịch bản (Test Cases), tầng xử lý nghiệp vụ (Keywords) và tầng dữ liệu (Test Data).
+Dự án sử dụng mô hình phân lớp nhằm tách biệt tầng kịch bản (Test Cases), tầng xử lý nghiệp vụ (Keywords) và tầng dữ liệu (Test Data).
 
 ```text
 xanhstay_automation/

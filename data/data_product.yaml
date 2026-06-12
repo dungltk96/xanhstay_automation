@@ -38,14 +38,8 @@ dt_display_name_admin: "MobiPlus Support"
 
 #===============Dữ liệu api===============
 #Định nghĩa môi trường mặc định khi không truyền dl từ dòng lệnh
-default_env: "dev"
-
-staging:
-  domain: "http://smart-homestay-api-dev.m2wdemo.id.vn/api/v1/Account/personal/change-password"
-  login_url: "/api/v1/Auth/login"
-  list_contract_url: "/api/v1/ContractRequest/list-contract-requests"
-
-product: "http://smart-homestay-api-dev.m2wdemo.id.vn/api/v1/Account/personal/change-password"
+domain_api: "http://smart-homestay-api-dev.m2wdemo.id.vn"
+${dt_OTP}: [1,2,3,4,5,6]
 
 #===============Dữ liệu website===============
 #Dữ liệu webadmin

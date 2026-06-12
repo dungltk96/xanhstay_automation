@@ -2,18 +2,19 @@
 Resource    ../config/import.resource
 Resource    ../common/variables.resource
 
+
 *** Keywords ***
 Setup-Open Application
     [Documentation]    Mở ứng dụng tùy chọn. Mặc định là mở App User. Truyền 'admin' để mở App Admin.
     [Arguments]    ${app_type}=user
 
     # 1. Khởi tạo biến lưu package và activity mặc định (là của User)
-    ${target_package}=     Set Variable    ${user_appPackage}
+    ${target_package}=    Set Variable    ${user_appPackage}
     ${target_activity}=    Set Variable    ${user_appActivity}
 
     # 2. Đổi hướng sang App Admin nếu được yêu cầu
     IF    '${app_type}' == 'admin'
-        ${target_package}=     Set Variable    ${admin_appPackage}
+        ${target_package}=    Set Variable    ${admin_appPackage}
         ${target_activity}=    Set Variable    ${admin_appActivity}
     END
 
@@ -36,23 +37,7 @@ Teardown - Close application
     Close Application
 
 Teardown - Chup Anh Va Dong App
-    # 1. Lấy tên Test Case gốc
-    ${raw_name}=    Set Variable    ${TEST_NAME}
-
-    # 2. Xóa các ký tự cấm của Windows (\ / : * ? " < > |) và thay bằng dấu gạch dưới (_)
-    # Sử dụng Regular Expression (Regexp) để quét sạch một lần
-    ${safe_name}=    Replace String Using Regexp    ${raw_name}    [:\\\\/*?"<>|]    _
-
-    # 3. Xử lý khoảng trắng: Biến tất cả khoảng trắng thành 1 dấu gạch dưới
-    ${safe_name}=    Replace String Using Regexp    ${safe_name}    \\s+    _
-
-    # (Tùy chọn) 4. Cắt bỏ dấu gạch dưới ở 2 đầu tên file nếu có (để tên file gọn gàng hơn)
-    ${safe_name}=    Strip String    ${safe_name}    characters=_
-
-    # 5. Chụp ảnh nếu TC Fail với tên file
-    Run Keyword If Test Failed    Capture Page Screenshot    ${safe_name}.png
-
-    # 6. Đóng App
+    Run Keyword If Test Failed    Capture Page Screenshot    ${TEST_NAME}.png
     Teardown - Close Application
 
 Common - Click Element
@@ -70,10 +55,16 @@ Common - Input Element
     Input Text    ${input_locator}    ${value}
 
 Common - Get Text Element
-    [Arguments]    ${expected_locator}    ${actual_locator}
-    Wait Until Page Contains Element    ${actual_locator}
-    ${actual_locator}    Get Text    ${actual_locator}
-    Should Be Equal As Strings    ${actual_locator}    ${expected_locator}
+    [Arguments]    ${locator}
+    Wait Until Page Contains Element    ${locator}
+    ${value_locator}=    Get Text    ${locator}
+    RETURN    ${value_locator}
+
+Common - Get Attribute
+    [Arguments]    ${locator}    ${attribute}=content-desc
+    Wait Until Page Contains Element    ${locator}
+    ${value_attribute}=    Get Element Attribute    ${locator}    ${attribute}
+    RETURN    ${value_attribute}
 
 Common - Chon Ngay Tuong Lai
     [Arguments]    ${so_ngay_cong_them}
@@ -91,8 +82,8 @@ Common - Chon Ngay Tuong Lai
     Common - Click Element    ${locator_ngay_tuong_lai}
 
 Common - Vuot Man Hinh Tim Element
-    [Arguments]    ${locator}    ${so_lan_vuot_toi_da}=5
     [Documentation]    Vuốt màn hình từ dưới lên trên để tìm element bị khuất theo tỷ lệ %
+    [Arguments]    ${locator}    ${so_lan_vuot_toi_da}=5
 
     FOR    ${index}    IN RANGE    ${so_lan_vuot_toi_da}
         # Kiểm tra xem phần tử đã xuất hiện trên màn hình chưa (Không chờ lâu, quét nhanh)
@@ -111,7 +102,10 @@ Common - Vuot Man Hinh Tim Element
         # Dừng lại 1 chút để giao diện load kịp sau khi vuốt
         Sleep    1s
     END
-    Wait Until Page Contains Element    ${locator}    5s    error=LỖI TÌM KIẾM: Đã cuộn hết cỡ nhưng không thấy phần tử ${locator}
+    Wait Until Page Contains Element
+    ...    ${locator}
+    ...    5s
+    ...    error=LỖI TÌM KIẾM: Đã cuộn hết cỡ nhưng không thấy phần tử ${locator}
 
 Common - Keo De Lam Moi Man Hinh
     [Documentation]    Thực hiện cử chỉ Pull-to-refresh bằng cách vuốt dọc từ trên xuống dưới.
@@ -124,21 +118,23 @@ Common - Keo De Lam Moi Man Hinh
     Sleep    3s
 
 Mo Ung Dung Va Dang Nhap He Thong
-    [Arguments]    ${phone}    ${password}
     [Documentation]    Gộp bước mở Appium và Đăng nhập để dùng cho Suite Setup
+    [Arguments]    ${phone}    ${password}
     Setup-Open Application
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
-    Log To Console         \n[Info] Đã mở App và Đăng nhập thành công!
+    Log To Console    \n[Info] Đã mở App và Đăng nhập thành công!
 
-#Dọn dẹp
+# Dọn dẹp
+
 Don Dep Man Hinh Sau Khi Test
     Run Keyword And Ignore Error    Go Back
 
 Common - Lay AccessToken Tu API Dang Nhap
-    Create Session    XanhStay    http://smart-homestay-api-dev.m2wdemo.id.vn
-    &{dic_data_login}    Create Dictionary    username=${dt_phone_number}    password=${dt_password}
+    Log To Console    Đang gọi API tại: ${domain_api}/api/v1/Auth/login
+    Create Session    XanhStay    ${domain_api}
+    &{dic_data_login}=    Create Dictionary    username=${dt_phone_number}    password=${dt_password}
     ${response}=    POST On Session    XanhStay    /api/v1/Auth/login    json=${dic_data_login}
-    Log To Console     ${response.json()}[data][accessToken]
+    Log To Console    ${response.json()}[data][accessToken]
     RETURN    ${response.json()}[data][accessToken]
 
 Common - Chuan Hoa Ngay Thang Tu API
@@ -149,17 +145,16 @@ Common - Chuan Hoa Ngay Thang Tu API
     RETURN    ${formatted_date}
 
 Common - Chuan Hoa Tien Te Tu API
-    [Arguments]    ${api_price_raw}
+    [Arguments]    ${api_gia_thue_can_ho_raw}
 
     # Sử dụng Evaluate để chạy hàm Format số của Python:
     # 1. Ép kiểu về float. 2. Format có dấu phẩy (7,000,000). 3. Đổi phẩy thành chấm (7.000.000)
-    ${formatted_price}=    Evaluate    "{:,.0f}".format(float('${api_price_raw}')).replace(',', '.')
+    ${formatted_price}=    Evaluate    "{:,.0f}".format(float('${api_gia_thue_can_ho_raw}')).replace(',', '.')
     RETURN    ${formatted_price}
 
-
-#Common - Dang Nhap WebAdmin
-#    Set Library Search Order    SeleniumLibrary    AppiumLibrary
-#    Common - Click Element    ${msg_bat_thong_bao_web}
-#    Common - Click Element    ${ten_tai_khoan_admin}
-#    Common - Click Element    ${mat_khau_admin}
-#    Common - Click Element    ${btn_dang_nhap_admin}
+Common - Input OTP
+    [Arguments]    ${OTP}
+    FOR    ${i}    IN    @{OTP}
+        Common - Click Element    ${input_OPT}[${i}]
+        Common - Input Element    ${input_OPT}[${i}]    ${i}
+    END
