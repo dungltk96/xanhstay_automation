@@ -4,6 +4,27 @@ Resource    thanh_toan_hoa_don_variables.resource
 
 
 *** Keywords ***
+Thuc Hien Mo Danh Sach Hoa Don Thanh Toan
+    Common - Click Element    ${btn_menu}
+    Common - Click Element    ${btn_option_ca_nhan}
+    Common - Click Element    ${btn_menu_tat_ca_hoa_don}
+
+Thuc Hien Click Hoa Don Dau Tien De Xem Chi Tiet
+    Common - Click Element    ${btn_menu}
+    Common - Click Element    ${btn_option_ca_nhan}
+    Common - Click Element    ${btn_menu_tat_ca_hoa_don}
+    Common - Click Element    ${btn_chi_tiet_hoa_don_dau_tien}
+    Sleep    5s
+
+Thuc Hien Thanh Toan Hoa Don Tien Thue
+    Common - Click Element
+    ...    ${btn_chon_hoa_don_chua_thanh_toan_tien_thue}
+    Common - Click Element
+    ...    ${btn_thanh_toan_phieu}
+    Common - Click Element    ${btn_tiep_tuc}
+    Sleep    3s
+    Common - Click Element    ${nav_ui_thanh_toan_payos}
+
 Thuc Hien Thanh Toan Hoa Don Tien Coc
     Common - Click Element    ${btn_menu}
     Common - Click Element    ${btn_option_ca_nhan}
@@ -20,6 +41,14 @@ Thuc Hien Thanh Toan Hoa Don Tien Coc
     Go Back
     Go Back
     Go Back
+
+Thuc Hien Thanh Toan Hoa Don Tien Coc Giu Cho
+    Common - Click Element
+    ...    ${btn_chon_hoa_don_chua_thanh_toan_tien_coc_giu_cho}
+    Common - Click Element
+    ...    ${btn_thanh_toan_phieu}
+    Common - Click Element    ${btn_tiep_tuc}
+    Common - Click Element    ${nav_ui_thanh_toan_payos}
 
 Thuc Hien Duyet Hoa Don Thanh Toan Tien Coc
     Common - Click Element    ${menu_hoa_don_admin}
@@ -43,20 +72,3 @@ Thuc Hien Duyet Hoa Don Thanh Toan Tien Thue Nha
     Sleep    5s
     Common - Click Element    ${popup_xac_nhan_thanh_toan_admin}
     Wait Until Page Contains Element    ${msg_duyet_hoa_don_thanh_cong_admin}    30s
-
-Thuc Hien Thanh Toan Hoa Don Tien Thue
-    Common - Click Element
-    ...    ${btn_chon_hoa_don_chua_thanh_toan_tien_thue}
-    Common - Click Element
-    ...    ${btn_thanh_toan_phieu}
-    Common - Click Element    ${btn_tiep_tuc}
-    Sleep    3s
-    Common - Click Element    ${nav_ui_thanh_toan_payos}
-
-Thuc Hien Thanh Toan Hoa Don Tien Coc Giu Cho
-    Common - Click Element
-    ...    ${btn_chon_hoa_don_chua_thanh_toan_tien_coc_giu_cho}
-    Common - Click Element
-    ...    ${btn_thanh_toan_phieu}
-    Common - Click Element    ${btn_tiep_tuc}
-    Common - Click Element    ${nav_ui_thanh_toan_payos}

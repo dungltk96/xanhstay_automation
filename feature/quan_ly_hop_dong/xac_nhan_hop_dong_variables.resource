@@ -8,4 +8,4 @@ ${title_thong_bao_xac_nhan_hop_dong_success}    xpath=//android.view.View[contai
 # Các thông báo lỗi
 ${msg_untick_err}                               Bạn phải xác nhận đã đọc và đồng ý với các điều khoản trong hợp đồng trước khi xác nhận thuê căn hộ
 ${msg_KYC_err}                                  Người thuê chưa xác thực danh tính (KYC). Vui lòng hoàn tất KYC trước khi xác nhận hợp đồng.
-${msg_payment_err}                              Vui lòng thanh toán hóa đơn cọc/tiền phòng trước khi ký
+${msg_payment_err}                              Vui lòng thanh toán phiếu thanh toán cọc/tiền phòng trước khi ký
