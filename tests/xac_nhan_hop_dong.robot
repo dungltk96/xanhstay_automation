@@ -8,13 +8,13 @@ Test Teardown       Teardown - Chup Anh Va Dong App
 *** Test Cases ***
 TC01_Xac_nhan_hop_dong_that_bai_do_chua_tick_dieu_khoan
     [Documentation]    Không tích điều khoản -> Báo lỗi UI
-    [Tags]    flow
+    [Tags]    flow    high
     Di Vao Man Hinh Chi Tiet Hop Dong
     Kiem Tra Loi Khong Tich Dieu Khoan
 
 TC02_Xac_nhan_hop_dong_that_bai_do_chua_xac_thuc_KYC
     [Documentation]    Có tích điều khoản -> Báo lỗi chưa KYC
-    [Tags]    flow
+    [Tags]    flow    high
     IF    ${kyc_status}
         Skip    Bỏ qua kịch bản kiểm thử này do tài khoản hiện tại đã hoàn tất KYC.
     ELSE

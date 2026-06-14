@@ -45,6 +45,7 @@ Thuc Hien Dang ky Xem Can Ho
     Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
 
     Common - Click Element    ${btn_xac_nhan}
+    Wait Until Page Contains    ${msg_thanh_cong}
 
 Thuc Hien Dang Ky Xem Can Ho Va Kiem Tra Thong Tin Yeu Cau Xem Phong
     Go Back

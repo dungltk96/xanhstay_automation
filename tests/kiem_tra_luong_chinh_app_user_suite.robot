@@ -2,7 +2,8 @@
 Resource            ../config/import.resource
 
 Suite Setup         Mo Ung Dung Va Dang Nhap He Thong    ${dt_phone_number}    ${dt_password}
-Suite Teardown      Teardown - Chup Anh Va Dong App
+Suite Teardown      Teardown - Close Application
+Test Teardown       Run Keyword If Test Failed    Capture Page Screenshot    ${TEST_NAME}.png
 
 
 *** Test Cases ***
@@ -40,5 +41,5 @@ TC_06_Xac_nhan_hop_dong_thanh_cong
     [Tags]    smoke    flow
     [Setup]    Setup-Open Application    user
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
-    Di Vao Man Hinh Chi Tiet Hop Dong Hop Le
+    Di Vao Man Hinh Chi Tiet Hop Dong
     Kiem Tra Xac Nhan Hop Dong Thanh Cong    ${title_thong_bao_xac_nhan_hop_dong_success}

@@ -40,23 +40,24 @@ Kiem Tra Loi Nghiep Vu Chua Xac Thuc KYC
     [Arguments]    ${cau_thong_bao_mong_doi}
     Common - Click Element    ${tick_checkbox}
     Common - Click Element    ${btn_xac_nhan_hop_dong}
-    Wait Until Page Contains Element    ${cau_thong_bao_mong_doi}
+    Wait Until Page Contains    ${cau_thong_bao_mong_doi}
     Log To Console    \n[Pass] TC02: Báo lỗi nghiệp vụ -> ${cau_thong_bao_mong_doi}
-    Wait Until Page Does Not Contain Element    ${cau_thong_bao_mong_doi}
+    Wait Until Page Does Not Contain    ${cau_thong_bao_mong_doi}
 
 Kiem Tra Loi Nghiep Vu Chua Thanh Toán Bill
     [Documentation]    Tích checkbox và verify lỗi theo trạng thái Account
-#    [Arguments]    ${cau_thong_bao_mong_doi}
+    [Arguments]    ${cau_thong_bao_mong_doi}
     Common - Click Element    ${tick_checkbox}
     Common - Click Element    ${btn_xac_nhan_hop_dong}
-#    Wait Until Page Contains Element    ${cau_thong_bao_mong_doi}
-#    Log To Console    \n[Pass] TC03: Báo lỗi nghiệp vụ -> ${cau_thong_bao_mong_doi}
-#    Wait Until Page Does Not Contain Element    ${cau_thong_bao_mong_doi}
+    Wait Until Page Contains    ${cau_thong_bao_mong_doi}
+    Log To Console    \n[Pass] TC03: Báo lỗi nghiệp vụ -> ${cau_thong_bao_mong_doi}
+    Wait Until Page Does Not Contain    ${cau_thong_bao_mong_doi}
 
 Kiem Tra Xac Nhan Hop Dong Thanh Cong
     [Documentation]    Tích checkbox và verify lỗi theo trạng thái Account
     [Arguments]    ${cau_thong_bao_mong_doi}
     Common - Click Element    ${tick_checkbox}
     Common - Click Element    ${btn_xac_nhan_hop_dong}
-    Wait Until Element Is Visible    ${cau_thong_bao_mong_doi}    15s
+    Wait Until Page Contains    ${cau_thong_bao_mong_doi}
+    Wait Until Page Does Not Contain    ${cau_thong_bao_mong_doi}
     Common - Click Element    ${btn_dong}
