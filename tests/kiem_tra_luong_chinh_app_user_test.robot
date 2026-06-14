@@ -43,5 +43,5 @@ TC_06_Xac_nhan_hop_dong_thanh_cong
     [Documentation]    Xác nhận hợp đồng thành công
     [Tags]    smoke    flow
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
-    Di Vao Man Hinh Chi Tiet Hop Dong Hop Le
+    Di Vao Man Hinh Chi Tiet Hop Dong
     Kiem Tra Xac Nhan Hop Dong Thanh Cong    ${title_thong_bao_xac_nhan_hop_dong_success}

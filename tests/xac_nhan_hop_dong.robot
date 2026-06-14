@@ -27,3 +27,5 @@ TC03_Xac_nhan_hop_dong_that_bai_do_chua_thanh_toan_bill
     [Tags]    flow
     Di Vao Man Hinh Chi Tiet Hop Dong
     Kiem Tra Loi Nghiep Vu Chua Thanh Toán Bill    ${msg_payment_err}
+
+#TC kiểm tra xác nhận hợp đồng thành công viết trong suite Thanh toán hoóa đơn

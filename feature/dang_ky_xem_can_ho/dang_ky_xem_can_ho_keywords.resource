@@ -10,16 +10,11 @@ Thuc Hien Mo Danh Sach Can Ho Quang Cao
     Common - Click Element    ${menu_tim_nha}
 
 Thuc Hien Click Can Ho Dau Tien De Xem Chi Tiet
-    Common - Click Element    ${btn_menu}
-    Common - Click Element    ${btn_option_tim_nha}
-    Common - Click Element    ${menu_tim_nha}
     Common - Click Element    ${btn_xem_chi_tiet_can_ho}
     Go Back
 
 Thuc Hien Dang ky Xem Can Ho
     [Arguments]    ${ho_ten}    ${email}    ${so_dien_thoai}
-    Common - Click Element    ${btn_menu}
-    Common - Click Element    ${btn_option_tim_nha}
     Common - Click Element    ${menu_tim_nha}
     Common - Click Element    ${btn_xem_chi_tiet_can_ho}
     Lay Thong Tin Can Ho Luu Vao Dictionary
@@ -43,29 +38,14 @@ Thuc Hien Dang ky Xem Can Ho
 
     ${actual_so_dien_thoai}    Common - Get Text Element    ${input_so_dien_thoai}
     Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
-
     Common - Click Element    ${btn_xac_nhan}
-
-Thuc Hien Dang Ky Xem Can Ho Va Kiem Tra Thong Tin Yeu Cau Xem Phong
     Go Back
-    ${status}    Run Keyword And Return Status
-    ...    Thuc Hien Dang Ky Xem Can Ho
-    ...    ${dt_ho_ten}
-    ...    ${dt_email}
-    ...    ${dt_phone_number}
-    IF    "${status}" == "True"
-        Kiem Tra Thong Tin Yeu Cau Xem Phong
-    ELSE
-        Log    Đăng ký xem căn hộ thất bại, bỏ qua bước kiểm tra thông tin.    WARN
-        Skip    Đăng ký xem căn hộ không thành công, không thể thực hiện kiểm tra.
-    END
 
 Thuc Hien Dang Ky Can Ho Da Thue
     Common - Click Element    ${menu_tim_nha}
     Common - Vuot Man Hinh Tim Element    ${btn_dang_ky_xem_chi_tiet_can_ho_da_thue}
     Common - Click Element    ${btn_dang_ky_xem_chi_tiet_can_ho_da_thue}
     Lay Thong Tin Can Ho Luu Vao Dictionary
-    Common - Click Element    ${btn_dang_ky_xem_can_ho}
     Common - Click Element    ${btn_dang_ky_xem_can_ho}
     Sleep    5s
 
@@ -93,11 +73,16 @@ Lay Thong Tin Can Ho Luu Vao Dictionary
     [Documentation]    Vừa vuốt màn hình vừa tìm data cất vào Dictionary
     ${value_dia_chi_can_ho}    Common - Get Attribute    ${dia_chi_can_ho_man_chi_tiet_can_ho}
     ${value_ten_can_ho}    Common - Get Attribute    ${ten_can_ho_man_chi_tiet_can_ho}
+    ${value_ho_ten_chu_can_ho}    Common - Get Attribute    ${ho_ten_chu_can_ho_man_chi_tiet_can_ho}
+    Common - Vuot Man Hinh Tim Element    ${sdt_chu_can_ho_man_chi_tiet_can_ho}
+    ${value_sdt_chu_can_ho}    Common - Get Attribute    ${sdt_chu_can_ho_man_chi_tiet_can_ho}
 
     Set To Dictionary
     ...    ${dic_thong_tin_yeu_cau_xem_can_ho}
     ...    dia_chi_can_ho=${value_dia_chi_can_ho}
     ...    ten_can_ho=${value_ten_can_ho}
+    ...    ho_ten_chu_can_ho=${value_ho_ten_chu_can_ho}
+    ...    sdt_chu_can_ho=${value_sdt_chu_can_ho}
 
 Xu Ly Dia Chi
     [Arguments]    ${dia_chi_day_du}
@@ -115,7 +100,6 @@ Xu Ly Ngay Thang
     RETURN    ${thoi_gian_rut_gon}
 
 Kiem Tra Thong Tin Yeu Cau Xem Phong
-    Go Back
     Common - Click Element    ${menu_yeu_cau_xem_phong}
 
     # Bóc tách thời gian
@@ -132,42 +116,12 @@ Kiem Tra Thong Tin Yeu Cau Xem Phong
     ...    ${short_date}
     ...    ${dic_thong_tin_yeu_cau_xem_can_ho}[ten_can_ho]
     ...    ${short_addres}
-#    ...    ${dic_thong_tin_yeu_cau_xem_can_ho}[sdt_can_ho]
+    ...    ${dic_thong_tin_yeu_cau_xem_can_ho}[sdt_chu_can_ho]
+    ...    ${dic_thong_tin_yeu_cau_xem_can_ho}[ho_ten_chu_can_ho]
 
-    # Vòng lặp FOR quét qua từng từ khóa con trong danh sách
     FOR    ${item}    IN    @{thong_tin_can_ho}
         Wait Until Page Contains Element
         ...    xpath=//android.view.View[contains(@content-desc, '${item}')]
         ...    5s
         ...    error=LỖI CHỨC NĂNG: Giao diện yêu cầu xem phòng hiển thị sai lệch thông tin, không tìm thấy cụm từ: [${item}]
     END
-
-Thuc Hien Doi Lich Can Ho
-    [Arguments]    ${ho_ten}    ${email}    ${so_dien_thoai}
-    Common - Click Element    ${btn_menu}
-    Common - Click Element    ${btn_option_tim_nha}
-    Common - Click Element    ${menu_tim_nha}
-    Common - Click Element    ${btn_xem_chi_tiet_can_ho}
-    Common - Click Element    ${btn_dang_ky_xem_can_ho}
-
-#    Wait Until Page Contains Element    ${lbl_da_dang_ky_lich}    30s
-
-#    Tiến hành đổi lịch xem sang ngày mai
-    Common - Click Element    ${viewing_date_xem_can_ho}
-    Common - Chon Ngay Tuong Lai    1
-    Common - Click Element    ${btn_chon}
-
-#    Verify thông tin auto-fill trước khi submit (lấy giá trị element thực tế & so sánh kq mong muốn với kq thực tế)
-    ${actual_ho_ten}    Common - Get Text Element    ${input_ho_ten}
-    Should Be Equal As Strings    ${dt_ho_ten}    ${actual_ho_ten}
-
-    ${actual_email}    Common - Get Text Element    ${input_email}
-    Should Be Equal As Strings    ${dt_email}    ${actual_email}
-
-    ${actual_so_dien_thoai}    Common - Get Text Element    ${input_so_dien_thoai}
-    Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
-
-    Common - Click Element    ${btn_xac_nhan}
-
-    Wait Until Page Contains
-    ...    ${msg_doi_lich_thanh_cong}
