@@ -31,33 +31,41 @@ Dự án được xây dựng và phát triển dựa trên các công nghệ c�
 
 ## 📂 3 Cấu Trúc Thư Mục
 
-Dự án sử dụng mô hình phân lớp nhằm tách biệt tầng kịch bản (Test Cases), tầng xử lý nghiệp vụ (Keywords) và tầng dữ liệu (Test Data).
-git
+Dự án sử dụng mô hình phân lớp nhằm tách biệt tầng kịch bản (Test Cases), tầng xử lý nghiệp vụ (Keywords) và tầng dữ liệu (Test Data)
 ```text
 xanhstay_automation/
 │
-├── configs/            # Cấu hình môi trường toàn cục (Biến hệ thống, Desired Capabilities)
+├── configs/                        # Cấu hình môi trường toàn cục
 │   └── import.resource
 │
-├── common/             # Từ khóa dùng chung cho toàn dự án (Mở/Đóng app, tương tác cơ bản)
+├── common/                         # Từ khóa và biến dùng chung
 │   ├── common_keywords.resource
 │   └── common_variables.resource
 │
-├── feature/            # Tầng nghiệp vụ bọc (Page Object Model / Business Keywords)
+├── feature/                        # Tầng nghiệp vụ (Business Keywords)
 │   ├── dang_nhap/
-│   └── dang_ky_xem_can_ho/
+│   ├── dang_ky_tai_khoan/
+│   ├── dang_ky_xem_can_ho/
+│   ├── dang_ky_thue_can_ho/
+│   ├── thanh_toan_hoa_don/
+│   └── ...
 │
-├── data/               # Dữ liệu kiểm thử ngoại vi (Dùng cho Data-Driven Testing)
-│   └── dang_ky_tai_khoan.csv
+├── data/                           # Dữ liệu kiểm thử và cấu hình
+│   ├── dang_ky_tai_khoan.csv       # Data-Driven Testing
+│   ├── data_product.yaml           # Dữ liệu môi trường Product
+│   └── device.yaml                 # Cấu hình thiết bị Appium
 │
-├── tests/              # Tầng chứa kịch bản kiểm thử (Test Suites - Tập tin *.robot)
-│   ├── 01_dang_nhap.robot
-│   └── 02_dang_ky_xem_can_ho.robot
+├── tests/                          # Test Suites (*.robot)
+│   ├── dang_nhap.robot
+│   ├── dang_ky_tai_khoan.robot
+│   ├── dang_ky_xem_can_ho.robot
+│   ├── dang_ky_thue_can_ho.robot
+│   └── ...
 │
-├── results/            # Kết quả thực thi sau khi chạy test
-│   ├── log.html        # Nhật ký chi tiết
-│   ├── report.html     # Báo cáo tổng quan
-│   ├── output.xml      # File kết quả cho CI/CD
-│   └── screenshots/    # Ảnh chụp màn hình tự động khi kịch bản xảy ra lỗi (Failures)
+├── results/                        # Kết quả thực thi
+│   ├── log.html
+│   ├── report.html
+│   ├── output.xml
+│   └── screenshots/
 │
-└── requirements.txt    # Danh sách thư viện Python cần thiết cho dự án
+└── requirements.txt                # Danh sách thư viện Python
