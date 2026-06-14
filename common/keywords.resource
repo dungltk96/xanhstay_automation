@@ -86,7 +86,7 @@ Common - Vuot Man Hinh Tim Element
     [Arguments]    ${locator}    ${so_lan_vuot_toi_da}=5
 
     FOR    ${index}    IN RANGE    ${so_lan_vuot_toi_da}
-        # Kiểm tra xem phần tử đã xuất hiện trên màn hình chưa (Không chờ lâu, quét nhanh)
+        # Kiểm tra xem phần tử đã xuất hiện trên màn hình chưa
         ${da_thay_chua}=    Run Keyword And Return Status    Page Should Contain Element    ${locator}
 
         # Nếu đã thấy rồi thì thoát vòng lặp ngay lập tức
@@ -123,8 +123,6 @@ Mo Ung Dung Va Dang Nhap He Thong
     Setup-Open Application
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
     Log To Console    \n[Info] Đã mở App và Đăng nhập thành công!
-
-# Dọn dẹp
 
 Don Dep Man Hinh Sau Khi Test
     Run Keyword And Ignore Error    Go Back

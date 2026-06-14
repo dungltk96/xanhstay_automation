@@ -21,7 +21,7 @@ Dang Ky Tai Khoan
     Log To Console    Đang test data: ${fullname} | Mong muốn: ${expected_message}
 
     # =========================================================================
-    # BƯỚC 1: ĐIỀU HƯỚNG VÀ ĐIỀN FORM
+    # BƯỚC 1: Điều hướng và nhập liệu
     # =========================================================================
     Common - Click Element    ${btn_menu}
     Common - Click Element    ${btn_option_ca_nhan}
@@ -46,26 +46,24 @@ Dang Ky Tai Khoan
     Hide Keyboard
     Common - Click Element    ${checkbox_dieu_khoan_dk}
 
-    # THAO TÁC QUYẾT ĐỊNH: Bấm 2 nút này để App gửi request kiểm tra dữ liệu
+    # Gửi request
     Common - Click Element    ${btn_nhan_ma_qua_email_dk}
     Common - Click Element    ${btn_lay_ma_OTP_dk}
 
     # =========================================================================
-    # BƯỚC 2: TRẠM KIỂM SOÁT POPUP TỔNG HỢP (XỬ LÝ 3 QUY TẮC BẰNG CHUẨN HÓA TEXT)
+    # BƯỚC 2: Verify popup
     # =========================================================================
     ${locator_popup}=    Set Variable
     ...    xpath=//android.view.View[starts-with(@content-desc, 'Thông báo') or contains(@content-desc, 'đã được kích hoạt rồi') or contains(@content-desc, 'Email đã tồn tại')]
 
-    # Ép Bot thức canh chừng liên tục tối đa 5s. Popup vừa nhú lên là tóm gọn ngay lập tức!
+    # Bot chờ phần tử xuất hiện tối đa 5s
     ${co_popup}=    Run Keyword And Return Status    Wait Until Page Contains Element    ${locator_popup}    5s
 
     IF    ${co_popup}
-        # CÓ POPUP XUẤT HIỆN -> Bốc nội dung thực tế ra
+        # Có popup xuất hiện -> Lấy nội dung thông báo thực tế ra lưu tại biến tạm
         ${actual_msg_raw}=    Get Element Attribute    ${locator_popup}    content-desc
 
-        # =========================================================================
-        # KỸ THUẬT CHUẨN HÓA TEXT (TRÁNH LỖI SO SÁNH SAI)
-        # =========================================================================
+        # Chuẩn hóa nội dung thông báo thực tế
         # 1. Xóa hẳn chữ "Thông báo" ra khỏi kết quả thực tế (Thay bằng rỗng)
         ${actual_msg_clean}=    Replace String    ${actual_msg_raw}    Thông báo    ${EMPTY}
 
@@ -77,9 +75,8 @@ Dang Ky Tai Khoan
 
         # 4. Cắt sạch khoảng trắng dư thừa trong file CSV (Đề phòng lúc nhập data bị dư dấu cách)
         ${expected_clean}=    Strip String    ${expected_message}
-        # =========================================================================
 
-        # [QUY TẮC 1]: Kiểm tra trùng data (Thêm ignore_case=True để tuyệt đối an toàn)
+        # Kiểm tra trùng data (ignore_case=True để bỏ qua sự khác biệt giữa chữ hoa và chữ thường khi so sánh chuỗi)
         ${is_dup_phone}=    Run Keyword And Return Status
         ...    Should Contain
         ...    ${actual_msg_clean}
@@ -99,8 +96,7 @@ Dang Ky Tai Khoan
 
         # Xử lý tiếp nếu không phải trùng data
         IF    '${expected_message}' != 'Đăng ký thành công'
-            # [QUY TẮC 3]: So sánh thông báo lỗi thực tế vs mong muốn
-            # BÍ QUYẾT: Dùng ignore_case=True để Bot lờ đi việc viết hoa/thường
+            # So sánh thông báo lỗi thực tế vs mong muốn
             ${is_match}=    Run Keyword And Return Status
             ...    Should Contain
             ...    ${actual_msg_clean}
@@ -118,14 +114,14 @@ Dang Ky Tai Khoan
                 ...    *HTML* <span style="color:red"><b>LỖI THÔNG BÁO: Thông báo lỗi không khớp!</b><br>=> Mong muốn: [${expected_clean}]<br>=> App thực tế hiện: [${actual_msg_clean}]</span>
             END
         ELSE
-            # Nếu expected là thành công nhưng lại văng lỗi (không phải trùng data)
+            # Nếu TC kết quả mong muốn là thành công nhưng thực tế kết quả thông báo lỗi mới (không phải trùng data)
             Fail
             ...    *HTML* <span style="color:red"><b>LỖI HỆ THỐNG:</b> Kịch bản Happy Case bị chặn bởi popup báo lỗi:<br>[${actual_msg_clean}]</span>
         END
     ELSE
-        # KHÔNG CÓ POPUP NÀO HIỆN LÊN
+        # Không có popup nào hiện lên thì hiển thị tb thành công (vì kịch bản thực tế k hiển thị msg tb thành công)
         IF    '${expected_message}' != 'Đăng ký thành công'
-            # [QUY TẮC 2]: Nhập data sai nhưng app im re không chặn
+            # Nhập data sai nhưng app không chặn
             Fail
             ...    *HTML* <span style="color:red"><b>LỖI CHỨC NĂNG:</b> Điền thông tin không hợp lệ nhưng App KHÔNG CHẶN!</span>
         END
@@ -134,7 +130,7 @@ Dang Ky Tai Khoan
     END
 
     # =========================================================================
-    # BƯỚC 3: NHẬP OTP (CHỈ CHẠY ĐẾN ĐÂY KHI LUỒNG HAPPY CASE THỰC SỰ PASS)
+    # BƯỚC 3: Nhập OTP (Luồng Happy case pass mới thực hiện bước này)
     # =========================================================================
     Common - Input OTP    ${dt_otp}
     Common - Click Element    ${btn_tiep_tuc_dk}
@@ -153,5 +149,5 @@ Dang Ky Tai Khoan
         ...    *HTML* <span style="color:red"><b>LỖI ĐIỀU HƯỚNG:</b> Đăng ký thành công nhưng không chuyển sang màn Xác thực KYC!</span>
     END
 
-    Log To Console    => Kịch bản hoàn thành xuất sắc!
+    Log To Console    => Đã chạy xong testcase!
     Log To Console    ${fullname},${phone},${email},${password},${confirm_password},${expected_message}

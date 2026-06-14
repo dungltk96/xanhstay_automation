@@ -29,5 +29,4 @@ TC_02_So_Sanh_Du_Lieu_API_Va_UI_Phan_Tu_Dau_Tien_Trong_Chi_Tiet_Hop-Dong
     ...    ${api_dien_tich_can_ho}
     ...    ${api_ten_khach_thue_can_ho}
     ...    ${api_sdt_khach_thue_can_ho}
-
     Sleep    7s

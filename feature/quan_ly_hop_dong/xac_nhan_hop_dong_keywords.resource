@@ -19,15 +19,6 @@ Di Vao Man Hinh Chi Tiet Hop Dong
     Common - Click Element    ${btn_detail_yc_hop_dong}
     Log To Console    \n[Info] Đã truy cập màn hình Chi tiết hợp đồng thành công!
 
-# Di Vao Man Hinh Chi Tiet Hop Dong Hop Le
-#    [Documentation]    Tìm data trạng thái [Chờ lập hợp đồng] và click vào chi tiết hợp đồng đầu tiên
-#    Common - Click Element    ${btn_menu}
-#    Common - Click Element    ${btn_option_tim_nha}
-#    Common - Click Element    ${menu_yeu_cau_ky}
-#    Common - Vuot Man Hinh Tim Element    ${ds_hop_dong_co_trang_cho_lap_hop_dong}    3
-#    Common - Click Element    ${ds_hop_dong_co_trang_cho_lap_hop_dong}
-#    Log To Console    \n[Info] Đã truy cập màn hình Chi tiết hợp đồng thành công!
-
 Kiem Tra Loi Khong Tich Dieu Khoan
     [Documentation]    Nhấn Xác nhận khi chưa tích chọn để bắt lỗi mặc định
     Common - Click Element    ${btn_xac_nhan_hop_dong}

@@ -24,7 +24,7 @@ TC_03_Dang_ky_thue_can_ho_thanh_cong
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
     Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}
 
-TC_04_Admin_duyet_hoa_don_tien_coc_thue_nha
+TC_04_Admin_duyet_hoa_don_tien_coc_can_ho
     [Documentation]    Admin duyệt hóa đơn tiền cọc
     [Tags]    smoke    flow
     [Setup]    Setup-Open Application    admin
@@ -32,8 +32,8 @@ TC_04_Admin_duyet_hoa_don_tien_coc_thue_nha
     Thuc Hien Duyet Hoa Don Thanh Toan Tien Coc
     Common - Keo De Lam Moi Man Hinh    2000ms
 
-TC_05_Admin_duyet_hoa_don_tien_thue_nha
-    [Documentation]    Admin duyệt hóa đơn tiền cọc
+TC_05_Admin_duyet_hoa_don_tien_thue_dau_ky_can_ho
+    [Documentation]    Admin duyệt hóa đơn tiền thuê đầu kỳ
     [Tags]    smoke    flow
     [Setup]    Setup-Open Application    admin
     Thuc Hien Dang Nhap App Admin    ${dt_tai_khoan_admin}    ${dt_mat_khau_admin}    ${dt_display_name_admin}
