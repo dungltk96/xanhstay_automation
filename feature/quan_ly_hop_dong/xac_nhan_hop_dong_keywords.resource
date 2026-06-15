@@ -48,7 +48,8 @@ Kiem Tra Xac Nhan Hop Dong Thanh Cong
     [Documentation]    Tích checkbox và verify lỗi theo trạng thái Account
     [Arguments]    ${cau_thong_bao_mong_doi}
     Common - Click Element    ${tick_checkbox}
+    Sleep    3s
     Common - Click Element    ${btn_xac_nhan_hop_dong}
-    Wait Until Page Contains    ${cau_thong_bao_mong_doi}
-    Wait Until Page Does Not Contain    ${cau_thong_bao_mong_doi}
+    Wait Until Page Contains Element    ${cau_thong_bao_mong_doi}
     Common - Click Element    ${btn_dong}
+    Wait Until Page Does Not Contain Element    ${cau_thong_bao_mong_doi}

@@ -2,8 +2,7 @@
 Resource            ../config/import.resource
 
 Suite Setup         Mo Ung Dung Va Dang Nhap He Thong    ${dt_phone_number}    ${dt_password}
-Suite Teardown      Teardown - Close Application
-Test Teardown       Run Keyword If Test Failed    Capture Page Screenshot    ${TEST_NAME}.png
+Test Teardown       Common - Test Teardown
 
 
 *** Test Cases ***

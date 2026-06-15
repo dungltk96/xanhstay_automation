@@ -2,7 +2,7 @@
 Resource            ../config/import.resource
 
 Test Setup          Mo Ung Dung Va Dang Nhap He Thong    ${dt_phone_number}    ${dt_password}
-Test Teardown       Teardown - Chup Anh Va Dong App
+Test Teardown       Common - Test Teardown
 
 
 *** Test Cases ***
@@ -28,4 +28,4 @@ TC03_Xac_nhan_hop_dong_that_bai_do_chua_thanh_toan_bill
     Di Vao Man Hinh Chi Tiet Hop Dong
     Kiem Tra Loi Nghiep Vu Chua Thanh Toán Bill    ${msg_payment_err}
 
-#TC kiểm tra xác nhận hợp đồng thành công viết trong suite Thanh toán hoóa đơn
+# TC kiểm tra xác nhận hợp đồng thành công viết trong suite Thanh toán hoóa đơn
