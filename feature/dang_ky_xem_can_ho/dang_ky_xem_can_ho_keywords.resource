@@ -5,13 +5,12 @@ Resource    dang_ky_xem_can_ho_variables.resource
 
 *** Keywords ***
 Thuc Hien Mo Danh Sach Can Ho Quang Cao
-    Common - Click Element    ${btn_menu}
-    Common - Click Element    ${btn_option_tim_nha}
     Common - Click Element    ${menu_tim_nha}
 
 Thuc Hien Click Can Ho Dau Tien De Xem Chi Tiet
+    Common - Click Element    ${menu_tim_nha}
     Common - Click Element    ${btn_xem_chi_tiet_can_ho}
-    Go Back
+    Sleep    3s
 
 Thuc Hien Dang ky Xem Can Ho
     [Arguments]    ${ho_ten}    ${email}    ${so_dien_thoai}
