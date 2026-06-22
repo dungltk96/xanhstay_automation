@@ -6,6 +6,7 @@ Library         String    # Dùng để xử lý chuỗi ký tự
 Library         Collections    # Xử lý mảng
 Library         RequestsLibrary    # API
 Library         JSONLibrary    # Đọc tệp json or response từ API
+Library         OperatingSystem    #Dùng để thao tác hệ thống như thêm sửa xóa tệp.thư mục
 Variables       ../data/device.yaml
 Variables       ../data/data_${env}.yaml
 Resource        ../common/keywords.resource

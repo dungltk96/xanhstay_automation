@@ -2,6 +2,7 @@
 Resource            ../config/import.resource
 
 Suite Setup         Mo Ung Dung Va Dang Nhap He Thong    ${dt_phone_number}    ${dt_password}
+Test Setup          Common - Test Setup
 Test Teardown       Common - Test Teardown
 
 

@@ -8,6 +8,7 @@ ${btn_dang_ky_xem_chi_tiet_can_ho_da_thue}      xpath=//*[contains(@content-desc
 ${btn_xac_nhan}                                 accessibility_id=Xác nhận
 ${btn_huy_bo}                                   accessibility_id=Hủy bỏ
 ${lbl_da_dang_ky_lich}                          xpath=//android.view.View[contains(@content-desc, 'Bạn đã đăng ký xem căn hộ này vào ngày')]
+${label_thong_tin_can_ho}                        xpath=//android.widget.Button[@content-desc='Thông tin căn hộ']
 # ${lbl_da_dang_ky_lich}    Bạn đã đăng ký xem căn hộ này vào ngày
 
 # Các trường thông tin nhập liệu (Chỉ dùng để điền, không lấy data ở đây)

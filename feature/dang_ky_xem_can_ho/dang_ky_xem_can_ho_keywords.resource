@@ -6,11 +6,13 @@ Resource    dang_ky_xem_can_ho_variables.resource
 *** Keywords ***
 Thuc Hien Mo Danh Sach Can Ho Quang Cao
     Common - Click Element    ${menu_tim_nha}
+    Wait Until Page Contains Element    ${btn_xem_chi_tiet_can_ho}
 
 Thuc Hien Click Can Ho Dau Tien De Xem Chi Tiet
     Common - Click Element    ${menu_tim_nha}
     Common - Click Element    ${btn_xem_chi_tiet_can_ho}
     Sleep    3s
+    Wait Until Page Contains Element    ${label_thong_tin_can_ho}
 
 Thuc Hien Dang ky Xem Can Ho
     [Arguments]    ${ho_ten}    ${email}    ${so_dien_thoai}
@@ -98,7 +100,6 @@ Xu Ly Ngay Thang
     RETURN    ${thoi_gian_rut_gon}
 
 Kiem Tra Thong Tin Yeu Cau Xem Phong
-    Go Back
     Common - Click Element    ${menu_yeu_cau_xem_phong}
 
     # Bóc tách thời gian
