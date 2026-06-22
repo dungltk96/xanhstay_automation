@@ -15,7 +15,6 @@ Thuc Hien Click Can Ho Dau Tien De Xem Chi Tiet
 
 Thuc Hien Dang ky Xem Can Ho
     [Arguments]    ${ho_ten}    ${email}    ${so_dien_thoai}
-    Common - Click Element    ${menu_tim_nha}
     Common - Click Element    ${btn_xem_chi_tiet_can_ho}
     Lay Thong Tin Can Ho Luu Vao Dictionary
     Common - Click Element    ${btn_dang_ky_xem_can_ho}
@@ -39,7 +38,7 @@ Thuc Hien Dang ky Xem Can Ho
     ${actual_so_dien_thoai}    Common - Get Text Element    ${input_so_dien_thoai}
     Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
     Common - Click Element    ${btn_xac_nhan}
-    Go Back
+    Wait Until Page Contains    ${msg_thanh_cong}
 
 Thuc Hien Dang Ky Can Ho Da Thue
     Common - Click Element    ${menu_tim_nha}
@@ -100,6 +99,7 @@ Xu Ly Ngay Thang
     RETURN    ${thoi_gian_rut_gon}
 
 Kiem Tra Thong Tin Yeu Cau Xem Phong
+    Go Back
     Common - Click Element    ${menu_yeu_cau_xem_phong}
 
     # Bóc tách thời gian

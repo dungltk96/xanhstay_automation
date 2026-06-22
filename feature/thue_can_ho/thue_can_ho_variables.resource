@@ -4,7 +4,7 @@ ${ds_chu_ky_thanh_toan}                             id=contract_type
 ${btn_chon_phan_tu_chu_ky_thanh_toan_dau_tien}      xpath=//android.widget.Button[1]
 
 ${ds_thoi_han_hop_dong}                             id=contract_duration
-${btn_chon_chu_ky_thanh_toan}                       accessibility_id=12 tháng (6 kỳ thanh toán)
+${btn_chon_chu_ky_thanh_toan}                       xpath=//android.widget.Button[contains(@content-desc,"tháng")][1]
 
 ${viewing_date_thue_can_ho}                         xpath=//android.view.View[@content-desc="Ngày vào ở *"]/following-sibling::android.view.View[1]
 ${btn_ok}                                           accessibility_id=OK

@@ -2,8 +2,8 @@
 Resource            ../config/import.resource
 Library             DataDriver    file=../data/Data_Test_Cases_Dang_Ky.csv    encoding=UTF-8    delimiter=,
 
-Test Setup          Setup-Open Application
-Test Teardown       Teardown - Chup Anh Va Dong App
+Test Setup          Setup - Open Application
+Test Teardown       Common - Test Teardown
 Test Template       Dang Ky Tai Khoan
 
 

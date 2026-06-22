@@ -4,7 +4,7 @@ Resource    ../common/variables.resource
 
 
 *** Keywords ***
-Setup-Open Application
+Setup - Open Application
     [Documentation]    Mở ứng dụng tùy chọn. Mặc định là mở App User. Truyền 'admin' để mở App Admin.
     [Arguments]    ${app_type}=user
 
@@ -33,12 +33,26 @@ Setup-Open Application
 #    ...    app=${EXECDIR}/app/${app_name}
     Log To Console    \n[Info] Đã mở thành công App: ${app_type}
 
-Teardown - Close application
-    Close Application
+Common - Test Setup
+    [Documentation]    Mở ứng dụng tùy chọn. Mặc định là mở App User. Truyền 'admin' để mở App Admin.
+    [Arguments]    ${app_type}=user
+    IF    '${app_type}'=='user'
+#    Mở lại app
+        Activate Application    ${user_appPackage}
+    ELSE
+        Activate Application    ${admin_appPackage}
+    END
+    Log To Console    \n[Info] Đã mở thành công App: ${app_type}
 
-Teardown - Chup Anh Va Dong App
+Common - Test Teardown
+    [Arguments]    ${app_type}=user
     Run Keyword If Test Failed    Capture Page Screenshot    ${TEST_NAME}.png
-    Teardown - Close Application
+    IF    '${app_type}'=='user'
+#    Lệnh kill (tắt app, không cho app chạy nền)
+        Terminate Application    ${user_appPackage}
+    ELSE
+        Terminate Application    ${admin_appPackage}
+    END
 
 Common - Click Element
     [Arguments]    ${locator}
@@ -120,7 +134,7 @@ Common - Keo De Lam Moi Man Hinh
 Mo Ung Dung Va Dang Nhap He Thong
     [Documentation]    Gộp bước mở Appium và Đăng nhập để dùng cho Suite Setup
     [Arguments]    ${phone}    ${password}
-    Setup-Open Application
+    Setup - Open Application
     Thuc Hien Dang Nhap    ${dt_phone_number}    ${dt_password}
     Log To Console    \n[Info] Đã mở App và Đăng nhập thành công!
 

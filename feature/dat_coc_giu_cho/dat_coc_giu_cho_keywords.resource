@@ -35,7 +35,6 @@ Thuc Hien Dat Coc Giu Cho
         Log To Console    Đang thực hiện luồng thanh toán tiền cọc
         Common - Click Element    ${btn_thanh_toan_lai_tien_coc}
         Sleep    3s
-        Common - Click Element    ${btn_tiep_tuc}
         Wait Until Page Contains Element
         ...    ${nav_ui_thanh_toan_payos}
         ...    error=LỖI NGHIỆP VỤ: Không chuyển sang màn thanh toán
