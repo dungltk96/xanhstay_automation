@@ -41,34 +41,6 @@ Thuc Hien Dang ky Xem Can Ho
     Common - Click Element    ${btn_xac_nhan}
     Wait Until Page Contains    ${msg_thanh_cong}
 
-Thuc Hien Dang Ky Can Ho Da Thue
-    Common - Click Element    ${menu_tim_nha}
-    Common - Vuot Man Hinh Tim Element    ${btn_dang_ky_xem_chi_tiet_can_ho_da_thue}
-    Common - Click Element    ${btn_dang_ky_xem_chi_tiet_can_ho_da_thue}
-    Lay Thong Tin Can Ho Luu Vao Dictionary
-    Common - Click Element    ${btn_dang_ky_xem_can_ho}
-    Sleep    5s
-
-#    Thực hiện điền form
-    Common - Click Element    ${viewing_date_xem_can_ho}
-    Common - Click Element    ${date_picker_today}
-    Common - Click Element    ${btn_chon}
-
-#    Verify thông tin auto-fill trước khi submit (lấy giá trị element thực tế & so sánh kq mong muốn với kq thực tế)
-    ${actual_ho_ten}    Common - Get Text Element    ${input_ho_ten}
-    Should Be Equal As Strings    ${dt_ho_ten}    ${actual_ho_ten}
-
-    ${actual_email}    Common - Get Text Element    ${input_email}
-    Should Be Equal As Strings    ${dt_email}    ${actual_email}
-
-    ${actual_so_dien_thoai}    Common - Get Text Element    ${input_so_dien_thoai}
-    Should Be Equal As Strings    ${dt_phone_number}    ${actual_so_dien_thoai}
-
-    Common - Click Element    ${btn_xac_nhan}
-    Wait Until Page Contains
-    ...    ${msg_loi_can_ho_da_cho_thue}
-    ...    error=LỖI NGHIỆP VỤ: Đăng ký căn hộ đã thuê không thấy báo lỗi như kịch bản!
-
 Lay Thong Tin Can Ho Luu Vao Dictionary
     [Documentation]    Vừa vuốt màn hình vừa tìm data cất vào Dictionary
     ${value_dia_chi_can_ho}    Common - Get Attribute    ${dia_chi_can_ho_man_chi_tiet_can_ho}

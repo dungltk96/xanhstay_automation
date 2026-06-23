@@ -23,4 +23,6 @@ TC_03_Dang_ky_xem_can_ho_thanh_cong
 TC_04_Dang_ky_va_kiem_tra_thong_tin_yeu_cau_xem_phong
     [Documentation]    Đăng ký và kiềm tra thông tin yêu cầu xem phòng
     [Tags]    flow
+    Thuc Hien Dang ky Xem Can Ho    ${dt_ho_ten}    ${dt_email}    ${dt_phone_number}
+    Go Back
     Kiem Tra Thong Tin Yeu Cau Xem Phong

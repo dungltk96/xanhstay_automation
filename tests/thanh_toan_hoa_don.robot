@@ -23,7 +23,7 @@ TC_03_Dang_ky_thue_can_ho_thanh_cong
     [Tags]    smoke    flow
     Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}
 
-TC_04_Admin_duyet_hoa_don_tien_coc_can_ho
+TC_04_Admin_duyet_hoa_don_thanh_toan_tien_coc
     [Documentation]    Admin duyệt hóa đơn tiền cọc
     [Tags]    smoke    flow
     [Setup]    Run Keywords    Setup - Open Application    admin
@@ -32,7 +32,7 @@ TC_04_Admin_duyet_hoa_don_tien_coc_can_ho
     Common - Keo De Lam Moi Man Hinh    2000ms
     [Teardown]    Common - Test Teardown    admin
 
-TC_05_Admin_duyet_hoa_don_tien_thue_dau_ky_can_ho
+TC_05_Admin_duyet_hoa_don_thanh_toan_tien_thue_dau_ky
     [Documentation]    Admin duyệt hóa đơn tiền thuê đầu kỳ
     [Tags]    smoke    flow
     [Setup]    Common - Test Setup    admin

@@ -23,17 +23,26 @@ TC_01_Dang_nhap_thanh_cong
     ...    ${actual_text}
     ...    msg=LỖI NGHIỆP VỤ: Kết quả thực tế [${actual_text}] không khớp với kết quả mong muốn [${expected_text}]!
 
-TC_02_Dang_ky_xem_can_ho_thanh_cong
-    [Documentation]    Đăng ký xem căn hộ thành công
-    [Tags]    smoke    flow
-    Thuc Hien Dang ky Xem Can Ho    ${dt_ho_ten}    ${dt_email}    ${dt_phone_number}
-
-TC_03_Thue_can_ho_thanh_cong
+TC_02_Thue_can_ho_thanh_cong
     [Documentation]    Đăng ký thuê căn hộ thành công
     [Tags]    smoke
     Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}
 
-TC_04_Duyet_Hoa_Don_Thanh_Toan_Tien_Coc
+TC_03_Kiem_tra_he_thong_tu_dong_tao_hop_dong_va_doi_chieu_du_lieu_danh_sach_hop_dong_giua_API_va_UI
+    Lay Du Lieu Tu API Hop Dong Va Chuan Hoa Du Lieu API
+    Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Danh Sach Hop Dong
+    ...    ${api_code_hop_dong}
+    ...    ${api_from_hop_dong}
+    ...    ${api_to_hop_dong}
+    ...    ${api_ten_can_ho}
+    ...    ${api_dia_chi_can_ho}
+    ...    ${api_gia_thue_can_ho}
+
+TC_04_Kiem_tra_tu_dong_sinh_hoa_don_thanh_toan_khi_thue_can_ho
+    Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}    # Nửa năm
+    Kiem Tra Hoa Don Thanh Toan
+
+TC_05_Admin_duyet_hoa_don_thanh_toan_tien_coc
     [Documentation]    Admin duyệt hóa đơn tiền cọc
     [Tags]    smoke    flow
     [Setup]    Run Keywords    Setup - Open Application    admin
@@ -42,14 +51,14 @@ TC_04_Duyet_Hoa_Don_Thanh_Toan_Tien_Coc
     Common - Keo De Lam Moi Man Hinh    2000ms
     [Teardown]    Common - Test Teardown    admin
 
-TC_05_Duyet_Hoa_Don_Thanh_Toan_Tien_Thue
+TC_06_Admin_duyet_hoa_don_thanh_toan_tien_thue_dau_ky
     [Documentation]    Admin duyệt hóa đơn tiền cọc
     [Tags]    smoke    flow
     [Setup]    Common - Test Setup    admin
     Thuc Hien Duyet Hoa Don Thanh Toan Tien Thue Nha
     [Teardown]    Common - Test Teardown    admin
 
-TC_06_Xac_nhan_hop_dong_thanh_cong
+TC_07_Xac_nhan_hop_dong_thanh_cong
     [Documentation]    Xác nhận hợp đồng thành công
     [Tags]    smoke    flow
     Di Vao Man Hinh Chi Tiet Hop Dong

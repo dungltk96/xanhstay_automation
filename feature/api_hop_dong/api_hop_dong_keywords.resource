@@ -99,12 +99,11 @@ Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Danh Sach Hop Dong
     Common - Click Element    ${btn_menu}
     Common - Click Element    ${btn_option_ca_nhan}
     Common - Click Element    ${btn_menu_tat_ca_hop_dong}
-
-    ${locator_hop_dong_dau_tien}=    Set Variable    ${btn_chi_tiet_hop_dong_dau_tien}
-    Wait Until Page Contains Element    ${locator_hop_dong_dau_tien}    10s
+    Common - Click Element    ${btn_chi_tiet_hop_dong_dau_tien}
 
     # Khởi tạo danh sách chứa các trường dữ liệu cần xác thực
     ${thong_tin_api_can_check}=    Create List
+    ...    Chờ duyệt
     ...    ${api_code}
     ...    ${api_from}
     ...    ${api_to}
@@ -134,13 +133,11 @@ Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Chi Tiet Hop Dong
     Common - Click Element    ${btn_menu}
     Common - Click Element    ${btn_option_ca_nhan}
     Common - Click Element    ${btn_menu_tat_ca_hop_dong}
-
-    ${locator_hop_dong_dau_tien}=    Set Variable    ${btn_chi_tiet_hop_dong_dau_tien}
-    Wait Until Page Contains Element    ${locator_hop_dong_dau_tien}    10s
-    Common - Click Element    ${locator_hop_dong_dau_tien}
+    Common - Click Element    ${btn_chi_tiet_hop_dong_dau_tien}
 
     # Khởi tạo danh sách chứa các trường dữ liệu cần xác thực
     ${thong_tin_api_can_check}=    Create List
+    ...    Chờ duyệt
     ...    ${api_code}
     ...    ${api_from}
     ...    ${api_gia_thue_can_ho}
