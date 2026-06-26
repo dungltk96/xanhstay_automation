@@ -29,6 +29,7 @@ TC_02_Thue_can_ho_thanh_cong
     Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}
 
 TC_03_Kiem_tra_he_thong_tu_dong_tao_hop_dong_va_doi_chieu_du_lieu_danh_sach_hop_dong_giua_API_va_UI
+    [Documentation]    Kiểm tra hệ thống tự động tạo hợp đồng và đối chiếu dữ liệu giữa API và giao diện phần tử đầu tiên màn danh sách hợp đồng
     Lay Du Lieu Tu API Hop Dong Va Chuan Hoa Du Lieu API
     Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Danh Sach Hop Dong
     ...    ${api_code_hop_dong}
@@ -39,7 +40,9 @@ TC_03_Kiem_tra_he_thong_tu_dong_tao_hop_dong_va_doi_chieu_du_lieu_danh_sach_hop_
     ...    ${api_gia_thue_can_ho}
 
 TC_04_Kiem_tra_tu_dong_sinh_hoa_don_thanh_toan_khi_thue_can_ho
-    Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}    # Nửa năm
+    [Documentation]    Kiểm tra hệ thống tự động sinh ra hóa đơn thanh toán khi thuê căn hộ
+    Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}    Nửa năm
+    Go Back
     Kiem Tra Hoa Don Thanh Toan
 
 TC_05_Admin_duyet_hoa_don_thanh_toan_tien_coc
@@ -48,7 +51,6 @@ TC_05_Admin_duyet_hoa_don_thanh_toan_tien_coc
     [Setup]    Run Keywords    Setup - Open Application    admin
     ...    AND    Thuc Hien Dang Nhap App Admin    ${dt_tai_khoan_admin}    ${dt_mat_khau_admin}    ${dt_display_name_admin}
     Thuc Hien Duyet Hoa Don Thanh Toan Tien Coc
-    Common - Keo De Lam Moi Man Hinh    2000ms
     [Teardown]    Common - Test Teardown    admin
 
 TC_06_Admin_duyet_hoa_don_thanh_toan_tien_thue_dau_ky

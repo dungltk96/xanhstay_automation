@@ -35,12 +35,8 @@ Thuc Hien Thanh Toan Hoa Don Tien Thue
 #    Common - Click Element
 #    ...    ${btn_thanh_toan_phieu}
 #    Common - Click Element    ${btn_tiep_tuc}
-#    Sleep    3s
 #    Common - Click Element    ${nav_ui_thanh_toan_payos}
 #    Sleep    2s
-#    Go Back
-#    Go Back
-#    Go Back
 
 Thuc Hien Thanh Toan Hoa Don Tien Coc Giu Cho
     Common - Click Element
@@ -52,24 +48,21 @@ Thuc Hien Thanh Toan Hoa Don Tien Coc Giu Cho
 
 Thuc Hien Duyet Hoa Don Thanh Toan Tien Coc
     Common - Click Element    ${menu_hoa_don_admin}
-    Sleep    3s
+    Wait Until Page Contains Element    xpath=//android.view.View[contains(@content-desc,'Đặt cọc căn hộ ${dic_thong_tin_yeu_cau_thue_can_ho}[ten_can_ho]')][contains(@content-desc,'Chờ thanh toán')]
     Common - Click Element    ${btn_chon_hoa_don_thanh_toan_coc_t1_admin}
-    Sleep    5s
     Common - Click Element    ${btn_xac_nhan_thanh_toan_admin}
-    Sleep    5s
     Common - Click Element    ${popup_xac_nhan_thanh_toan_admin}
-    Sleep    7s
     Wait Until Page Contains Element    ${msg_duyet_hoa_don_thanh_cong_admin}
-    Common - Click Element    ${btn_back_admin}
+    Wait Until Page Contains Element    xpath=//android.view.View[contains(@content-desc,'Đặt cọc căn hộ ${dic_thong_tin_yeu_cau_thue_can_ho}[ten_can_ho]')]
+    Wait Until Page Contains Element    xpath=//android.view.View[@content-desc='Đã thanh toán']
 
 Thuc Hien Duyet Hoa Don Thanh Toan Tien Thue Nha
     Common - Click Element    ${menu_hoa_don_admin}
-    Sleep    3s
+    Wait Until Page Contains Element    xpath=//android.view.View[contains(@content-desc,'Hóa đơn tiền thuê ${dic_thong_tin_yeu_cau_thue_can_ho}[ten_can_ho]')][contains(@content-desc,'Chờ thanh toán')]
     Common - Click Element
     ...    ${btn_chon_hoa_don_thanh_toan_nha_t1_admin}
-    Sleep    5s
     Common - Click Element    ${btn_xac_nhan_thanh_toan_admin}
-    Sleep    5s
     Common - Click Element    ${popup_xac_nhan_thanh_toan_admin}
-    Wait Until Page Contains Element    ${msg_duyet_hoa_don_thanh_cong_admin}    30s
-    Sleep    3s
+    Wait Until Page Contains Element    ${msg_duyet_hoa_don_thanh_cong_admin}
+    Wait Until Page Contains Element    xpath=//android.view.View[contains(@content-desc,'Hóa đơn tiền thuê ${dic_thong_tin_yeu_cau_thue_can_ho}[ten_can_ho]')]
+    Wait Until Page Contains Element    xpath=//android.view.View[@content-desc='Đã thanh toán']

@@ -40,8 +40,38 @@ Thuc Hien Thue Can Ho
 
 Kiem Tra Hoa Don Thanh Toan
     Common - Click Element    ${btn_menu}
-    Common - Click Element    ${btn_menu_ca_nhan}
+    Common - Click Element    ${btn_option_ca_nhan}
     Common - Click Element    ${btn_menu_tat_ca_hoa_don}
+
+    Kiem Tra Hoa Don Tien Thue
+    Kiem Tra Hoa Don Tien Coc
+
+Kiem Tra Hoa Don Tien Thue
+    # Khởi tạo danh sách chứa các trường dữ liệu cần xác thực
+    ${thong_tin_hoa_don_tien_thue_dau_ky}    Create List
+    ...    Chưa thanh toán
+    ...    Hóa đơn tiền thuê ${dic_thong_tin_yeu_cau_thue_can_ho}[ten_can_ho]
+    ...    ${dic_thong_tin_yeu_cau_thue_can_ho}[tien_thue_dau_ky]
+
+    FOR    ${item}    IN    @{thong_tin_hoa_don_tien_thue_dau_ky}
+        Wait Until Page Contains Element
+        ...    xpath=//android.view.View[contains(@content-desc, '${item}')]
+        ...    5s
+        ...    error=Không hiển thị thông tin [${item}] trên hóa đơn.
+    END
+
+Kiem Tra Hoa Don Tien Coc
+     # Khởi tạo danh sách chứa các trường dữ liệu cần xác thực
+    ${thong_tin_hoa_don_tien_coc}    Create List
+    ...    Chưa thanh toán
+    ...    Đặt cọc căn hộ ${dic_thong_tin_yeu_cau_thue_can_ho}[ten_can_ho]
+
+    FOR    ${item}    IN    @{thong_tin_hoa_don_tien_coc}
+        Wait Until Page Contains Element
+        ...    xpath=//android.view.View[contains(@content-desc, '${item}')]
+        ...    5s
+        ...    error=Không hiển thị thông tin [${item}] trên hóa đơn.
+    END
 
 Format VND
     [Arguments]    ${amount}
@@ -73,4 +103,4 @@ Tinh Toan So Tien Thue Dau Ky
     ${so_tien_thue_dau_ky}    Evaluate
     ...    round(${so_thang_thanh_toan} * ${so_tien_thue_1_thang} * (100 - ${discount}) / 100)
     ${formated_so_tien_thue_dau_ky}    Format VND    ${so_tien_thue_dau_ky}
-    RETURN    Số tiền sau khi format: ${formated_so_tien_thue_dau_ky}
+    RETURN    ${formated_so_tien_thue_dau_ky}

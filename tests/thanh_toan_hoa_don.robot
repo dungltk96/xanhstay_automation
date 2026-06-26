@@ -29,7 +29,6 @@ TC_04_Admin_duyet_hoa_don_thanh_toan_tien_coc
     [Setup]    Run Keywords    Setup - Open Application    admin
     ...    AND    Thuc Hien Dang Nhap App Admin    ${dt_tai_khoan_admin}    ${dt_mat_khau_admin}    ${dt_display_name_admin}
     Thuc Hien Duyet Hoa Don Thanh Toan Tien Coc
-    Common - Keo De Lam Moi Man Hinh    2000ms
     [Teardown]    Common - Test Teardown    admin
 
 TC_05_Admin_duyet_hoa_don_thanh_toan_tien_thue_dau_ky

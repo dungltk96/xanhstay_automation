@@ -1,0 +1,4 @@
+﻿*** testcase ***;${fullname};${phone};${email};${password};${confirm_password};${expected_message}
+nhap_ten_dang_nhap_rong;${EMPTY};0909123888;test01@gmail.com;Abc123;Abc123;Tên đăng nhập không được để trống
+nhap_ten_dang_nhap_duoi_min_2;An;0909123999;test02@gmail.com;Abc123;Abc123;Tên đăng nhập tối thiểu 3 ký tự
+nhap_ten_dang_nhap_min_3_va_chua_khoang_trang;Anh Tuấn;0982000123;redemo003@gmail.com;Abc123;Abc123;Đăng ký thành công

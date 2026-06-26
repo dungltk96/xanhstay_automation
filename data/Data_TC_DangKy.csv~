@@ -1,0 +1,4 @@
+﻿*** testcase ***,${fullname},${phone},${email},${password},${confirm_password},${expected_message}
+nhap_ten_dang_nhap_rong,${EMPTY},0981000001,demo001@gmail.com,Abc123,Abc123,Vui lòng nhập họ và tên.
+nhap_ten_dang_nhap_duoi_min_2,An,0981000002,demo002@gmail.com,Abc123,Abc123,Họ tên không hợp lệ. Vui lòng nhập đầy đủ họ và tên.
+nhap_ten_dang_nhap_min_3_va_chua_khoang_trang,Anh Tuấn,0981000003,demo003@gmail.com,Abc123,Abc123,Đăng ký thành công

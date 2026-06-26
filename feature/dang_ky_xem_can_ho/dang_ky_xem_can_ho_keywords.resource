@@ -95,5 +95,5 @@ Kiem Tra Thong Tin Yeu Cau Xem Phong
         Wait Until Page Contains Element
         ...    xpath=//android.view.View[contains(@content-desc, '${item}')]
         ...    5s
-        ...    error=LỖI CHỨC NĂNG: Giao diện yêu cầu xem phòng hiển thị sai lệch thông tin, không tìm thấy cụm từ: [${item}]
+        ...    error=Không hiển thị thông tin [${item}] trên thông tin yêu cầu xem phòng.
     END

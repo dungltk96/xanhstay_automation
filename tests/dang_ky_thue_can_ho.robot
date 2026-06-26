@@ -16,6 +16,8 @@ TC_01_Thue_can_ho_thanh_cong
     Thuc Hien Thue Can Ho    ${dt_so_nguoi_o}
 
 TC_02_Kiem_tra_he_thong_tu_dong_tao_hop_dong_va_doi_chieu_du_lieu_danh_sach_hop_dong_giua_API_va_UI
+    [Documentation]    Kiểm tra hệ thống tự động tạo hợp đồng và đối chiếu dữ liệu giữa API và giao diện phần tử đầu tiên màn danh sách hợp đồng
+    [Tags]    flow
     Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Danh Sach Hop Dong
     ...    ${api_code_hop_dong}
     ...    ${api_from_hop_dong}
@@ -25,6 +27,8 @@ TC_02_Kiem_tra_he_thong_tu_dong_tao_hop_dong_va_doi_chieu_du_lieu_danh_sach_hop_
     ...    ${api_gia_thue_can_ho}
 
 TC_03_Kiem_tra_he_thong_tu_dong_tao_hop_dong_va_doi_chieu_du_lieu_chi_tiet_hop_dong_giua_API_va_UI
+    [Documentation]    Kiểm tra hệ thống tự động tạo hợp đồng và đối chiếu dữ liệu giữa API và giao diện phần tử đầu tiên màn chi tiết hợp đồng
+    [Tags]    flow
     Kiem Tra Thong Tin Phan Tu Dau Tien Trong Man Chi Tiet Hop Dong
     ...    ${api_code_hop_dong}
     ...    ${api_from_hop_dong}
